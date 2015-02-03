@@ -17,6 +17,8 @@ _-_-_-_-_-_-_-""  ""
 *//////////////////////////////////////////////////////////////////////////////
 
 #pragma once
+#include <GL\glew.h>
+#include <SFML/OpenGL.hpp>
 
 #include "Vector2.h"
 #include "Vector3.h"

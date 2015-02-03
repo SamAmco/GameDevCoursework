@@ -1,6 +1,7 @@
 #include "Mesh.h"
 
-Mesh::Mesh(void)	{
+Mesh::Mesh(void)	
+{
 	//Most objects in OpenGL are represented as 'names' - an unsigned int
 	//index, really. They are always generated and destroyed by OpenGL 
 	//functions. Most of these functions allow you to generate multiple

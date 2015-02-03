@@ -48,9 +48,6 @@
     <ClInclude Include="GraphicsCode\Vector4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\SOIL\SOIL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GraphicsCode\common.h">
       <Filter>Header Files</Filter>
     </ClInclude>

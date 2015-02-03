@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <GL\glew.h>
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
 #include "GraphicsCode\Renderer.h"
