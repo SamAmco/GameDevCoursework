@@ -52,7 +52,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include;C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include;C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -70,7 +70,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include;C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include;C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -85,10 +85,31 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\SOIL\SOIL.h" />
+    <ClInclude Include="GraphicsCode\common.h" />
+    <ClInclude Include="GraphicsCode\Matrix3.h" />
+    <ClInclude Include="GraphicsCode\Matrix4.h" />
+    <ClInclude Include="GraphicsCode\Mesh.h" />
+    <ClInclude Include="GraphicsCode\OGLRenderer.h" />
+    <ClInclude Include="GraphicsCode\Quaternion.h" />
+    <ClInclude Include="GraphicsCode\Renderer.h" />
+    <ClInclude Include="GraphicsCode\RenderObject.h" />
+    <ClInclude Include="GraphicsCode\Shader.h" />
+    <ClInclude Include="GraphicsCode\Vector2.h" />
+    <ClInclude Include="GraphicsCode\Vector3.h" />
+    <ClInclude Include="GraphicsCode\Vector4.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GraphicsCode\Matrix3.cpp" />
+    <ClCompile Include="GraphicsCode\Matrix4.cpp" />
+    <ClCompile Include="GraphicsCode\Mesh.cpp" />
+    <ClCompile Include="GraphicsCode\OGLRenderer.cpp" />
+    <ClCompile Include="GraphicsCode\Quaternion.cpp" />
+    <ClCompile Include="GraphicsCode\Renderer.cpp" />
+    <ClCompile Include="GraphicsCode\RenderObject.cpp" />
+    <ClCompile Include="GraphicsCode\Shader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

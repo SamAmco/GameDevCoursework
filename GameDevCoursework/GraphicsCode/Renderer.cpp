@@ -1,5 +1,5 @@
 #include "Renderer.h"
-#include "../nclgl/Matrix3.h"
+#include "Matrix3.h"
 #include <time.h>
 
 Renderer::Renderer(Window &parent) : OGLRenderer(parent)	

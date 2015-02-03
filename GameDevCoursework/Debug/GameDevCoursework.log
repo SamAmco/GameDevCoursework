@@ -1,16 +1,54 @@
-﻿Build started 30/01/2015 11:47:05.
+﻿Build started 03/02/2015 15:12:49.
      1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GameDevCoursework\GameDevCoursework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\GameDevCoursework.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameDevCoursework.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\lib\Release\Win32" /LIBPATH:"C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\lib" opengl32.lib glew32.lib "sfml-system-d.lib" "sfml-audio-d.lib" "sfml-window-d.lib" "sfml-graphics-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.lib" /MACHINE:X86 Debug\main.obj
-         Debug\stdafx.obj
-         GameDevCoursework.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.exe
-     1>Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GameDevCoursework\GameDevCoursework.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameDevCoursework.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GraphicsCode\Matrix3.cpp GraphicsCode\Matrix4.cpp GraphicsCode\Mesh.cpp GraphicsCode\OGLRenderer.cpp GraphicsCode\Quaternion.cpp GraphicsCode\RenderObject.cpp GraphicsCode\Renderer.cpp GraphicsCode\Shader.cpp
+         Shader.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\shader.cpp(1): warning C4627: '#include "Shader.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\shader.cpp(2): warning C4627: '#include "Mesh.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\shader.cpp(300): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Renderer.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\renderer.cpp(1): warning C4627: '#include "Renderer.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\renderer.cpp(2): warning C4627: '#include "../nclgl/Matrix3.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\renderer.cpp(3): warning C4627: '#include <time.h>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\renderer.cpp(83): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         RenderObject.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\renderobject.cpp(1): warning C4627: '#include "RenderObject.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\renderobject.cpp(2): warning C4627: '#include <time.h>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\renderobject.cpp(65): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Quaternion.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\quaternion.cpp(1): warning C4627: '#include "Quaternion.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\quaternion.cpp(150): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         OGLRenderer.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\oglrenderer.cpp(26): warning C4627: '#include "OGLRenderer.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\oglrenderer.cpp(27): warning C4627: '#include <string>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\oglrenderer.cpp(28): warning C4627: '#include <iostream>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\oglrenderer.cpp(271): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Mesh.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\mesh.cpp(1): warning C4627: '#include "Mesh.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\mesh.cpp(304): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Matrix4.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\matrix4.cpp(1): warning C4627: '#include "Matrix4.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\matrix4.cpp(152): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Matrix3.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\matrix3.cpp(1): warning C4627: '#include "Matrix3.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\graphicscode\matrix3.cpp(91): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Generating Code...
+     1>Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GameDevCoursework\GameDevCoursework.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:03.16
+Time Elapsed 00:00:00.79

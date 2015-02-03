@@ -29,7 +29,7 @@ _-_-_-_-_-_-_-""  ""
 #include "Vector2.h"
 #include "Quaternion.h"
 #include "Matrix4.h"
-#include "Window.h"
+#include <SFML\Window.hpp>
 
 using std::vector;
 
@@ -42,7 +42,7 @@ using std::vector;
 #ifdef _DEBUG
 #define OPENGL_DEBUGGING
 #endif
-
+ 
 class OGLRenderer	{
 public:
 	friend class Window;

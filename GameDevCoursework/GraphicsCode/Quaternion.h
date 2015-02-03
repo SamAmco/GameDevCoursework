@@ -21,7 +21,6 @@ _-_-_-_-_-_-_-""  ""
 #pragma once
 
 #include <iostream>
-#include "common.h"
 #include "Matrix4.h"
 
 class Matrix4;

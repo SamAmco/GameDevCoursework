@@ -1,4 +1,5 @@
 #include "Matrix4.h"
+#include "common.h"
 
 Matrix4::Matrix4(void)	{
 	ToIdentity();

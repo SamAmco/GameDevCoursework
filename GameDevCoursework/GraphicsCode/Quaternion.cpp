@@ -1,4 +1,5 @@
 #include "Quaternion.h"
+#include "common.h"
 
 Quaternion::Quaternion(void)
 {

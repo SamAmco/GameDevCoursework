@@ -1,5 +1,5 @@
 #include "Matrix3.h"
-
+#include "common.h"
 
 Matrix3::Matrix3(void)	{
 	ToIdentity();
