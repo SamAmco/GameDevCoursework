@@ -18,7 +18,10 @@ _-_-_-_-_-_-_-""  ""
 
 #pragma once
 
-#include "OGLRenderer.h"
+#include "Vector2.h"
+#include "Vector3.h"
+#include "Vector4.h"
+
 #include <vector>
 #include <string>
 #include <fstream>

@@ -3,7 +3,6 @@
 #include "Matrix4.h"
 #include "Mesh.h"
 #include "Shader.h"
-#include "OGLRenderer.h"
 
 class RenderObject	{
 public:

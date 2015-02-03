@@ -1,11 +1,12 @@
 #include "stdafx.h"
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
+#include "GraphicsCode\Renderer.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	// create the window
-	sf::Window window(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, sf::ContextSettings(32));
+	Renderer window(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, sf::ContextSettings(32));
 	window.setVerticalSyncEnabled(true);
 
 	// load resources, initialize the OpenGL states, ...

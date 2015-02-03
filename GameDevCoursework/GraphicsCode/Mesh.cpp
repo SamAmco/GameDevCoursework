@@ -215,7 +215,9 @@ void Mesh::GenerateNormals()
 		normals[i] = normal;
 		normals[i + 1] = normal;
 		normals[i + 2] = normal;
-	}}
+	}
+}
+
 
 void	Mesh::BufferData()	
 {

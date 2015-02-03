@@ -1,8 +1,12 @@
+
 #include "Renderer.h"
 #include "Matrix3.h"
 #include <time.h>
+#include "SOIL.h"
 
-Renderer::Renderer(Window &parent) : OGLRenderer(parent)	
+Renderer::Renderer(sf::VideoMode mode, const sf::String& title, 
+	sf::Uint32 style, const sf::ContextSettings& settings) 
+	: sf::Window(mode, title, style, settings)
 {
 	light.colour = Vector3(1,1,1);
 	light.position = Vector3(0,0,0);
@@ -38,6 +42,14 @@ GLuint Renderer::LoadTexture(std::string name)
 	if (!t)
 		cout << "GLuint Renderer::LoadTexture(std::string name) FAILED TO LOAD " << name << std::endl;
 	return t;
+}
+
+void Renderer::UpdateShaderMatrices(GLuint program)	
+{
+	glUniformMatrix4fv(glGetUniformLocation(program, "modelMatrix"), 1, false, (float*)&modelMatrix);
+	glUniformMatrix4fv(glGetUniformLocation(program, "viewMatrix"), 1, false, (float*)&viewMatrix);
+	glUniformMatrix4fv(glGetUniformLocation(program, "projMatrix"), 1, false, (float*)&projMatrix);
+	glUniformMatrix4fv(glGetUniformLocation(program, "textureMatrix"), 1, false, (float*)&textureMatrix);
 }
 
 void	Renderer::Render(const RenderObject &o) 
