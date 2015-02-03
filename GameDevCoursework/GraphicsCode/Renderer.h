@@ -37,6 +37,14 @@ public:
 	{
 		renderObjects.push_back(&r);
 	}
+	void	SetProjectionMatrix(Matrix4 m)
+	{
+		projMatrix = m;
+	}
+
+	void	SetViewMatrix(Matrix4 m) {
+		viewMatrix = m;
+	}
 
 	void SetMainLight(Vector3 colour, Vector3 position, float radius);
 
