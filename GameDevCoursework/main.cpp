@@ -1,10 +1,18 @@
+/*#pragma comment(lib, "opengl32.lib")	//The actual OGL Library
+
+#ifdef _DEBUG
+#pragma comment(lib, "glew32sd.lib")		//GLEW static library bit, so we don't use the dll any more
+#else 
+#pragma comment(lib, "glew32s.lib")		//GLEW static library bit, so we don't use the dll any more
+#endif*/
+
 #include "stdafx.h"
 #include <GL\glew.h>
 #include <SFML/OpenGL.hpp>
-#include "GraphicsCode\Renderer.h"
 #include <SFML/Window.hpp>
 
 #include "GraphicsCode\Renderer.h"
+
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -46,30 +54,34 @@ int _tmain(int argc, _TCHAR* argv[])
 	renderer.SetMainLight(lightCol, lightPos, lightRad);
 	renderer.SetViewMatrix(Matrix4::BuildViewMatrix(Vector3(0, 0, 0), Vector3(0, 0, -10)));
 
-	sf::Event event;
-	while (renderer.pollEvent(event))
+	bool running = true;
+	while (running)
 	{
-		if (event.type == sf::Event::Closed)
-			break;
-		else if (event.type == sf::Event::Resized)
-			glViewport(0, 0, event.size.width, event.size.height);
+		sf::Event event;
+		while (renderer.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+				running = false;
+			else if (event.type == sf::Event::Resized)
+				glViewport(0, 0, event.size.width, event.size.height);
 
-		//float msec = renderer.GetTimer()->GetTimedMS();
+			//float msec = renderer.GetTimer()->GetTimedMS();
 
-		//Matrix4 p = Matrix4();
-		//p.ToIdentity();
-		//p.SetPositionVector(lightPos);
-		//lightPos = (Matrix4::Rotation(0.1f * msec, Vector3(0, 1, 0)) * p).GetPositionVector();
-		//renderer.SetMainLight(lightCol, lightPos, lightRad);
-		o.SetModelMatrix(o.GetModelMatrix() * Matrix4::Rotation(0.1f * 100, Vector3(1, 1, 1)));
+			//Matrix4 p = Matrix4();
+			//p.ToIdentity();
+			//p.SetPositionVector(lightPos);
+			//lightPos = (Matrix4::Rotation(0.1f * msec, Vector3(0, 1, 0)) * p).GetPositionVector();
+			//renderer.SetMainLight(lightCol, lightPos, lightRad);
+			o.SetModelMatrix(o.GetModelMatrix() * Matrix4::Rotation(0.1f * 100, Vector3(1, 1, 1)));
 
-		renderer.UpdateScene(100);
-		renderer.clear();
-		renderer.RenderScene();
-		renderer.display();
+			renderer.UpdateScene(100);
+			renderer.clear();
+			renderer.RenderScene();
+			renderer.display();
+		}
 	}
 	delete m;
-	for (int i = 0; i < shaders.size(); ++i)
+	for (unsigned int i = 0; i < shaders.size(); ++i)
 		delete shaders[i];
 
 	return 0;
