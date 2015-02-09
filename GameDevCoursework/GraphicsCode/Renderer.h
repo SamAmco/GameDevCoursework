@@ -47,8 +47,6 @@ public:
 
 	void SetMainLight(Vector3 colour, Vector3 position, float radius);
 
-	static GLuint LoadTexture(std::string name);
-
 protected:
 
 	void UpdateShaderMatrices(GLuint program);

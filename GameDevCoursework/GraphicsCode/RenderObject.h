@@ -3,6 +3,7 @@
 #include "Matrix4.h"
 #include "Mesh.h"
 #include "Shader.h"
+#include "../Texture.h"
 
 class RenderObject	{
 public:
@@ -16,8 +17,8 @@ public:
 	Shader* GetShader()		const		{return shader; }
 	void	SetShader(Shader*s)			{shader = s;}
 
-	GLuint	GetTexture(int index)		const	{ return textures[index]; }
-	void	AddTexture(GLuint tex)		{ textures.push_back(tex); }
+	Texture	GetTexture(int index)		const	{ return textures[index]; }
+	void	AddTexture(Texture tex)		{ textures.push_back(tex); }
 	void	ClearTextures()				{ textures.clear(); }
 
 	void	SetModelMatrix(Matrix4 mat) {modelMatrix = mat;}
@@ -46,7 +47,7 @@ protected:
 	Mesh*	mesh;
 	Shader*	shader;
 
-	vector<GLuint> textures;
+	vector<Texture> textures;
 
 	Matrix4 modelMatrix;
 	Matrix4 worldTransform;

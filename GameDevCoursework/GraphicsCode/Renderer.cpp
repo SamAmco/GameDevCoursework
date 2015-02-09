@@ -33,15 +33,6 @@ void Renderer::SetMainLight(Vector3 colour, Vector3 position, float radius)
 	light.radius = radius;
 }
 
-GLuint Renderer::LoadTexture(std::string name)
-{
-	GLuint t = SOIL_load_OGL_texture(name.c_str(), SOIL_LOAD_AUTO,
-		SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS);
-	if (!t)
-		cout << "GLuint Renderer::LoadTexture(std::string name) FAILED TO LOAD " << name << std::endl;
-	return t;
-}
-
 void Renderer::UpdateShaderMatrices(GLuint program)	
 {
 	glUniformMatrix4fv(glGetUniformLocation(program, "modelMatrix"), 1, false, (float*)&modelMatrix);
