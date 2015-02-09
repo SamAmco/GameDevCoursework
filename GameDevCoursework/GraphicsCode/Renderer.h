@@ -20,11 +20,10 @@ struct Light
 	Vector3 colour;
 };
 
-class Renderer : public sf::RenderWindow
+class Renderer
 {
 public:
-	Renderer(sf::VideoMode mode, const sf::String& title, 
-		sf::Uint32 style = sf::Style::Default, const sf::ContextSettings& settings = sf::ContextSettings());
+	Renderer();
 	~Renderer(void);
 
 	virtual void	RenderScene();
