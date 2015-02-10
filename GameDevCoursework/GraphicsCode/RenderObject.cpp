@@ -9,11 +9,11 @@ RenderObject::RenderObject(void)	{
 	parent  = NULL;
 }
 
-RenderObject::RenderObject(Mesh*m, Shader*s, GLuint t) {
+RenderObject::RenderObject(Mesh*m, Shader*s, Texture t) {
 	mesh	= m;
 	shader	= s;
 	textures = vector<Texture>();
-	if (t)
+	if (t.hasLoaded())
 		textures.push_back(t);
 	parent  = NULL;
 }

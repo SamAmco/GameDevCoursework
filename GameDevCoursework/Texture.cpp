@@ -1,10 +1,14 @@
 #include "stdafx.h"
 #include "Texture.h"
 
+using namespace std;
 
-Texture::Texture(GLuint texture)
+
+Texture::Texture(string name, GLuint tex)
 {
-	tex = texture;
+	this->name = name;
+	this->tex = tex;
+	this->loaded = true;
 }
 
 

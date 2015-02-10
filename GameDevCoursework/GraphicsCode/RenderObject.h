@@ -8,7 +8,7 @@
 class RenderObject	{
 public:
 	RenderObject(void);
-	RenderObject(Mesh*m, Shader*s, GLuint t = 0);
+	RenderObject(Mesh*m, Shader*s, Texture t = Texture());
 	~RenderObject(void);
 
 	Mesh*	GetMesh()	const			{return mesh;}

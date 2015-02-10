@@ -4,7 +4,7 @@
 #include <SFML/Window.hpp>
 
 #include "GraphicsCode\Renderer.h"
-#include "ResourceManager.h"
+#include "TextureManager.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -41,9 +41,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	RenderObject o(m, shaders[shaderInd]);
 	o.SetModelMatrix(Matrix4::Translation(Vector3(0, 0, -10)) * Matrix4::Scale(Vector3(1, 1, 1)));
-	o.AddTexture(ResourceManager::getInstance().LoadTexture("smiley.png"));
-	o.AddTexture(ResourceManager::getInstance().LoadTexture("perlin.png"));
-	o.AddTexture(ResourceManager::getInstance().LoadTexture("noise.png"));
+	o.AddTexture(TextureManager::getInstance().LoadTexture("smiley.png"));
+	o.AddTexture(TextureManager::getInstance().LoadTexture("perlin.png"));
+	o.AddTexture(TextureManager::getInstance().LoadTexture("noise.png"));
 	renderer.AddRenderObject(o);			   
 
 	Vector3 lightCol = Vector3(1, 1, 1);
