@@ -19,6 +19,7 @@ void TextureManager::UnloadTextures()
 		glDeleteTextures(1, p);
 		++i;
 	}
+	loadedTextures.clear();
 }
 
 Texture TextureManager::LoadTexture(string name)
