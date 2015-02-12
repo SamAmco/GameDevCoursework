@@ -1,11 +1,10 @@
 #pragma once
 #include <GL\glew.h>
-#include "Resource.h"
 #include <string>
 
 using namespace std;
 
-class Texture : Resource 
+class Texture 
 {
 public:
 	Texture() { };
