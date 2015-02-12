@@ -18,6 +18,8 @@ public:
 		return instance;
 	}
 
+	void UnloadTextures();
+
 	~TextureManager();
 private:
 	//These parts enforce singleton constraints

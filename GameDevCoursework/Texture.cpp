@@ -6,8 +6,8 @@ using namespace std;
 
 Texture::Texture(string name, GLuint tex)
 {
-	this->name = name;
 	this->tex = tex;
+	this->name = name;
 	this->loaded = true;
 }
 

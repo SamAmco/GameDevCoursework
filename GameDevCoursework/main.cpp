@@ -91,6 +91,9 @@ int _tmain(int argc, _TCHAR* argv[])
 		renderer.RenderScene();
 		window.display();
 	}
+
+	TextureManager::getInstance().UnloadTextures();
+
 	delete m;
 	for (unsigned int i = 0; i < shaders.size(); ++i)
 		delete shaders[i];

@@ -10,7 +10,7 @@ class Texture : Resource
 public:
 	Texture() { };
 	Texture(string, GLuint);
-	GLuint getGLuint() const { return tex; } 
+	const GLuint& getGLuint() const { return tex; } 
 	string getName() const { return name; }
 	bool hasLoaded() const { return loaded; }
 	~Texture();
