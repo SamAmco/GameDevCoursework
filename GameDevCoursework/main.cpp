@@ -5,6 +5,7 @@
 
 #include "GraphicsCode\Renderer.h"
 #include "TextureManager.h"
+#include "MeshManager.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -26,7 +27,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		return -1;
 	}
 
-	Mesh*	m = Mesh::LoadMeshFile("monkey.obj");
+	Mesh*	m = MeshManager::getInstance().LoadMesh("monkey.obj");
 	vector<Shader*> shaders = vector<Shader*>(8);
 	shaders[0] = new Shader("Shaders/BasicVert.glsl", "Shaders/BasicFrag.glsl");
 	shaders[1] = new Shader("Shaders/SinExpandVert.glsl", "Shaders/BasicFrag.glsl");//A vertex shader which modulates the scale of objects over time, using a uniform variable.
@@ -93,8 +94,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 
 	TextureManager::getInstance().UnloadTextures();
+	MeshManager::getInstance().UnloadMeshes();
 
-	delete m;
 	for (unsigned int i = 0; i < shaders.size(); ++i)
 		delete shaders[i];
 

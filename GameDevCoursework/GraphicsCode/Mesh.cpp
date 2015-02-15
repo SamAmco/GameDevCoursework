@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_DEPRECATE
 #include "Mesh.h"
 #include <iostream>
 #include <vector>
@@ -155,8 +154,9 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 	vector<Vector2> temp_uvs;
 	vector<Vector3> temp_normals;
 
-	FILE* file = fopen(filename.c_str(), "r");
-	if (file == NULL)
+	FILE* file;
+	errno_t err = fopen_s(&file, filename.c_str(), "r");
+	if (err)
 	{
 		cout << "Impossible to open the file " << filename << "\n";
 		return NULL;
@@ -164,35 +164,36 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 
 	while (1)
 	{
-		char lineHeader[128];
+		const int arrSize = 128;
+		char lineHeader[arrSize];
 		// read the first word of the line
-		int res = fscanf(file, "%s", lineHeader);
+		int res = fscanf_s(file, "%s", lineHeader, arrSize);
 		if (res == EOF)
 			break;
 
 		if (strcmp(lineHeader, "v") == 0)
 		{
 			Vector3 vertex;
-			fscanf(file, "%f %f %f\n", &vertex.x, &vertex.y, &vertex.z);
+			fscanf_s(file, "%f %f %f\n", &vertex.x, &vertex.y, &vertex.z);
 			temp_vertices.push_back(vertex);
 		}
 		else if (strcmp(lineHeader, "vt") == 0)
 		{
 			Vector2 uv;
-			fscanf(file, "%f %f\n", &uv.x, &uv.y);
+			fscanf_s(file, "%f %f\n", &uv.x, &uv.y);
 			uv.y = 1.0f-uv.y;//This is a small hack to account for the fact that blender assumes a different texture origin
 			temp_uvs.push_back(uv);
 		}
 		else if (strcmp(lineHeader, "vn") == 0)
 		{
 			Vector3 normal;
-			fscanf(file, "%f %f %f\n", &normal.x, &normal.y, &normal.z);
+			fscanf_s(file, "%f %f %f\n", &normal.x, &normal.y, &normal.z);
 			temp_normals.push_back(normal);
 		}
 		else if (strcmp(lineHeader, "f") == 0)
 		{
 			unsigned int vertexIndex[3], uvIndex[3], normalIndex[3];
-			int matches = fscanf(file, "%d/%d/%d %d/%d/%d %d/%d/%d\n", &vertexIndex[0], &uvIndex[0],
+			int matches = fscanf_s(file, "%d/%d/%d %d/%d/%d %d/%d/%d\n", &vertexIndex[0], &uvIndex[0],
 				&normalIndex[0], &vertexIndex[1], &uvIndex[1], &normalIndex[1], &vertexIndex[2], &uvIndex[2], &normalIndex[2]);
 			if (matches != 9)
 			{
