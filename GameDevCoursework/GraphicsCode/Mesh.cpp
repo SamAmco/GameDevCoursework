@@ -168,9 +168,8 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 		// read the first word of the line
 		int res = fscanf(file, "%s", lineHeader);
 		if (res == EOF)
-			break; // EOF = End Of File. Quit the loop.
+			break;
 
-		// else : parse lineHeader
 		if (strcmp(lineHeader, "v") == 0)
 		{
 			Vector3 vertex;
@@ -181,6 +180,7 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 		{
 			Vector2 uv;
 			fscanf(file, "%f %f\n", &uv.x, &uv.y);
+			uv.y = 1.0f-uv.y;//This is a small hack to account for the fact that blender assumes a different texture origin
 			temp_uvs.push_back(uv);
 		}
 		else if (strcmp(lineHeader, "vn") == 0)
@@ -191,7 +191,6 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 		}
 		else if (strcmp(lineHeader, "f") == 0)
 		{
-			//string vertex1, vertex2, vertex3;
 			unsigned int vertexIndex[3], uvIndex[3], normalIndex[3];
 			int matches = fscanf(file, "%d/%d/%d %d/%d/%d %d/%d/%d\n", &vertexIndex[0], &uvIndex[0],
 				&normalIndex[0], &vertexIndex[1], &uvIndex[1], &normalIndex[1], &vertexIndex[2], &uvIndex[2], &normalIndex[2]);
