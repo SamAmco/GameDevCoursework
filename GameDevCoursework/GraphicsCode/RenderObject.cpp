@@ -24,18 +24,15 @@ RenderObject::~RenderObject(void)
 }
 
 
-void RenderObject::Update(float msec) {
-	if(parent) {
+void RenderObject::Update(float msec) 
+{
+	if(parent)
 		worldTransform = parent->modelMatrix * modelMatrix;
-		//worldTransform = modelMatrix * parent->modelMatrix;
-	}
-	else {
+	else
 		worldTransform = modelMatrix;
-	}
 
-	for(vector<RenderObject*>::const_iterator i = children.begin(); i != children.end(); ++i ) {
+	for(vector<RenderObject*>::const_iterator i = children.begin(); i != children.end(); ++i )
 		(*i)->Update(msec);
-	}
 }
 
 void RenderObject::Draw() const 
