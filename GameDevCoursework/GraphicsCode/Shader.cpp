@@ -147,10 +147,10 @@ bool	Shader::LoadShaderFile(string from, string &into)	{
 	
 	into[into.size() - 1] = '\n';
 
-	cout << into << endl << endl;
+	//cout << into << endl << endl;
 
 	file.close();
-	cout << "Loaded shader text!" << endl << endl;
+	//cout << "Loaded shader text!" << endl << endl;
 	return true;
 }
 
@@ -170,7 +170,7 @@ code, you can query information on why its failed using the 'info log', which
 will return a string telling you about what warnings and errors it found.
 */
 GLuint	Shader::GenerateShader(string from, GLenum type)	{
-	cout << "Compiling Shader " << from << endl;
+	//cout << "Compiling Shader " << from << endl;
 
 	string load;
 	if(!LoadShaderFile(from,load)) {
@@ -196,7 +196,7 @@ GLuint	Shader::GenerateShader(string from, GLenum type)	{
 		loadSuccess = false;
 		return false;
 	}
-	cout << "Compiling success!" << endl << endl;
+	//cout << "Compiling success!" << endl << endl;
 	return shader;
 }
 

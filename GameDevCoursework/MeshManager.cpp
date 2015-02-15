@@ -14,7 +14,7 @@ void MeshManager::UnloadMeshes()
 	while (i != loadedMeshes.end())
 	{
 		Mesh* m = i->second;
-		cout << "deleting " << i->first << "\n";
+		cout << "deleting mesh " << i->first << "\n";
 		delete m;
 		++i;
 	}

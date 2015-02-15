@@ -6,6 +6,7 @@
 #include "GraphicsCode\Renderer.h"
 #include "TextureManager.h"
 #include "MeshManager.h"
+#include "ShaderManager.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -29,14 +30,14 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	Mesh*	m = MeshManager::getInstance().LoadMesh("monkey.obj");
 	vector<Shader*> shaders = vector<Shader*>(8);
-	shaders[0] = new Shader("Shaders/BasicVert.glsl", "Shaders/BasicFrag.glsl");
-	shaders[1] = new Shader("Shaders/SinExpandVert.glsl", "Shaders/BasicFrag.glsl");//A vertex shader which modulates the scale of objects over time, using a uniform variable.
-	shaders[2] = new Shader("Shaders/BasicVert.glsl", "Shaders/TexBlendSineFrag.glsl");//A fragment shader which blends back and forth between two textures.
-	shaders[3] = new Shader("Shaders/BasicVert.glsl", "Shaders/BasicFrag.glsl", "Shaders/PosSineGeom.glsl");//A geometry shader using a position-based sine wave to move vertices.
-	shaders[4] = new Shader("Shaders/BasicVert.glsl", "Shaders/ThreeTexBlendFrag.glsl");//Perform a non-trivial blend between two textures, perhaps using a third, greyscale texture to determine blend levels.
-	shaders[5] = new Shader("Shaders/BasicVert.glsl", "Shaders/BasicFrag.glsl", "Shaders/WireframeGeom.glsl");//Take in the vertices of the cube, and output new primitives from them (points, lines, or triangles forming new cubes)
-	shaders[6] = new Shader("Shaders/PhongVert.glsl", "Shaders/PhongFrag.glsl");//Calculate per - fragment lighting(using light information accessed from uniform variables)
-	shaders[7] = new Shader("Shaders/BasicVert.glsl", "Shaders/TransparentWhiteFrag.glsl");//Make part of the cube semi-transparent, while still rendering correctly from all orientations
+	shaders[0] = ShaderManager::getInstance().LoadShader("BasicVert", "BasicFrag");
+	shaders[1] = ShaderManager::getInstance().LoadShader("SinExpandVert", "BasicFrag");//A vertex shader which modulates the scale of objects over time, using a uniform variable.
+	shaders[2] = ShaderManager::getInstance().LoadShader("BasicVert", "TexBlendSineFrag");//A fragment shader which blends back and forth between two textures.
+	shaders[3] = ShaderManager::getInstance().LoadShader("BasicVert", "BasicFrag", "PosSineGeom");//A geometry shader using a position-based sine wave to move vertices.
+	shaders[4] = ShaderManager::getInstance().LoadShader("BasicVert", "ThreeTexBlendFrag");//Perform a non-trivial blend between two textures, perhaps using a third, greyscale texture to determine blend levels.
+	shaders[5] = ShaderManager::getInstance().LoadShader("BasicVert", "BasicFrag", "WireframeGeom");//Take in the vertices of the cube, and output new primitives from them (points, lines, or triangles forming new cubes)
+	shaders[6] = ShaderManager::getInstance().LoadShader("PhongVert", "PhongFrag");//Calculate per - fragment lighting(using light information accessed from uniform variables)
+	shaders[7] = ShaderManager::getInstance().LoadShader("BasicVert", "TransparentWhiteFrag");//Make part of the cube semi-transparent, while still rendering correctly from all orientations
 	int shaderInd = 0;
 
 
@@ -95,9 +96,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	TextureManager::getInstance().UnloadTextures();
 	MeshManager::getInstance().UnloadMeshes();
-
-	for (unsigned int i = 0; i < shaders.size(); ++i)
-		delete shaders[i];
+	ShaderManager::getInstance().UnloadShaders();
 
 	return 0;
 }
