@@ -6,12 +6,12 @@
 #include "TextureManager.h"
 #include <SFML/OpenGL.hpp>
 #include <SFML/Window.hpp>
-
+#include "btBulletDynamicsCommon.h"
 
 Game::Game(Renderer& renderer)
 	: renderer(renderer)
 {
-	Mesh* m = MeshManager::getInstance().LoadMesh("monkey.obj");
+	Mesh* m = MeshManager::getInstance().LoadMesh("Meshes/monkey.obj");
 
 	shaders = vector<Shader*>(8);
 	shaders[0] = ShaderManager::getInstance().LoadShader("BasicVert", "BasicFrag");

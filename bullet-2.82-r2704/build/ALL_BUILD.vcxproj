@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{D04345DB-EF9E-4BCD-BCAA-EE458F5FDBEF}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeCCompiler.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindGLU.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\BulletConfig.cmake.in;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeCCompiler.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindGLU.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\BulletConfig.cmake.in;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeCCompiler.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindGLU.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\BulletConfig.cmake.in;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeCCompiler.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindGLU.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\BulletConfig.cmake.in;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BasicDemo/AppBasicDemo.vcxproj">
+      <Project>7396398E-53D0-4DD1-8258-11C3CBDF5048</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/Benchmarks/AppBenchmarks.vcxproj">
+      <Project>449CFE01-2D0A-4207-BC18-EEDBC9E88C57</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/Box2dDemo/AppBox2dDemo.vcxproj">
+      <Project>A3BEA45E-5187-45D2-B37D-4A139851CCAF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/CollisionInterfaceDemo/AppCollisionInterfaceDemo.vcxproj">
+      <Project>B4CBBE7B-E351-4798-AF29-DD17D2F66DB7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConcaveDemo/AppConcaveDemo.vcxproj">
+      <Project>B9125307-C4ED-43AC-8137-C076A82455B9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConstraintDemo/AppConstraintDemo.vcxproj">
+      <Project>E686FF5C-68AA-49F2-8BA6-A175D91D0EE5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/AppConvexDecompositionDemo.vcxproj">
+      <Project>A8BFAC2D-AD5E-4FF1-A4BA-D83A8282FE6F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/FeatherstoneMultiBodyDemo/AppFeatherstoneMultiBodyDemo.vcxproj">
+      <Project>18380FB4-CA47-4FBE-9D5E-055FA94E203B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/FractureDemo/AppFractureDemo.vcxproj">
+      <Project>1636633A-481E-48E6-8799-DB07A1C430F6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/GenericJointDemo/AppGenericJointDemo.vcxproj">
+      <Project>FEA03D1B-4157-468C-8A5F-DFDCD6C0FE21</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/GimpactTestDemo/AppGimpactTestDemo.vcxproj">
+      <Project>2FDE39F9-9F30-4C0D-A4F0-4CC27368991D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/GyroscopicDemo/AppGyroscopicDemo.vcxproj">
+      <Project>5C434A56-8CAF-4D56-93E0-C07A0FFC5881</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/HelloWorld/AppHelloWorld.vcxproj">
+      <Project>22D2BE8C-EA3B-4270-BE9E-3937721BC329</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/InternalEdgeDemo/AppInternalEdgeDemo.vcxproj">
+      <Project>32F9234C-EB66-4F07-BE6E-BDA75DC1BD22</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/RaytestDemo/AppRaytestDemo.vcxproj">
+      <Project>0305A07E-7460-4979-82DB-33A1B7B880F2</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/RollingFrictionDemo/AppRollingFrictionDemo.vcxproj">
+      <Project>19CABEDD-F138-4BE2-B098-40942053A9E3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/SerializeDemo/AppSerializeDemo.vcxproj">
+      <Project>D3F5DCBE-AF55-4F47-A13B-0E7ADD7A6966</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/VectorAdd_OpenCL/MiniCL/AppVectorAdd_Mini.vcxproj">
+      <Project>43253FA5-175C-457A-BD2C-3125B69B19BC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/VoronoiFractureDemo/AppVoronoiFractureDemo.vcxproj">
+      <Project>5CA2689F-05C3-490F-8B4B-E92457A7BAB3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/BulletCollision/BulletCollision.vcxproj">
+      <Project>CDA0BA1C-EA11-4496-A50F-66E8C76257F8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/BulletDynamics/BulletDynamics.vcxproj">
+      <Project>7EA915E3-6EC7-402D-9694-A0CFAE180DBB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletFileLoader/BulletFileLoader.vcxproj">
+      <Project>BB5455C9-1C68-4250-8D23-96F1FEDA85F4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/BulletMultiThreaded/BulletMultiThreaded.vcxproj">
+      <Project>8D134049-04C3-40AF-90C2-44803D8E2D84</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/BulletSoftBody/BulletSoftBody.vcxproj">
+      <Project>0859D9D5-1ADD-45AE-AD19-30EB99D1B83C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/MiniCL/BulletSoftBodySolvers_OpenCL_Mini.vcxproj">
+      <Project>58520BF0-CBD5-4ED6-8DF1-6ED9D0DBE539</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletWorldImporter/BulletWorldImporter.vcxproj">
+      <Project>275E2BD0-6372-42FF-9BD6-F0642B993236</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletXmlWorldImporter/BulletXmlWorldImporter.vcxproj">
+      <Project>D18FB247-2654-4482-B147-185E74151B39</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/ConvexDecomposition/ConvexDecomposition.vcxproj">
+      <Project>1AEC82AF-AF71-4239-AC64-8D134ABE641A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/GIMPACTUtils/GIMPACTUtils.vcxproj">
+      <Project>5A4B4834-753E-407D-8235-DC2884BF05A4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/HACD/HACD.vcxproj">
+      <Project>EC7B2775-7019-4A31-AD64-2F192F4B7CC9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/LinearMath/LinearMath.vcxproj">
+      <Project>BD1CBBD0-BEC8-4BE9-9321-B82647BE0CE6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/MiniCL/MiniCL.vcxproj">
+      <Project>67333BF1-B86C-4C50-800E-979F71975A8F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/OpenGL/OpenGLSupport.vcxproj">
+      <Project>D36C6FE6-30F7-4990-A1AA-E7DFABEF8E3E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/ZERO_CHECK.vcxproj">
+      <Project>4699BA3C-D306-4452-8923-79A9B8EF2868</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

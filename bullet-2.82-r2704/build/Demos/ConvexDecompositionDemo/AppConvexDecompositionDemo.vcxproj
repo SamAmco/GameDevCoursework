@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{A8BFAC2D-AD5E-4FF1-A4BA-D83A8282FE6F}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>AppConvexDecompositionDemo</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AppConvexDecompositionDemo.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AppConvexDecompositionDemo</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AppConvexDecompositionDemo.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AppConvexDecompositionDemo</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">AppConvexDecompositionDemo.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">AppConvexDecompositionDemo</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">AppConvexDecompositionDemo.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">AppConvexDecompositionDemo</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_DEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_DEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/SerializeDemo/testFile.bullet" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/testFile.bullet"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/file.obj" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\Debug\OpenGLSupport_Debug.lib;..\..\lib\Debug\BulletWorldImporter_Debug.lib;..\..\lib\Debug\BulletDynamics_Debug.lib;..\..\lib\Debug\BulletCollision_Debug.lib;..\..\lib\Debug\LinearMath_Debug.lib;..\..\lib\Debug\BulletFileLoader_Debug.lib;..\..\lib\Debug\HACD_Debug.lib;..\..\lib\Debug\ConvexDecomposition_Debug.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/Debug/AppConvexDecompositionDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/Debug/AppConvexDecompositionDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/SerializeDemo/testFile.bullet" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/testFile.bullet"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/file.obj" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\Release\OpenGLSupport.lib;..\..\lib\Release\BulletWorldImporter.lib;..\..\lib\Release\BulletDynamics.lib;..\..\lib\Release\BulletCollision.lib;..\..\lib\Release\LinearMath.lib;..\..\lib\Release\BulletFileLoader.lib;..\..\lib\Release\HACD.lib;..\..\lib\Release\ConvexDecomposition.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/Release/AppConvexDecompositionDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/Release/AppConvexDecompositionDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/SerializeDemo/testFile.bullet" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/testFile.bullet"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/file.obj" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\MinSizeRel\OpenGLSupport_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletWorldImporter_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletDynamics_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletCollision_MinsizeRel.lib;..\..\lib\MinSizeRel\LinearMath_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletFileLoader_MinsizeRel.lib;..\..\lib\MinSizeRel\HACD_MinsizeRel.lib;..\..\lib\MinSizeRel\ConvexDecomposition_MinsizeRel.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/MinSizeRel/AppConvexDecompositionDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/MinSizeRel/AppConvexDecompositionDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\HACD;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\ConvexDecomposition;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/SerializeDemo/testFile.bullet" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/testFile.bullet"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/file.obj" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\RelWithDebInfo\OpenGLSupport_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletWorldImporter_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletDynamics_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletCollision_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\LinearMath_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletFileLoader_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\HACD_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\ConvexDecomposition_RelWithDebugInfo.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/RelWithDebInfo/AppConvexDecompositionDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/ConvexDecompositionDemo/RelWithDebInfo/AppConvexDecompositionDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/ConvexDecompositionDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/ConvexDecompositionDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/ConvexDecompositionDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/ConvexDecompositionDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/ConvexDecompositionDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/ConvexDecompositionDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/ConvexDecompositionDemo/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/ConvexDecompositionDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\ConvexDecompositionDemo\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\ConvexDecompositionDemo.h" />
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL\Win32AppMain.cpp"  />
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\ConvexDecompositionDemo.cpp"  />
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\ConvexDecompositionDemo\Win32ConvexDecompositionDemo.cpp"  />
+    <ResourceCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\bullet.rc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/BulletCollision/BulletCollision.vcxproj">
+      <Project>CDA0BA1C-EA11-4496-A50F-66E8C76257F8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/BulletDynamics/BulletDynamics.vcxproj">
+      <Project>7EA915E3-6EC7-402D-9694-A0CFAE180DBB</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletFileLoader/BulletFileLoader.vcxproj">
+      <Project>BB5455C9-1C68-4250-8D23-96F1FEDA85F4</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletWorldImporter/BulletWorldImporter.vcxproj">
+      <Project>275E2BD0-6372-42FF-9BD6-F0642B993236</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/ConvexDecomposition/ConvexDecomposition.vcxproj">
+      <Project>1AEC82AF-AF71-4239-AC64-8D134ABE641A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/HACD/HACD.vcxproj">
+      <Project>EC7B2775-7019-4A31-AD64-2F192F4B7CC9</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/LinearMath/LinearMath.vcxproj">
+      <Project>BD1CBBD0-BEC8-4BE9-9321-B82647BE0CE6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/OpenGL/OpenGLSupport.vcxproj">
+      <Project>D36C6FE6-30F7-4990-A1AA-E7DFABEF8E3E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/ZERO_CHECK.vcxproj">
+      <Project>4699BA3C-D306-4452-8923-79A9B8EF2868</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

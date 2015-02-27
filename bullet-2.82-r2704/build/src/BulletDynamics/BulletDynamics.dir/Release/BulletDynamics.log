@@ -1,0 +1,77 @@
+﻿Build started 27/02/2015 18:04:11.
+     1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\src\BulletDynamics\BulletDynamics.vcxproj" on node 3 (Build target(s)).
+     1>CustomBuild:
+         Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/src/BulletDynamics/CMakeLists.txt
+         CMake does not need to re-run because C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\src\BulletDynamics\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D USE_GRAPHICAL_BENCHMARK /D _IRR_STATIC_LIB_ /D _CRT_SECURE_NO_WARNINGS /D _CRT_SECURE_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MDd /GS /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo"BulletDynamics.dir\Release\\" /Fd"BulletDynamics.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Character\btKinematicCharacterController.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btContactConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btFixedConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btGearConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btHinge2Constraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btHingeConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\ConstraintSolver\btUniversalConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Dynamics\btRigidBody.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Dynamics\btSimpleDynamicsWorld.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Dynamics\Bullet-C-API.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Vehicle\btRaycastVehicle.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Vehicle\btWheelInfo.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Featherstone\btMultiBody.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Featherstone\btMultiBodyConstraintSolver.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Featherstone\btMultiBodyDynamicsWorld.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Featherstone\btMultiBodyConstraint.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\Featherstone\btMultiBodyJointMotor.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\MLCPSolvers\btDantzigLCP.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\BulletDynamics\MLCPSolvers\btMLCPSolver.cpp"
+         btKinematicCharacterController.cpp
+         btConeTwistConstraint.cpp
+         btContactConstraint.cpp
+         btFixedConstraint.cpp
+         btGearConstraint.cpp
+         btGeneric6DofConstraint.cpp
+         btGeneric6DofSpringConstraint.cpp
+         btHinge2Constraint.cpp
+         btHingeConstraint.cpp
+         btPoint2PointConstraint.cpp
+         btSequentialImpulseConstraintSolver.cpp
+         btSliderConstraint.cpp
+         btSolve2LinearConstraint.cpp
+         btTypedConstraint.cpp
+         btUniversalConstraint.cpp
+         btDiscreteDynamicsWorld.cpp
+         btRigidBody.cpp
+         btSimpleDynamicsWorld.cpp
+         Bullet-C-API.cpp
+         btRaycastVehicle.cpp
+         Generating Code...
+         Compiling...
+         btWheelInfo.cpp
+         btMultiBody.cpp
+         btMultiBodyConstraintSolver.cpp
+         btMultiBodyDynamicsWorld.cpp
+         btMultiBodyJointLimitConstraint.cpp
+         btMultiBodyConstraint.cpp
+         btMultiBodyPoint2Point.cpp
+         btMultiBodyJointMotor.cpp
+         btDantzigLCP.cpp
+         btMLCPSolver.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\lib\Release\BulletDynamics.lib" /NOLOGO BulletDynamics.dir\Release\btKinematicCharacterController.obj
+         BulletDynamics.dir\Release\btConeTwistConstraint.obj
+         BulletDynamics.dir\Release\btContactConstraint.obj
+         BulletDynamics.dir\Release\btFixedConstraint.obj
+         BulletDynamics.dir\Release\btGearConstraint.obj
+         BulletDynamics.dir\Release\btGeneric6DofConstraint.obj
+         BulletDynamics.dir\Release\btGeneric6DofSpringConstraint.obj
+         BulletDynamics.dir\Release\btHinge2Constraint.obj
+         BulletDynamics.dir\Release\btHingeConstraint.obj
+         BulletDynamics.dir\Release\btPoint2PointConstraint.obj
+         BulletDynamics.dir\Release\btSequentialImpulseConstraintSolver.obj
+         BulletDynamics.dir\Release\btSliderConstraint.obj
+         BulletDynamics.dir\Release\btSolve2LinearConstraint.obj
+         BulletDynamics.dir\Release\btTypedConstraint.obj
+         BulletDynamics.dir\Release\btUniversalConstraint.obj
+         BulletDynamics.dir\Release\btDiscreteDynamicsWorld.obj
+         BulletDynamics.dir\Release\btRigidBody.obj
+         BulletDynamics.dir\Release\btSimpleDynamicsWorld.obj
+         "BulletDynamics.dir\Release\Bullet-C-API.obj"
+         BulletDynamics.dir\Release\btRaycastVehicle.obj
+         BulletDynamics.dir\Release\btWheelInfo.obj
+         BulletDynamics.dir\Release\btMultiBody.obj
+         BulletDynamics.dir\Release\btMultiBodyConstraintSolver.obj
+         BulletDynamics.dir\Release\btMultiBodyDynamicsWorld.obj
+         BulletDynamics.dir\Release\btMultiBodyJointLimitConstraint.obj
+         BulletDynamics.dir\Release\btMultiBodyConstraint.obj
+         BulletDynamics.dir\Release\btMultiBodyPoint2Point.obj
+         BulletDynamics.dir\Release\btMultiBodyJointMotor.obj
+         BulletDynamics.dir\Release\btDantzigLCP.obj
+         BulletDynamics.dir\Release\btMLCPSolver.obj
+         BulletDynamics.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\lib\Release\BulletDynamics.lib
+     1>Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\src\BulletDynamics\BulletDynamics.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:23.33

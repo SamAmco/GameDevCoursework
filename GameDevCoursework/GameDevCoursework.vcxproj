@@ -52,7 +52,8 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;GLEW_STATIC;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GLEW\include;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include\GL;C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GLEW\include;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include\GL;C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -70,7 +71,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;GLEW_STATIC;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GLEW\include;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include\GL;C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GLEW\include;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include\GL;C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,6 +145,17 @@
     </ClCompile>
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bullet-2.82-r2704\build\src\BulletCollision\BulletCollision.vcxproj">
+      <Project>{cda0ba1c-ea11-4496-a50f-66e8c76257f8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\bullet-2.82-r2704\build\src\BulletDynamics\BulletDynamics.vcxproj">
+      <Project>{7ea915e3-6ec7-402d-9694-a0cfae180dbb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\bullet-2.82-r2704\build\src\LinearMath\LinearMath.vcxproj">
+      <Project>{bd1cbbd0-bec8-4be9-9321-b82647be0ce6}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
