@@ -17,7 +17,7 @@ public:
 		return instance;
 	}
 
-	Mesh* LoadMesh(string);
+	Mesh* LoadMesh(const string);
 	void UnloadMeshes();
 
 	~MeshManager();

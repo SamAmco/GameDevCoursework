@@ -145,7 +145,7 @@ Mesh* Mesh::GenerateQuad()
 	return m;
 }
 
-Mesh*	Mesh::LoadMeshFile(const string &filename) 
+Mesh*	Mesh::LoadMeshFile(const string &filename)
 {
 	using namespace std;
 
@@ -218,25 +218,20 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 	m->textureCoords = new Vector2[m->numVertices];
 	m->normals = new Vector3[m->numVertices];
 
-	for (unsigned int i = 0; i < vertexIndices.size(); i++)
+	for (unsigned int i = 0; i < vertexIndices.size(); ++i)
 	{
 		unsigned int vertexIndex = vertexIndices[i];
 		Vector3 vertex = temp_vertices[vertexIndex - 1];
 		m->vertices[i] = vertex;
-	}
 
-	for (unsigned int i = 0; i < uvIndices.size(); i++)
-	{
 		unsigned int uvIndex = uvIndices[i];
 		Vector2 uv = temp_uvs[uvIndex - 1];
 		m->textureCoords[i] = uv;
-	}
 
-	for (unsigned int i = 0; i < normalIndices.size(); i++)
-	{
 		unsigned int normalIndex = normalIndices[i];
 		Vector3 normal = temp_normals[normalIndex - 1];
 		m->normals[i] = normal;
+
 	}
 
 	m->BufferData();

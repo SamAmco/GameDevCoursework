@@ -1,5 +1,7 @@
 #pragma once
 #include "GraphicsCode\Renderer.h"
+#include "btBulletDynamicsCommon.h"
+
 
 class Game
 {
@@ -9,8 +11,15 @@ public:
 	void Update(sf::Event event, float msec);
 
 	~Game();
-private:
+
+private:	
+	void initializeGraphics();
+	void initializePhysics();
+
 	Renderer& renderer;
+
+	btDiscreteDynamicsWorld* dynamicsWorld;
+	btRigidBody* sphereRigidBody;
 
 	vector<Shader*> shaders;
 	int shaderInd;
