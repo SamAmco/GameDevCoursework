@@ -13,17 +13,17 @@ void Player::initializeGraphics(const Vector3& position)
 { 
 	Mesh* m = MeshManager::getInstance().LoadMesh("Meshes/sphere.obj");
 	Shader* shader = ShaderManager::getInstance().LoadShader("PhongVert", "PhongFrag");
-	renderObject = RenderObject(m, shader);
-	renderObject.AddTexture(TextureManager::getInstance().LoadTexture("Textures/smiley.png"));
-	renderObject.SetModelMatrix(Matrix4::Translation(position));
+	renderObject = new RenderObject(m, shader);
+	renderObject->AddTexture(TextureManager::getInstance().LoadTexture("Textures/smiley.png"));
+	renderObject->SetModelMatrix(Matrix4::Translation(position));
 	renderer.AddRenderObject(renderObject);
 }
 
 void Player::initializePhysics(const Vector3& position)
 {
-	btCollisionShape* shpereShape = new btSphereShape(1);
+	shpereShape = new btSphereShape(1);
 
-	btDefaultMotionState* sphereMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1),
+	sphereMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1),
 		btVector3(position.x, position.y, position.z)));
 	
 	btScalar mass = 1;
@@ -37,13 +37,26 @@ void Player::initializePhysics(const Vector3& position)
 
 void Player::Update(sf::Event& event, float msec)
 {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+		sphereRigidBody->applyTorque(btVector3(-1, 0, 0));
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+		sphereRigidBody->applyTorque(btVector3(1, 0, 0));
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+		sphereRigidBody->applyTorque(btVector3(0, 0, 1));
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+		sphereRigidBody->applyTorque(btVector3(0, 0, -1));
+
 	btTransform trans;
 	sphereRigidBody->getMotionState()->getWorldTransform(trans);
-	//cout << Matrix4(trans) << endl;
-	renderObject.SetModelMatrix(trans);
+	cout << Matrix4(trans) << endl;
+	renderObject->SetModelMatrix(trans);
 }
 
 Player::~Player()
 {
+	renderer.RemoveRenderObject(renderObject);
+	delete renderObject;
+	delete shpereShape;
+	delete sphereMotionState;
 }
 

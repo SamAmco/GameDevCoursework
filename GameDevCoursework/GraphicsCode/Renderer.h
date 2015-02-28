@@ -32,9 +32,20 @@ public:
 
 	virtual void	UpdateScene(float msec);
 
-	void	AddRenderObject(RenderObject &r) 
+	void	AddRenderObject(RenderObject* r) 
 	{
-		renderObjects.push_back(&r);
+		renderObjects.push_back(r);
+	}
+	void RemoveRenderObject(RenderObject* r)
+	{
+		for (auto ro = renderObjects.begin(); ro != renderObjects.end(); ro++)
+		{
+			if (*ro == r)
+			{
+				renderObjects.erase(ro);
+				break;
+			}
+		}
 	}
 	void	SetProjectionMatrix(Matrix4 m)
 	{

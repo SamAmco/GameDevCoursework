@@ -4,7 +4,7 @@
 #include "TextureManager.h"
 #include "ShaderManager.h"
 #include "btBulletDynamicsCommon.h"
-
+#include <SFML/Window.hpp>
 
 
 class Player
@@ -19,7 +19,10 @@ private:
 	void initializeGraphics(const Vector3& position);
 	void initializePhysics(const Vector3& position);
 
-	RenderObject renderObject;
+	btCollisionShape* shpereShape;
+	btDefaultMotionState* sphereMotionState;
+
+	RenderObject* renderObject;
 	Renderer& renderer;
 	btDiscreteDynamicsWorld* dynamicsWorld;
 	btRigidBody* sphereRigidBody;

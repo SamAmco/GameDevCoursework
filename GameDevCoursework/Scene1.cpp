@@ -41,14 +41,12 @@ void Scene1::initializePhysics()
 	dynamicsWorld->addRigidBody(groundRigidBody);
 
 	player = new Player(renderer, dynamicsWorld, Vector3(0, 2, -10));
-	player2 = new Player(renderer, dynamicsWorld, Vector3(-1, 3, -10));
 }
 
 void Scene1::Update(sf::Event event, float msec)
 {
 	dynamicsWorld->stepSimulation(msec);
 	player->Update(event, msec);
-	player2->Update(event, msec);
 }
 
 Scene1::~Scene1()
@@ -62,5 +60,4 @@ Scene1::~Scene1()
 	delete groundRigidBody;
 	delete solver;
 	delete player;
-	delete player2;
 }
