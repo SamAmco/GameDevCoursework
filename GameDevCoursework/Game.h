@@ -1,6 +1,8 @@
 #pragma once
 #include "GraphicsCode\Renderer.h"
-#include "btBulletDynamicsCommon.h"
+#include <SFML/OpenGL.hpp>
+#include <SFML/Window.hpp>
+#include "Scene1.h"
 
 
 class Game
@@ -12,20 +14,8 @@ public:
 
 	~Game();
 
-private:	
-	void initializeGraphics();
-	void initializePhysics();
-
-	Renderer& renderer;
-
-	btDiscreteDynamicsWorld* dynamicsWorld;
-	btRigidBody* sphereRigidBody;
-
-	vector<Shader*> shaders;
-	int shaderInd;
-	RenderObject o;
-	Vector3 lightCol;
-	Vector3 lightPos;
-	float lightRad;
+private:
+	Renderer& renderer; 
+	Scene* currentScene;
 };
 

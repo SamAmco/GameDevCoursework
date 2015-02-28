@@ -14,8 +14,8 @@ Renderer::Renderer()
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
-Renderer::~Renderer(void)	{
-	 
+Renderer::~Renderer(void)	
+{
 }
 
 void	Renderer::RenderScene() 

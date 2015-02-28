@@ -13,6 +13,32 @@ Matrix4::~Matrix4(void)	{
 	ToIdentity();
 }
 
+Matrix4::Matrix4(btTransform& trans)
+{
+	btMatrix3x3 btMat = trans.getBasis();
+	btVector3 orig = trans.getOrigin();
+
+	values[0] = btMat[0].getX();
+	values[1] = btMat[1].getX();
+	values[2] = btMat[2].getX();
+	values[3] = 0;
+	
+	values[4] = btMat[0].getY();
+	values[5] = btMat[1].getY();
+	values[6] = btMat[2].getY();
+	values[7] = 0;
+
+	values[8] = btMat[0].getZ();
+	values[9] = btMat[1].getZ();
+	values[10] = btMat[2].getZ();
+	values[11] = 0;
+
+	values[12] = orig.getX();
+	values[13] = orig.getY();
+	values[14] = orig.getZ();
+	values[15] = 1;
+}
+
 void Matrix4::ToIdentity() {
 	ToZero();
 	values[0]  = 1.0f;

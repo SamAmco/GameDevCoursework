@@ -18,6 +18,7 @@ _-_-_-_-_-_-_-""  ""
 #include <iostream>
 #include "Vector3.h"
 #include "Vector4.h"
+#include "LinearMath\btTransform.h"
 
 class Vector3;
 
@@ -25,6 +26,7 @@ class Matrix4	{
 public:
 	Matrix4(void);
 	Matrix4(float elements[16]);
+	Matrix4(btTransform& trans);
 	~Matrix4(void);
 
 	float	values[16];
