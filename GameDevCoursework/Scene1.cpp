@@ -49,7 +49,7 @@ void Scene1::Update(sf::Event event, float msec)
 	//cout << msec << endl;
 	player->Update(event, msec);
 	dynamicsWorld->stepSimulation(msec);
-	cout << Vector3(player->sphereRigidBody->getAngularVelocity()) << endl;
+	//cout << Vector3(player->sphereRigidBody->getAngularVelocity()) << endl;
 	//player2->Update(event, msec);
 }
 

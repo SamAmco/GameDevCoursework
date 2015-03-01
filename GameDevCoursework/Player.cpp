@@ -32,12 +32,13 @@ void Player::initializePhysics(const Vector3& position)
 	shpereShape->calculateLocalInertia(mass, sphereInertia);
 	btRigidBody::btRigidBodyConstructionInfo sphereRigidBodyCI(mass, sphereMotionState, shpereShape, sphereInertia);
 	sphereRigidBody = new btRigidBody(sphereRigidBodyCI);
+	sphereRigidBody->setActivationState(DISABLE_DEACTIVATION);
 	dynamicsWorld->addRigidBody(sphereRigidBody);
 }
 
 void Player::Update(sf::Event& event, float msec)
 {
-	cout << Vector3(sphereRigidBody->getAngularVelocity()) << " : ";
+	//cout << Vector3(sphereRigidBody->getAngularVelocity()) << " : ";
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 		sphereRigidBody->applyTorqueImpulse(btVector3(-1, 0, 0));
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
@@ -49,8 +50,10 @@ void Player::Update(sf::Event& event, float msec)
 
 	btTransform trans;
 	sphereRigidBody->getMotionState()->getWorldTransform(trans);
+	cout << sphereRigidBody->getActivationState() << endl;
+	//sphereRigidBody->forceActivationState(ActivationState)
 	//cout << Matrix4(trans) << endl;
-	cout << Vector3(sphereRigidBody->getAngularVelocity()) << " : ";
+	//cout << Vector3(sphereRigidBody->getAngularVelocity()) << " : ";
 	renderObject->SetModelMatrix(trans);
 }
 
