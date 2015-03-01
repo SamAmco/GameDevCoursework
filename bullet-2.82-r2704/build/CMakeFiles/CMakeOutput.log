@@ -10,8 +10,8 @@ Microsoft (R) Build Engine version 12.0.30723.0
 [Microsoft .NET Framework, version 4.0.30319.34209]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 27/02/2015 16:26:30.
-Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+Build started 01/03/2015 15:45:56.
+Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdC.tlog\".
@@ -22,7 +22,7 @@ ClCompile:
   CMakeCCompilerId.c
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdC\.\CompilerIdC.exe
+  CompilerIdC.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdC\.\CompilerIdC.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
@@ -30,20 +30,20 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.53
+Time Elapsed 00:00:01.23
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/3.2.0-rc2/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/3.2.0-rc2/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
@@ -56,8 +56,8 @@ Microsoft (R) Build Engine version 12.0.30723.0
 [Microsoft .NET Framework, version 4.0.30319.34209]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 27/02/2015 16:26:32.
-Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+Build started 01/03/2015 15:45:58.
+Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdCXX.tlog\".
@@ -68,7 +68,7 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdCXX\.\CompilerIdCXX.exe
+  CompilerIdCXX.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdCXX\.\CompilerIdCXX.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -76,216 +76,216 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\3.2.0-rc2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.93
+Time Elapsed 00:00:00.96
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/3.2.0-rc2/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/3.2.0-rc2/CompilerIdCXX/CompilerIdCXX.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec1658721814.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec1179771319.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
 Microsoft (R) Build Engine version 12.0.30723.0
 [Microsoft .NET Framework, version 4.0.30319.34209]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 27/02/2015 16:26:33.
-Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec1658721814.vcxproj" on node 1 (default targets).
+Build started 01/03/2015 15:46:00.
+Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec1179771319.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTryCompileExec1658721814.dir\Debug\".
-  Creating directory "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTryCompileExec1658721814.dir\Debug\cmTryCom.9D04CDA3.tlog\".
+  Creating directory "cmTryCompileExec1179771319.dir\Debug\".
+  Creating directory "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTryCompileExec1179771319.dir\Debug\cmTryCom.0A5960FC.tlog\".
 InitializeBuildStatus:
-  Creating "cmTryCompileExec1658721814.dir\Debug\cmTryCom.9D04CDA3.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTryCompileExec1179771319.dir\Debug\cmTryCom.0A5960FC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec1658721814.dir\Debug\\" /Fd"cmTryCompileExec1658721814.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec1179771319.dir\Debug\\" /Fd"cmTryCompileExec1179771319.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\testCCompiler.c"
   Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30723 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec1658721814.dir\Debug\\" /Fd"cmTryCompileExec1658721814.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\testCCompiler.c"
-  testCCompiler.c
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec1179771319.dir\Debug\\" /Fd"cmTryCompileExec1179771319.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\testCCompiler.c"
   
+  testCCompiler.c
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1658721814.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1658721814.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1658721814.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec1658721814.dir\Debug\testCCompiler.obj
-  cmTryCompileExec1658721814.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1658721814.exe
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1179771319.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1179771319.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1179771319.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec1179771319.dir\Debug\testCCompiler.obj
+  cmTryCompileExec1179771319.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1179771319.exe
 FinalizeBuildStatus:
-  Deleting file "cmTryCompileExec1658721814.dir\Debug\cmTryCom.9D04CDA3.tlog\unsuccessfulbuild".
-  Touching "cmTryCompileExec1658721814.dir\Debug\cmTryCom.9D04CDA3.tlog\cmTryCompileExec1658721814.lastbuildstate".
-Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec1658721814.vcxproj" (default targets).
+  Deleting file "cmTryCompileExec1179771319.dir\Debug\cmTryCom.0A5960FC.tlog\unsuccessfulbuild".
+  Touching "cmTryCompileExec1179771319.dir\Debug\cmTryCom.0A5960FC.tlog\cmTryCompileExec1179771319.lastbuildstate".
+Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec1179771319.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.23
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec3786919417.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine version 12.0.30723.0
+[Microsoft .NET Framework, version 4.0.30319.34209]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 01/03/2015 15:46:01.
+Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec3786919417.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec3786919417.dir\Debug\".
+  Creating directory "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTryCompileExec3786919417.dir\Debug\cmTryCom.D1FD05E2.tlog\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec3786919417.dir\Debug\cmTryCom.D1FD05E2.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3786919417.dir\Debug\\" /Fd"cmTryCompileExec3786919417.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30723 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3786919417.dir\Debug\\" /Fd"cmTryCompileExec3786919417.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c"
+  
+  CMakeCCompilerABI.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3786919417.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3786919417.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3786919417.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec3786919417.dir\Debug\CMakeCCompilerABI.obj
+  cmTryCompileExec3786919417.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3786919417.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec3786919417.dir\Debug\cmTryCom.D1FD05E2.tlog\unsuccessfulbuild".
+  Touching "cmTryCompileExec3786919417.dir\Debug\cmTryCom.D1FD05E2.tlog\cmTryCompileExec3786919417.lastbuildstate".
+Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec3786919417.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.07
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec1393669428.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine version 12.0.30723.0
+[Microsoft .NET Framework, version 4.0.30319.34209]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 01/03/2015 15:46:03.
+Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec1393669428.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec1393669428.dir\Debug\".
+  Creating directory "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTryCompileExec1393669428.dir\Debug\cmTryCom.DFEEC52D.tlog\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec1393669428.dir\Debug\cmTryCom.DFEEC52D.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1393669428.dir\Debug\\" /Fd"cmTryCompileExec1393669428.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30723 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1393669428.dir\Debug\\" /Fd"cmTryCompileExec1393669428.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  
+  testCXXCompiler.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1393669428.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1393669428.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1393669428.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec1393669428.dir\Debug\testCXXCompiler.obj
+  cmTryCompileExec1393669428.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1393669428.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec1393669428.dir\Debug\cmTryCom.DFEEC52D.tlog\unsuccessfulbuild".
+  Touching "cmTryCompileExec1393669428.dir\Debug\cmTryCom.DFEEC52D.tlog\cmTryCompileExec1393669428.lastbuildstate".
+Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec1393669428.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.07
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec1784236052.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine version 12.0.30723.0
+[Microsoft .NET Framework, version 4.0.30319.34209]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 01/03/2015 15:46:04.
+Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec1784236052.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec1784236052.dir\Debug\".
+  Creating directory "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTryCompileExec1784236052.dir\Debug\cmTryCom.B1ABB53E.tlog\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec1784236052.dir\Debug\cmTryCom.B1ABB53E.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1784236052.dir\Debug\\" /Fd"cmTryCompileExec1784236052.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp"
+  Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30723 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1784236052.dir\Debug\\" /Fd"cmTryCompileExec1784236052.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp"
+  
+  CMakeCXXCompilerABI.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1784236052.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1784236052.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1784236052.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec1784236052.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTryCompileExec1784236052.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1784236052.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec1784236052.dir\Debug\cmTryCom.B1ABB53E.tlog\unsuccessfulbuild".
+  Touching "cmTryCompileExec1784236052.dir\Debug\cmTryCom.B1ABB53E.tlog\cmTryCompileExec1784236052.lastbuildstate".
+Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec1784236052.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.18
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec342897712.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine version 12.0.30723.0
+[Microsoft .NET Framework, version 4.0.30319.34209]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 01/03/2015 15:46:06.
+Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec342897712.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec342897712.dir\Debug\".
+  Creating directory "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTryCompileExec342897712.dir\Debug\cmTryCom.E13F145A.tlog\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec342897712.dir\Debug\cmTryCom.E13F145A.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec342897712.dir\Debug\\" /Fd"cmTryCompileExec342897712.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\feature_tests.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30723 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec342897712.dir\Debug\\" /Fd"cmTryCompileExec342897712.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\feature_tests.cxx"
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec342897712.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec342897712.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec342897712.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec342897712.dir\Debug\feature_tests.obj
+  cmTryCompileExec342897712.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec342897712.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec342897712.dir\Debug\cmTryCom.E13F145A.tlog\unsuccessfulbuild".
+  Touching "cmTryCompileExec342897712.dir\Debug\cmTryCom.E13F145A.tlog\cmTryCompileExec342897712.lastbuildstate".
+Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec342897712.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
 Time Elapsed 00:00:01.21
-
-
-Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec643779524.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
-Microsoft (R) Build Engine version 12.0.30723.0
-[Microsoft .NET Framework, version 4.0.30319.34209]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 27/02/2015 16:26:34.
-Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec643779524.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTryCompileExec643779524.dir\Debug\".
-  Creating directory "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTryCompileExec643779524.dir\Debug\cmTryCom.4735A06A.tlog\".
-InitializeBuildStatus:
-  Creating "cmTryCompileExec643779524.dir\Debug\cmTryCom.4735A06A.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec643779524.dir\Debug\\" /Fd"cmTryCompileExec643779524.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c"
-  Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30723 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec643779524.dir\Debug\\" /Fd"cmTryCompileExec643779524.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c"
-  CMakeCCompilerABI.c
-  
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec643779524.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec643779524.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec643779524.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec643779524.dir\Debug\CMakeCCompilerABI.obj
-  cmTryCompileExec643779524.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec643779524.exe
-FinalizeBuildStatus:
-  Deleting file "cmTryCompileExec643779524.dir\Debug\cmTryCom.4735A06A.tlog\unsuccessfulbuild".
-  Touching "cmTryCompileExec643779524.dir\Debug\cmTryCom.4735A06A.tlog\cmTryCompileExec643779524.lastbuildstate".
-Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec643779524.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:00.95
-
-
-Determining if the CXX compiler works passed with the following output:
-Change Dir: C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec353514202.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
-Microsoft (R) Build Engine version 12.0.30723.0
-[Microsoft .NET Framework, version 4.0.30319.34209]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 27/02/2015 16:26:36.
-Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec353514202.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTryCompileExec353514202.dir\Debug\".
-  Creating directory "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTryCompileExec353514202.dir\Debug\cmTryCom.D7532681.tlog\".
-InitializeBuildStatus:
-  Creating "cmTryCompileExec353514202.dir\Debug\cmTryCom.D7532681.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec353514202.dir\Debug\\" /Fd"cmTryCompileExec353514202.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
-  Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30723 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec353514202.dir\Debug\\" /Fd"cmTryCompileExec353514202.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
-  testCXXCompiler.cxx
-  
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec353514202.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec353514202.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec353514202.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec353514202.dir\Debug\testCXXCompiler.obj
-  cmTryCompileExec353514202.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec353514202.exe
-FinalizeBuildStatus:
-  Deleting file "cmTryCompileExec353514202.dir\Debug\cmTryCom.D7532681.tlog\unsuccessfulbuild".
-  Touching "cmTryCompileExec353514202.dir\Debug\cmTryCom.D7532681.tlog\cmTryCompileExec353514202.lastbuildstate".
-Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec353514202.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:01.01
-
-
-Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec2511627149.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
-Microsoft (R) Build Engine version 12.0.30723.0
-[Microsoft .NET Framework, version 4.0.30319.34209]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 27/02/2015 16:26:37.
-Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec2511627149.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTryCompileExec2511627149.dir\Debug\".
-  Creating directory "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTryCompileExec2511627149.dir\Debug\cmTryCom.2E95C82C.tlog\".
-InitializeBuildStatus:
-  Creating "cmTryCompileExec2511627149.dir\Debug\cmTryCom.2E95C82C.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2511627149.dir\Debug\\" /Fd"cmTryCompileExec2511627149.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp"
-  Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30723 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2511627149.dir\Debug\\" /Fd"cmTryCompileExec2511627149.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp"
-  CMakeCXXCompilerABI.cpp
-  
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2511627149.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2511627149.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2511627149.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec2511627149.dir\Debug\CMakeCXXCompilerABI.obj
-  cmTryCompileExec2511627149.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec2511627149.exe
-FinalizeBuildStatus:
-  Deleting file "cmTryCompileExec2511627149.dir\Debug\cmTryCom.2E95C82C.tlog\unsuccessfulbuild".
-  Touching "cmTryCompileExec2511627149.dir\Debug\cmTryCom.2E95C82C.tlog\cmTryCompileExec2511627149.lastbuildstate".
-Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec2511627149.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:01.06
-
-
-
-
-Detecting CXX [] compiler features compiled with the following output:
-Change Dir: C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec3495270737.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
-Microsoft (R) Build Engine version 12.0.30723.0
-[Microsoft .NET Framework, version 4.0.30319.34209]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 27/02/2015 16:26:38.
-Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec3495270737.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTryCompileExec3495270737.dir\Debug\".
-  Creating directory "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTryCompileExec3495270737.dir\Debug\cmTryCom.10C455F4.tlog\".
-InitializeBuildStatus:
-  Creating "cmTryCompileExec3495270737.dir\Debug\cmTryCom.10C455F4.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3495270737.dir\Debug\\" /Fd"cmTryCompileExec3495270737.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\feature_tests.cxx"
-  Microsoft (R) C/C++ Optimizing Compiler Version 18.00.30723 for x86
-  Copyright (C) Microsoft Corporation.  All rights reserved.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3495270737.dir\Debug\\" /Fd"cmTryCompileExec3495270737.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\feature_tests.cxx"
-  feature_tests.cxx
-  
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3495270737.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3495270737.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3495270737.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec3495270737.dir\Debug\feature_tests.obj
-  cmTryCompileExec3495270737.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3495270737.exe
-FinalizeBuildStatus:
-  Deleting file "cmTryCompileExec3495270737.dir\Debug\cmTryCom.10C455F4.tlog\unsuccessfulbuild".
-  Touching "cmTryCompileExec3495270737.dir\Debug\cmTryCom.10C455F4.tlog\cmTryCompileExec3495270737.lastbuildstate".
-Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\CMakeTmp\cmTryCompileExec3495270737.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:00.99
 
 
     Feature record: CXX_FEATURE:1cxx_alias_templates

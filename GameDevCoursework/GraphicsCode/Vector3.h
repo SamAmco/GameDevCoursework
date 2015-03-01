@@ -13,11 +13,19 @@ _-_-_-_-_-_-_-""  ""
 */
 #include <cmath>
 #include <iostream>
+#include "LinearMath\btVector3.h"
 
 class Vector3	{
 public:
 	Vector3(void) {
 		ToZero();
+	}
+
+	Vector3(const btVector3& vec)
+	{
+		this->x = vec.getX();
+		this->y = vec.getY();
+		this->z = vec.getZ();
 	}
 
 	Vector3(const float x, const float y, const float z) {

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704
+# Install script for directory: C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,16 +29,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/bullet" TYPE FILE FILES
-    "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/UseBullet.cmake"
-    "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/BulletConfig.cmake"
+    "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/UseBullet.cmake"
+    "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/BulletConfig.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/cmake_install.cmake")
-  include("C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/cmake_install.cmake")
-  include("C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/cmake_install.cmake")
+  include("C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/cmake_install.cmake")
+  include("C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Extras/cmake_install.cmake")
+  include("C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/src/cmake_install.cmake")
 
 endif()
 
@@ -48,7 +48,7 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-file(WRITE "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/${CMAKE_INSTALL_MANIFEST}" "")
+file(WRITE "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/${CMAKE_INSTALL_MANIFEST}" "")
 foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  file(APPEND "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  file(APPEND "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 endforeach()

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Extras/Serialize
+# Install script for directory: C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Extras/Serialize
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,9 +29,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletFileLoader/cmake_install.cmake")
-  include("C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletXmlWorldImporter/cmake_install.cmake")
-  include("C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletWorldImporter/cmake_install.cmake")
+  include("C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Extras/Serialize/BulletFileLoader/cmake_install.cmake")
+  include("C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Extras/Serialize/BulletXmlWorldImporter/cmake_install.cmake")
+  include("C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Extras/Serialize/BulletWorldImporter/cmake_install.cmake")
 
 endif()
 

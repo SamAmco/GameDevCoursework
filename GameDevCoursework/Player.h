@@ -14,6 +14,7 @@ public:
 	~Player();
 
 	void Update(sf::Event& event, float msec);
+	btRigidBody* sphereRigidBody;
 
 private:
 	void initializeGraphics(const Vector3& position);
@@ -25,6 +26,7 @@ private:
 	RenderObject* renderObject;
 	Renderer& renderer;
 	btDiscreteDynamicsWorld* dynamicsWorld;
-	btRigidBody* sphereRigidBody;
+
+	//const float
 };
 

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{5FA8B427-8BDD-4E56-8860-95144382F8BA}</ProjectGUID>
+    <ProjectGUID>{933C2725-EC85-4330-814E-4CB2954FFFA6}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>INSTALL</ProjectName>
@@ -65,7 +65,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -87,7 +87,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -109,7 +109,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -131,7 +131,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -152,7 +152,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\CMakeFiles\2e4c04a9d4feddd747c1fb85bfd743e0\INSTALL_force.rule">
+    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\CMakeFiles\ec12746c2d887209c281c965d8ab48fb\INSTALL_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd .
@@ -163,8 +163,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/2e4c04a9d4feddd747c1fb85bfd743e0/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BspDemo\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/ec12746c2d887209c281c965d8ab48fb/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BspDemo\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
@@ -176,8 +176,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/2e4c04a9d4feddd747c1fb85bfd743e0/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BspDemo\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/ec12746c2d887209c281c965d8ab48fb/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BspDemo\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
@@ -189,8 +189,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/2e4c04a9d4feddd747c1fb85bfd743e0/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BspDemo\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/ec12746c2d887209c281c965d8ab48fb/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BspDemo\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
@@ -202,14 +202,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/CMakeFiles/2e4c04a9d4feddd747c1fb85bfd743e0/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BspDemo\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/CMakeFiles/ec12746c2d887209c281c965d8ab48fb/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BspDemo\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/ALL_BUILD.vcxproj">
-      <Project>D04345DB-EF9E-4BCD-BCAA-EE458F5FDBEF</Project>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/ALL_BUILD.vcxproj">
+      <Project>EC2BBF63-7071-4272-98F8-99649CAB4F00</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

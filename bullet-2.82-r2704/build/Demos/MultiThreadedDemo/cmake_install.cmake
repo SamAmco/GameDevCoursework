@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/MultiThreadedDemo
+# Install script for directory: C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/MultiThreadedDemo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

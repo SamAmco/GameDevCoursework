@@ -1,30 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL\Win32AppMain.cpp">
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\InternalEdgeDemo\InternalEdgeDemo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\InternalEdgeDemo\InternalEdgeDemo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\InternalEdgeDemo\Win32InternalEdgeDemo.cpp">
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\InternalEdgeDemo\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\InternalEdgeDemo\InternalEdgeDemo.h">
+    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\InternalEdgeDemo\InternalEdgeDemo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\InternalEdgeDemo\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\InternalEdgeDemo\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{49FDC753-E704-40A8-A124-05A4F9A580E3}</UniqueIdentifier>
+      <UniqueIdentifier>{F52E671F-80A8-441D-B3D6-9C8558A60BCC}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{B567001C-0D4B-45DA-9EA0-62DD5B1730AD}</UniqueIdentifier>
+      <UniqueIdentifier>{E5CB9F7D-F7F0-430E-A4AE-6871327B196F}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

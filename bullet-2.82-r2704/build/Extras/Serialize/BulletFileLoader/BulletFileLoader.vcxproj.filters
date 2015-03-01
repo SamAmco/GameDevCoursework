@@ -1,48 +1,48 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bChunk.cpp">
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bChunk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bDNA.cpp">
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bDNA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bFile.cpp">
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\btBulletFile.cpp">
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\btBulletFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bChunk.h">
+    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bChunk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bCommon.h">
+    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bCommon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bDefines.h">
+    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bDefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bDNA.h">
+    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bDNA.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bFile.h">
+    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\bFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\btBulletFile.h">
+    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\btBulletFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{49FDC753-E704-40A8-A124-05A4F9A580E3}</UniqueIdentifier>
+      <UniqueIdentifier>{F52E671F-80A8-441D-B3D6-9C8558A60BCC}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{B567001C-0D4B-45DA-9EA0-62DD5B1730AD}</UniqueIdentifier>
+      <UniqueIdentifier>{E5CB9F7D-F7F0-430E-A4AE-6871327B196F}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

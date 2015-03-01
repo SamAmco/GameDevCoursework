@@ -30,25 +30,27 @@ void Player::initializePhysics(const Vector3& position)
 	btVector3 sphereInertia(0, 0, 0);
 
 	shpereShape->calculateLocalInertia(mass, sphereInertia);
-	btRigidBody::btRigidBodyConstructionInfo fallRigidBodyCI(mass, sphereMotionState, shpereShape, sphereInertia);
-	sphereRigidBody = new btRigidBody(fallRigidBodyCI);
+	btRigidBody::btRigidBodyConstructionInfo sphereRigidBodyCI(mass, sphereMotionState, shpereShape, sphereInertia);
+	sphereRigidBody = new btRigidBody(sphereRigidBodyCI);
 	dynamicsWorld->addRigidBody(sphereRigidBody);
 }
 
 void Player::Update(sf::Event& event, float msec)
 {
+	cout << Vector3(sphereRigidBody->getAngularVelocity()) << " : ";
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-		sphereRigidBody->applyTorque(btVector3(-1, 0, 0));
+		sphereRigidBody->applyTorqueImpulse(btVector3(-1, 0, 0));
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-		sphereRigidBody->applyTorque(btVector3(1, 0, 0));
+		sphereRigidBody->applyTorqueImpulse(btVector3(1, 0, 0));
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-		sphereRigidBody->applyTorque(btVector3(0, 0, 1));
+		sphereRigidBody->applyTorqueImpulse(btVector3(0, 0, 1));
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-		sphereRigidBody->applyTorque(btVector3(0, 0, -1));
+		sphereRigidBody->applyTorqueImpulse(btVector3(0, 0, -1));
 
 	btTransform trans;
 	sphereRigidBody->getMotionState()->getWorldTransform(trans);
-	cout << Matrix4(trans) << endl;
+	//cout << Matrix4(trans) << endl;
+	cout << Vector3(sphereRigidBody->getAngularVelocity()) << " : ";
 	renderObject->SetModelMatrix(trans);
 }
 

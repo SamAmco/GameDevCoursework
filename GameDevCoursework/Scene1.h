@@ -30,5 +30,6 @@ private:
 	btSequentialImpulseConstraintSolver* solver;
 
 	Player* player;
+	//Player* player2;
 };
 

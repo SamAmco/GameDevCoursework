@@ -1,7 +1,7 @@
-﻿Build started 27/02/2015 17:09:01.
-     1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\src\LinearMath\LinearMath.vcxproj" on node 4 (Build target(s)).
+﻿Build started 01/03/2015 15:55:16.
+     1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\src\LinearMath\LinearMath.vcxproj" on node 3 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _DEBUG /D USE_GRAPHICAL_BENCHMARK /D _IRR_STATIC_LIB_ /D _CRT_SECURE_NO_WARNINGS /D _CRT_SECURE_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo"LinearMath.dir\Debug\\" /Fd"LinearMath.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\LinearMath\btAlignedAllocator.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\LinearMath\btConvexHull.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\LinearMath\btConvexHullComputer.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\LinearMath\btGeometryUtil.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\LinearMath\btPolarDecomposition.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\LinearMath\btQuickprof.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\LinearMath\btSerializer.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src\LinearMath\btVector3.cpp"
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _DEBUG /D _DEBUG /D USE_GRAPHICAL_BENCHMARK /D _IRR_STATIC_LIB_ /D _CRT_SECURE_NO_WARNINGS /D _CRT_SECURE_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo"LinearMath.dir\Debug\\" /Fd"LinearMath.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src\LinearMath\btAlignedAllocator.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src\LinearMath\btConvexHull.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src\LinearMath\btConvexHullComputer.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src\LinearMath\btGeometryUtil.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src\LinearMath\btPolarDecomposition.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src\LinearMath\btQuickprof.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src\LinearMath\btSerializer.cpp" "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src\LinearMath\btVector3.cpp"
          btAlignedAllocator.cpp
          btConvexHull.cpp
          btConvexHullComputer.cpp
@@ -12,7 +12,7 @@
          btVector3.cpp
          Generating Code...
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\lib\Debug\LinearMath_Debug.lib" /NOLOGO LinearMath.dir\Debug\btAlignedAllocator.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\lib\Debug\LinearMath_Debug.lib" /NOLOGO LinearMath.dir\Debug\btAlignedAllocator.obj
          LinearMath.dir\Debug\btConvexHull.obj
          LinearMath.dir\Debug\btConvexHullComputer.obj
          LinearMath.dir\Debug\btGeometryUtil.obj
@@ -20,9 +20,9 @@
          LinearMath.dir\Debug\btQuickprof.obj
          LinearMath.dir\Debug\btSerializer.obj
          LinearMath.dir\Debug\btVector3.obj
-         LinearMath.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\lib\Debug\LinearMath_Debug.lib
+         LinearMath.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\lib\Debug\LinearMath_Debug.lib
      1>Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\src\LinearMath\LinearMath.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.61
+Time Elapsed 00:00:02.63

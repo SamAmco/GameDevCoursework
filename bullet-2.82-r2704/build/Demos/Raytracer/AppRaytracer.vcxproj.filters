@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\Raytracer\Raytracer.cpp">
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\Raytracer\Raytracer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\Raytracer\main.cpp">
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\Raytracer\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\Raytracer\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\Raytracer\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{49FDC753-E704-40A8-A124-05A4F9A580E3}</UniqueIdentifier>
+      <UniqueIdentifier>{F52E671F-80A8-441D-B3D6-9C8558A60BCC}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

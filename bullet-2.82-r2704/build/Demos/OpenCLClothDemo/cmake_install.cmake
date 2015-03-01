@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/OpenCLClothDemo
+# Install script for directory: C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/OpenCLClothDemo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/OpenCLClothDemo/MiniCL/cmake_install.cmake")
+  include("C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/OpenCLClothDemo/MiniCL/cmake_install.cmake")
 
 endif()
 

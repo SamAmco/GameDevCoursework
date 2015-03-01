@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{6DF7E129-81BD-4382-9FC0-20FCF4374B81}</ProjectGUID>
+    <ProjectGUID>{88B5B42C-8586-4FFF-9BF6-C379AE926E68}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>AppBulletXmlImportDemo</ProjectName>
@@ -58,25 +58,25 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AppBulletXmlImportDemo.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AppBulletXmlImportDemo</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AppBulletXmlImportDemo.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AppBulletXmlImportDemo</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\MinSizeRel\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\MinSizeRel\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">AppBulletXmlImportDemo.dir\MinSizeRel\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">AppBulletXmlImportDemo</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\RelWithDebInfo\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\RelWithDebInfo\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">AppBulletXmlImportDemo.dir\RelWithDebInfo\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">AppBulletXmlImportDemo</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
@@ -85,7 +85,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -104,10 +104,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_DEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;DESERIALIZE_SOFT_BODIES;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -117,7 +117,7 @@
     <PostBuildEvent>
       <Message>	</Message>
       <Command>setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/GLUT32.DLL" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/GLUT32.DLL" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -126,9 +126,9 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/bullet_basic.xml"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/bullet_basic.xml"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/bullet_basic.xml"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/bullet_basic.xml"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -143,8 +143,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/AppBulletXmlImportDemo.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/AppBulletXmlImportDemo.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/AppBulletXmlImportDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/AppBulletXmlImportDemo.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -154,7 +154,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
@@ -172,10 +172,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;DESERIALIZE_SOFT_BODIES;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -185,7 +185,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>	</Message>
       <Command>setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/GLUT32.DLL" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/GLUT32.DLL" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -194,9 +194,9 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/bullet_basic.xml"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/bullet_basic.xml"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/bullet_basic.xml"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/bullet_basic.xml"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -211,8 +211,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Release/AppBulletXmlImportDemo.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Release/AppBulletXmlImportDemo.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Release/AppBulletXmlImportDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Release/AppBulletXmlImportDemo.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -222,7 +222,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
@@ -240,10 +240,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;DESERIALIZE_SOFT_BODIES;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -253,7 +253,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>	</Message>
       <Command>setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/GLUT32.DLL" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/GLUT32.DLL" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -262,9 +262,9 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/bullet_basic.xml"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/bullet_basic.xml"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/bullet_basic.xml"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/bullet_basic.xml"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -279,8 +279,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/MinSizeRel/AppBulletXmlImportDemo.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/MinSizeRel/AppBulletXmlImportDemo.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/MinSizeRel/AppBulletXmlImportDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/MinSizeRel/AppBulletXmlImportDemo.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -290,7 +290,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -308,10 +308,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_IRR_STATIC_LIB_;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;DESERIALIZE_SOFT_BODIES;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Glut;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\OpenGL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletFileLoader;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletWorldImporter;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Extras\Serialize\BulletXmlWorldImporter;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -321,7 +321,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>	</Message>
       <Command>setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/GLUT32.DLL" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/GLUT32.DLL" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -330,9 +330,9 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/bullet_basic.xml"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/bullet_basic.xml"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/bullet_basic.xml"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E copy_if_different "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/bullet_basic.xml" "C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/Debug/bullet_basic.xml"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -347,8 +347,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/RelWithDebInfo/AppBulletXmlImportDemo.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/RelWithDebInfo/AppBulletXmlImportDemo.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/RelWithDebInfo/AppBulletXmlImportDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/BulletXmlImportDemo/RelWithDebInfo/AppBulletXmlImportDemo.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version></Version>
     </Link>
@@ -357,10 +357,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -368,12 +368,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -381,12 +381,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -394,12 +394,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp"
+"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704" "-BC:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build" --check-stamp-file "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -407,44 +407,44 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/Demos/BulletXmlImportDemo/CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\Demos\BulletXmlImportDemo\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\BulletXmlImportDemo.h" />
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\main.cpp"  />
-    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\Demos\BulletXmlImportDemo\BulletXmlImportDemo.cpp"  />
-    <ResourceCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\bullet-2.82-r2704\build\bullet.rc"  />
+    <ClInclude Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\BulletXmlImportDemo.h" />
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\main.cpp"  />
+    <ClCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\Demos\BulletXmlImportDemo\BulletXmlImportDemo.cpp"  />
+    <ResourceCompile Include="C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\bullet.rc"  />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/BulletCollision/BulletCollision.vcxproj">
-      <Project>CDA0BA1C-EA11-4496-A50F-66E8C76257F8</Project>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/src/BulletCollision/BulletCollision.vcxproj">
+      <Project>E8E0B1B3-5B9A-41D1-A5B7-1ECD512E231E</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/BulletDynamics/BulletDynamics.vcxproj">
-      <Project>7EA915E3-6EC7-402D-9694-A0CFAE180DBB</Project>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/src/BulletDynamics/BulletDynamics.vcxproj">
+      <Project>E4AD2CAF-F7C7-4ECB-848B-44E9F28D8B46</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletFileLoader/BulletFileLoader.vcxproj">
-      <Project>BB5455C9-1C68-4250-8D23-96F1FEDA85F4</Project>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Extras/Serialize/BulletFileLoader/BulletFileLoader.vcxproj">
+      <Project>DA52A7B7-F1BE-455A-918B-1F9D6623F6CB</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/BulletSoftBody/BulletSoftBody.vcxproj">
-      <Project>0859D9D5-1ADD-45AE-AD19-30EB99D1B83C</Project>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/src/BulletSoftBody/BulletSoftBody.vcxproj">
+      <Project>EBE8062C-27EB-41CE-B73B-E057D61050C2</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletWorldImporter/BulletWorldImporter.vcxproj">
-      <Project>275E2BD0-6372-42FF-9BD6-F0642B993236</Project>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Extras/Serialize/BulletWorldImporter/BulletWorldImporter.vcxproj">
+      <Project>D2AE4C86-C5D7-47E7-A1E3-6D7D056A3A27</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Extras/Serialize/BulletXmlWorldImporter/BulletXmlWorldImporter.vcxproj">
-      <Project>D18FB247-2654-4482-B147-185E74151B39</Project>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Extras/Serialize/BulletXmlWorldImporter/BulletXmlWorldImporter.vcxproj">
+      <Project>BD6332C2-E01D-469B-AED4-4B87E3DB879C</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/src/LinearMath/LinearMath.vcxproj">
-      <Project>BD1CBBD0-BEC8-4BE9-9321-B82647BE0CE6</Project>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/src/LinearMath/LinearMath.vcxproj">
+      <Project>5CC06A54-3E58-4BFA-8CC4-15D5DD9C64E2</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/Demos/OpenGL/OpenGLSupport.vcxproj">
-      <Project>D36C6FE6-30F7-4990-A1AA-E7DFABEF8E3E</Project>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/Demos/OpenGL/OpenGLSupport.vcxproj">
+      <Project>D14448B0-13BC-4A78-8F96-65B0A6BC46BC</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/bullet-2.82-r2704/build/ZERO_CHECK.vcxproj">
-      <Project>4699BA3C-D306-4452-8923-79A9B8EF2868</Project>
+    <ProjectReference Include="C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/build/ZERO_CHECK.vcxproj">
+      <Project>F5DA3F30-C504-4FF2-A555-23F047EF2141</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
