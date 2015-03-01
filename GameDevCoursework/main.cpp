@@ -20,14 +20,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	settings.majorVersion = 3;
 	settings.minorVersion = 0;
 	sf::Window window = sf::Window(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, settings);
-	Renderer renderer = Renderer();
 	window.setVerticalSyncEnabled(true);
 
-	if (glewInit() != GLEW_OK) 
+	if (glewInit() != GLEW_OK)
 	{	//Try to initialise GLEW
 		std::cout << "OGLRenderer::OGLRenderer(): Cannot initialise GLEW!" << std::endl;
 		return -1;
 	}
+	Renderer renderer = Renderer();
 
 	Game game = Game(renderer);
 

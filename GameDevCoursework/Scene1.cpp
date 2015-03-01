@@ -41,16 +41,12 @@ void Scene1::initializePhysics()
 	dynamicsWorld->addRigidBody(groundRigidBody);
 
 	player = new Player(renderer, dynamicsWorld, Vector3(0, 2, -10));
-	//player2 = new Player(renderer, dynamicsWorld, Vector3(0, 4, -9));
 }
 
 void Scene1::Update(sf::Event event, float msec)
 {
-	//cout << msec << endl;
 	player->Update(event, msec);
 	dynamicsWorld->stepSimulation(msec);
-	//cout << Vector3(player->sphereRigidBody->getAngularVelocity()) << endl;
-	//player2->Update(event, msec);
 }
 
 Scene1::~Scene1()

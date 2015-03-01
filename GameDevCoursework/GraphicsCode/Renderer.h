@@ -30,6 +30,8 @@ public:
 
 	virtual void	Render(const RenderObject &o);
 
+	virtual void DrawSkyBox();
+
 	virtual void	UpdateScene(float msec);
 
 	void	AddRenderObject(RenderObject* r) 
@@ -58,14 +60,18 @@ public:
 
 	void SetMainLight(Vector3 colour, Vector3 position, float radius);
 
+	Matrix4 viewMatrix;		//View matrix
 protected:
 
 	void UpdateShaderMatrices(GLuint program);
 
 	Matrix4 projMatrix;		//Projection matrix
 	Matrix4 modelMatrix;	//Model matrix. NOT MODELVIEW
-	Matrix4 viewMatrix;		//View matrix
 	Matrix4 textureMatrix;	//Texture matrix
+
+	Shader* skyBoxShader;
+	GLuint cubeMap;
+	Mesh* quad;
 
 	vector<RenderObject*> renderObjects;
 	Light light;

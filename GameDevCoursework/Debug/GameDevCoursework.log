@@ -1,4 +1,4 @@
-﻿Build started 01/03/2015 16:02:09.
+﻿Build started 01/03/2015 17:28:08.
      1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GameDevCoursework\GameDevCoursework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GLEW\include" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include\GL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D GLEW_STATIC /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameDevCoursework.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Player.cpp
@@ -28,4 +28,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.01
+Time Elapsed 00:00:02.94

@@ -12,18 +12,43 @@ Renderer::Renderer()
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glEnable(GL_TEXTURE_CUBE_MAP_SEAMLESS);
+
+	quad = Mesh::GenerateQuad();
+	skyBoxShader = new Shader("Shaders/skyBoxVertex.glsl", "Shaders/skyBoxFragment.glsl");
+	cubeMap = SOIL_load_OGL_cubemap(
+		"Textures/smiley.png", "Textures/smiley.png",
+		"Textures/smiley.png", "Textures/smiley.png",
+		"Textures/smiley.png", "Textures/smiley.png",
+		SOIL_LOAD_RGB,
+		SOIL_CREATE_NEW_ID, 0);	skyBoxShader->LinkProgram();
 }
 
 Renderer::~Renderer(void)	
 {
+	delete skyBoxShader;
+	delete quad;
 }
 
 void	Renderer::RenderScene() 
 {
+	DrawSkyBox();
 	for(vector<RenderObject*>::iterator i = renderObjects.begin(); i != renderObjects.end(); ++i )
 	{
 		Render(*(*i));
 	}
+}
+
+void Renderer::DrawSkyBox()
+{
+	glDepthMask(GL_FALSE);
+	glUseProgram(skyBoxShader->GetShaderProgram());
+	
+	UpdateShaderMatrices(skyBoxShader->GetShaderProgram());
+	quad->Draw();
+	
+	glUseProgram(0);
+	glDepthMask(GL_TRUE);
 }
 
 void Renderer::SetMainLight(Vector3 colour, Vector3 position, float radius)

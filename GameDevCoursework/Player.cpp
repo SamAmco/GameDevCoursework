@@ -48,6 +48,17 @@ void Player::Update(sf::Event& event, float msec)
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 		sphereRigidBody->applyTorqueImpulse(btVector3(0, 0, -1));
 
+	float camSpeed = 0.4f;
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+		renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(-camSpeed, Vector3(0, 1, 0)));
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+		renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(camSpeed, Vector3(0, 1, 0)));
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+		renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(-camSpeed, Vector3(1, 0, 0)));
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+		renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(camSpeed, Vector3(1, 0, 0)));
+
 	btTransform trans;
 	sphereRigidBody->getMotionState()->getWorldTransform(trans);
 	cout << sphereRigidBody->getActivationState() << endl;
