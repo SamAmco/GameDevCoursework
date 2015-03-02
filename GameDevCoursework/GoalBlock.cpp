@@ -27,11 +27,11 @@ void GoalBlock::initializePhysics(const Vector3& position)
 		btVector3(position.x, position.y, position.z)));
 
 	btScalar mass = 1;
-	btVector3 sphereInertia(0, 0, 0);
+	btVector3 blockInertia(0, 0, 0);
 
-	blockShape->calculateLocalInertia(mass, sphereInertia);
-	btRigidBody::btRigidBodyConstructionInfo sphereRigidBodyCI(mass, blockMotionState, blockShape, sphereInertia);
-	blockRigidBody = new btRigidBody(sphereRigidBodyCI);
+	blockShape->calculateLocalInertia(mass, blockInertia);
+	btRigidBody::btRigidBodyConstructionInfo blockRigidBodyCI(mass, blockMotionState, blockShape, blockInertia);
+	blockRigidBody = new btRigidBody(blockRigidBodyCI);
 	dynamicsWorld->addRigidBody(blockRigidBody);
 }
 

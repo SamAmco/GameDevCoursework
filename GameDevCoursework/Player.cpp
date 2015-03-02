@@ -33,7 +33,7 @@ void Player::initializePhysics(const Vector3& position)
 	btRigidBody::btRigidBodyConstructionInfo sphereRigidBodyCI(mass, sphereMotionState, shpereShape, sphereInertia);
 	sphereRigidBody = new btRigidBody(sphereRigidBodyCI);
 	sphereRigidBody->setActivationState(DISABLE_DEACTIVATION);
-	sphereRigidBody->setFriction(10);
+	sphereRigidBody->setFriction(2.0f);
 	sphereRigidBody->setDamping(0.01f,0.9f);
 
 	dynamicsWorld->addRigidBody(sphereRigidBody);

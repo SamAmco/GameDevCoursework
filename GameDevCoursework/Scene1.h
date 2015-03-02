@@ -6,6 +6,7 @@
 #include <SFML/Window.hpp>
 #include "Player.h"
 #include "GoalBlock.h"
+#include "SolidPlatform.h"
 
 class Scene1 : public Scene
 {
@@ -32,5 +33,8 @@ private:
 
 	Player* player;
 	GoalBlock* goalBlock;
+
+	SolidPlatform* p1;
+	SolidPlatform* p2;
 };
 
