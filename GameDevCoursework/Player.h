@@ -5,7 +5,7 @@
 #include "ShaderManager.h"
 #include "btBulletDynamicsCommon.h"
 #include <SFML/Window.hpp>
-
+#include "ThirdPersonCamera.h"
 
 class Player
 {
@@ -26,7 +26,9 @@ private:
 	RenderObject* renderObject;
 	Renderer& renderer;
 	btDiscreteDynamicsWorld* dynamicsWorld;
+	ThirdPersonCamera camera;
 
-	//const float
+	const float torquePower = 4.0f;
+	const float jumpPower = 1.0f;
 };
 

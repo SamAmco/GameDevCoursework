@@ -17,7 +17,6 @@ void Scene1::initializeGraphics()
 
 	renderer.SetProjectionMatrix(Matrix4::Perspective(1, 100, 1.33f, 45.0f));
 	renderer.SetMainLight(lightCol, lightPos, lightRad);
-	renderer.SetViewMatrix(Matrix4::BuildViewMatrix(Vector3(0, 0, 0), Vector3(0, 0, -10)));
 }
 
 void Scene1::initializePhysics()

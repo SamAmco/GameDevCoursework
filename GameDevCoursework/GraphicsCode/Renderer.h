@@ -54,13 +54,10 @@ public:
 		projMatrix = m;
 	}
 
-	void	SetViewMatrix(Matrix4 m) {
-		viewMatrix = m;
-	}
+	Matrix4 viewMatrix;		//View matrix
 
 	void SetMainLight(Vector3 colour, Vector3 position, float radius);
 
-	Matrix4 viewMatrix;		//View matrix
 protected:
 
 	void UpdateShaderMatrices(GLuint program);

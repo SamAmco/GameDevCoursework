@@ -3,7 +3,7 @@
 
 
 Player::Player(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vector3& position) 
-	: renderer(renderer), dynamicsWorld(dynamicsWorld)
+	: renderer(renderer), dynamicsWorld(dynamicsWorld), camera(ThirdPersonCamera(8, 2))
 {
 	initializeGraphics(position);
 	initializePhysics(position);
@@ -40,32 +40,32 @@ void Player::Update(sf::Event& event, float msec)
 {
 	//cout << Vector3(sphereRigidBody->getAngularVelocity()) << " : ";
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-		sphereRigidBody->applyTorqueImpulse(btVector3(-1, 0, 0));
+		sphereRigidBody->applyTorque(btVector3(-1, 0, 0) * torquePower);
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-		sphereRigidBody->applyTorqueImpulse(btVector3(1, 0, 0));
+		sphereRigidBody->applyTorque(btVector3(1, 0, 0) * torquePower);
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-		sphereRigidBody->applyTorqueImpulse(btVector3(0, 0, 1));
+		sphereRigidBody->applyTorque(btVector3(0, 0, 1) * torquePower);
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-		sphereRigidBody->applyTorqueImpulse(btVector3(0, 0, -1));
+		sphereRigidBody->applyTorque(btVector3(0, 0, -1) * torquePower);
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+		sphereRigidBody->applyImpulse(btVector3(0, jumpPower, 0), btVector3());
 
 	float camSpeed = 0.4f;
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-		renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(-camSpeed, Vector3(0, 1, 0)));
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-		renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(camSpeed, Vector3(0, 1, 0)));
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-		renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(-camSpeed, Vector3(1, 0, 0)));
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-		renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(camSpeed, Vector3(1, 0, 0)));
+	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	//	renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(-camSpeed, Vector3(0, 1, 0)));
+	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	//	renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(camSpeed, Vector3(0, 1, 0)));
+	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	//	renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(-camSpeed, Vector3(1, 0, 0)));
+	//if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	//	renderer.SetViewMatrix(renderer.viewMatrix * Matrix4::Rotation(camSpeed, Vector3(1, 0, 0)));
 
 	btTransform trans;
 	sphereRigidBody->getMotionState()->getWorldTransform(trans);
-	cout << sphereRigidBody->getActivationState() << endl;
-	//sphereRigidBody->forceActivationState(ActivationState)
-	//cout << Matrix4(trans) << endl;
-	//cout << Vector3(sphereRigidBody->getAngularVelocity()) << " : ";
 	renderObject->SetModelMatrix(trans);
+	//cout << Vector3(trans.getOrigin()) << endl;
+	camera.Update(renderer, Vector3(trans.getOrigin()));
 }
 
 Player::~Player()

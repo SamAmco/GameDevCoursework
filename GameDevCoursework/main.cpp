@@ -21,6 +21,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	settings.minorVersion = 0;
 	sf::Window window = sf::Window(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, settings);
 	window.setVerticalSyncEnabled(true);
+	window.setMouseCursorVisible(false);
 
 	if (glewInit() != GLEW_OK)
 	{	//Try to initialise GLEW
@@ -49,7 +50,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		else
 			event = sf::Event();
 
-		game.Update(event, msec);//physics update
+		running = game.Update(event, msec);//physics update
 		
 		renderer.UpdateScene(msec);//graphics update
 

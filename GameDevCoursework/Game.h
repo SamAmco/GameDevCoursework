@@ -10,7 +10,7 @@ class Game
 public:
 	Game(Renderer&);
 
-	void Update(sf::Event event, float msec);
+	bool Update(sf::Event event, float msec);
 
 	~Game();
 

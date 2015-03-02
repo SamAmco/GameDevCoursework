@@ -8,14 +8,22 @@ Game::Game(Renderer& renderer)
 }
 
 
-void Game::Update(sf::Event event, float msec)
+bool Game::Update(sf::Event event, float msec)
 {
-	if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::R)
+	if (event.type == sf::Event::KeyPressed)
 	{
-		delete currentScene;
-		currentScene = new Scene1(renderer);
+		if (event.key.code == sf::Keyboard::R)
+		{
+			delete currentScene;
+			currentScene = new Scene1(renderer);
+		}
+		else if (event.key.code == sf::Keyboard::Escape)
+		{
+			return false;
+		}
 	}
 	currentScene->Update(event, msec);
+	return true;
 }
 
 Game::~Game()
