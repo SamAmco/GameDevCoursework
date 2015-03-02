@@ -15,6 +15,8 @@ public:
 	~ThirdPersonCamera(){}
 
 	void Update(Renderer& renderer, const Vector3& target);
+	btVector3 getRotatedVector(Vector3& v);
+
 
 	float distance;
 	float height;

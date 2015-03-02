@@ -1,11 +1,11 @@
-﻿Build started 02/03/2015 14:54:58.
+﻿Build started 02/03/2015 18:52:00.
      1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GameDevCoursework\GameDevCoursework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GLEW\include" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include\GL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D GLEW_STATIC /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameDevCoursework.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\main.cpp(39): warning C4244: 'initializing' : conversion from 'sf::Int32' to 'float', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GLEW\include" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\include\GL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D GLEW_STATIC /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameDevCoursework.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Player.cpp
+         Player.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GLEW\lib" /LIBPATH:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL\Debug" /LIBPATH:"C:\Users\SamAmco\Documents\Visual Studio 2013\glew-1.12.0\lib\Release\Win32" /LIBPATH:"C:\Users\SamAmco\Documents\Visual Studio 2013\SFML-2.2\lib" glew32sd.lib opengl32.lib "sfml-system-d.lib" "sfml-audio-d.lib" "sfml-window-d.lib" "sfml-graphics-d.lib" SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.lib" /MACHINE:X86 Debug\Game.obj
+         Debug\GoalBlock.obj
          Debug\Matrix3.obj
          Debug\Matrix4.obj
          Debug\Mesh.obj
@@ -30,4 +30,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.70
+Time Elapsed 00:00:03.80

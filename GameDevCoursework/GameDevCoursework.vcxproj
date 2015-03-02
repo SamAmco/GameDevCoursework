@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GoalBlock.h" />
     <ClInclude Include="GraphicsCode\common.h" />
     <ClInclude Include="GraphicsCode\Matrix3.h" />
     <ClInclude Include="GraphicsCode\Matrix4.h" />
@@ -112,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GoalBlock.cpp" />
     <ClCompile Include="GraphicsCode\Matrix3.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>

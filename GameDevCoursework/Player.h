@@ -14,7 +14,6 @@ public:
 	~Player();
 
 	void Update(sf::Event& event, float msec);
-	btRigidBody* sphereRigidBody;
 
 private:
 	void initializeGraphics(const Vector3& position);
@@ -22,13 +21,14 @@ private:
 
 	btCollisionShape* shpereShape;
 	btDefaultMotionState* sphereMotionState;
+	btRigidBody* sphereRigidBody;
 
 	RenderObject* renderObject;
 	Renderer& renderer;
 	btDiscreteDynamicsWorld* dynamicsWorld;
 	ThirdPersonCamera camera;
 
-	const float torquePower = 4.0f;
-	const float jumpPower = 1.0f;
+	const float torquePower = 16.0f;
+	const float jumpPower = 2.0f;
 };
 

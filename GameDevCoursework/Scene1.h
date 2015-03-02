@@ -5,6 +5,7 @@
 #include <SFML/OpenGL.hpp>
 #include <SFML/Window.hpp>
 #include "Player.h"
+#include "GoalBlock.h"
 
 class Scene1 : public Scene
 {
@@ -30,5 +31,6 @@ private:
 	btSequentialImpulseConstraintSolver* solver;
 
 	Player* player;
+	GoalBlock* goalBlock;
 };
 

@@ -12,3 +12,10 @@ void ThirdPersonCamera::Update(Renderer& renderer, const Vector3& target)
 	
 	renderer.viewMatrix = offset * rot * pos;
 }
+
+btVector3 ThirdPersonCamera::getRotatedVector(Vector3& v)
+{
+	Matrix4 rot = Matrix4::Rotation(-rotation, Vector3(0, 1, 0));
+	Vector3 temp = rot * v;
+	return btVector3(temp.x, temp.y, temp.z);
+}

@@ -17,11 +17,12 @@ Renderer::Renderer()
 	quad = Mesh::GenerateQuad();
 	skyBoxShader = new Shader("Shaders/skyBoxVertex.glsl", "Shaders/skyBoxFragment.glsl");
 	cubeMap = SOIL_load_OGL_cubemap(
-		"Textures/smiley.png", "Textures/smiley.png",
-		"Textures/smiley.png", "Textures/smiley.png",
-		"Textures/smiley.png", "Textures/smiley.png",
+		"Textures/checkered_left.jpg", "Textures/checkered_right.jpg",
+		"Textures/checkered_top.JPG", "Textures/checkered_top.JPG",
+		"Textures/checkered_back.jpg", "Textures/checkered_front.jpg",
 		SOIL_LOAD_RGB,
-		SOIL_CREATE_NEW_ID, 0);	skyBoxShader->LinkProgram();
+		SOIL_CREATE_NEW_ID, 0);
+	skyBoxShader->LinkProgram();
 }
 
 Renderer::~Renderer(void)	

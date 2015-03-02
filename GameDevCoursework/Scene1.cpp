@@ -7,6 +7,8 @@ Scene1::Scene1(Renderer& renderer)
 {
 	initializeGraphics();
 	initializePhysics();
+	player = new Player(renderer, dynamicsWorld, Vector3(0, 2, -10));
+	goalBlock = new GoalBlock(renderer, dynamicsWorld, Vector3(0, 1, -20));
 }
 
 void Scene1::initializeGraphics()
@@ -38,13 +40,12 @@ void Scene1::initializePhysics()
 	btRigidBody::btRigidBodyConstructionInfo groundRigidBodyCI(0, groundMotionState, groundShape, btVector3(0, 0, 0));
 	groundRigidBody = new btRigidBody(groundRigidBodyCI);
 	dynamicsWorld->addRigidBody(groundRigidBody);
-
-	player = new Player(renderer, dynamicsWorld, Vector3(0, 2, -10));
 }
 
 void Scene1::Update(sf::Event event, float msec)
 {
 	player->Update(event, msec);
+	goalBlock->Update(event, msec);
 	dynamicsWorld->stepSimulation(msec);
 }
 
