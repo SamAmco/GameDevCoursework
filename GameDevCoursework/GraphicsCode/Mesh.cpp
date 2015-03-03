@@ -113,17 +113,17 @@ Mesh* Mesh::GenerateQuad()
 	m-> numVertices = 4;
 	m-> type = GL_TRIANGLE_STRIP;
 
-	m-> vertices = new Vector3[m-> numVertices];
-	m-> textureCoords = new Vector2[m-> numVertices];
-	m-> colours = new Vector4[m-> numVertices];
-	m-> normals = new Vector3[m-> numVertices];
-	m-> tangents = new Vector3[m-> numVertices];
+	m->vertices = new Vector3[m->numVertices];
+	m->textureCoords = new Vector2[m-> numVertices];
+	m->colours = new Vector4[m-> numVertices];
+	m->normals = new Vector3[m-> numVertices];
+	m->tangents = new Vector3[m-> numVertices];
 
 	m-> vertices[0] = Vector3(-1.0f, -1.0f, 0.0f);
 	m-> vertices[1] = Vector3(-1.0f, 1.0f, 0.0f);
 	m-> vertices[2] = Vector3(1.0f, -1.0f, 0.0f);
 	m-> vertices[3] = Vector3(1.0f, 1.0f, 0.0f);
-
+	
 	m-> textureCoords[0] = Vector2(0.0f, 1.0f);
 	m-> textureCoords[1] = Vector2(0.0f, 0.0f);
 	m-> textureCoords[2] = Vector2(1.0f, 1.0f);
@@ -137,7 +137,8 @@ Mesh* Mesh::GenerateQuad()
 
 	m->BufferData();
 
-	return m;
+	return m;
+
 }
 
 Mesh*	Mesh::LoadMeshFile(const string &filename)
@@ -301,7 +302,8 @@ void	Mesh::BufferData()
 	glEnableVertexAttribArray(VERTEX_BUFFER);
 
 	////Buffer texture data
-	if (textureCoords) {
+	if (textureCoords) 
+	{
 		glGenBuffers(1, &bufferObject[TEXTURE_BUFFER]);
 		glBindBuffer(GL_ARRAY_BUFFER, bufferObject[TEXTURE_BUFFER]);
 		glBufferData(GL_ARRAY_BUFFER, numVertices*sizeof(Vector2), textureCoords, GL_STATIC_DRAW);
@@ -310,7 +312,8 @@ void	Mesh::BufferData()
 	}
 
 	//buffer colour data
-	if (colours)	{
+	if (colours)	
+	{
 		glGenBuffers(1, &bufferObject[COLOUR_BUFFER]);
 		glBindBuffer(GL_ARRAY_BUFFER, bufferObject[COLOUR_BUFFER]);
 		glBufferData(GL_ARRAY_BUFFER, numVertices*sizeof(Vector4), colours, GL_STATIC_DRAW);
@@ -329,7 +332,8 @@ void	Mesh::BufferData()
 	}
 
 	//buffer index data
-	if(indices) {
+	if (indices)
+	{
 		glGenBuffers(1, &bufferObject[INDEX_BUFFER]);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bufferObject[INDEX_BUFFER]);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, numIndices*sizeof(GLuint), indices, GL_STATIC_DRAW);
@@ -338,4 +342,5 @@ void	Mesh::BufferData()
 	//Once we're done with the vertex buffer binding, we can unbind the VAO,
 	//ready to reapply later, such as in the Draw function above!
 	glBindVertexArray(0);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
 }

@@ -41,31 +41,40 @@ void Player::initializePhysics(const Vector3& position)
 
 void Player::Update(sf::Event& event, float msec)
 {
-	btTransform trans;
-	sphereRigidBody->getMotionState()->getWorldTransform(trans);
-
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-		sphereRigidBody->applyTorque(camera.getRotatedVector(Vector3(-1, 0, 0)) * torquePower);
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-		sphereRigidBody->applyTorque(camera.getRotatedVector(Vector3(1, 0, 0)) * torquePower);
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-		sphereRigidBody->applyTorque(camera.getRotatedVector(Vector3(0, 0, 1)) * torquePower);
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-		sphereRigidBody->applyTorque(camera.getRotatedVector(Vector3(0, 0, -1)) * torquePower);
-
-	//If The player has ground beneath them and they press space, then jump
-	btVector3 start = trans.getOrigin() + btVector3(0, -0.9f, 0);
-	btVector3 end = trans.getOrigin() + btVector3(0, -1.3f, 0);
-	btCollisionWorld::ClosestRayResultCallback rayCallback(start, end);
-	dynamicsWorld->rayTest(start, end, rayCallback);
-	if (rayCallback.hasHit())
+	if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Return)
 	{
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-			sphereRigidBody->applyImpulse(btVector3(0, jumpPower, 0), btVector3(0, 0, 0));
+		hasControl = !hasControl;
 	}
 
+	btTransform trans;
+	sphereRigidBody->getMotionState()->getWorldTransform(trans);
 	renderObject->SetModelMatrix(trans);
-	camera.Update(renderer, Vector3(trans.getOrigin()));
+
+	if (hasControl)
+	{
+		
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+			sphereRigidBody->applyTorque(camera.getRotatedVector(Vector3(-1, 0, 0)) * torquePower);
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+			sphereRigidBody->applyTorque(camera.getRotatedVector(Vector3(1, 0, 0)) * torquePower);
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+			sphereRigidBody->applyTorque(camera.getRotatedVector(Vector3(0, 0, 1)) * torquePower);
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+			sphereRigidBody->applyTorque(camera.getRotatedVector(Vector3(0, 0, -1)) * torquePower);
+
+		//If The player has ground beneath them and they press space, then jump
+		btVector3 start = trans.getOrigin() + btVector3(0, -0.9f, 0);
+		btVector3 end = trans.getOrigin() + btVector3(0, -1.3f, 0);
+		btCollisionWorld::ClosestRayResultCallback rayCallback(start, end);
+		dynamicsWorld->rayTest(start, end, rayCallback);
+		if (rayCallback.hasHit())
+		{
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+				sphereRigidBody->applyImpulse(btVector3(0, jumpPower, 0), btVector3(0, 0, 0));
+		}
+
+		camera.Update(renderer, Vector3(trans.getOrigin()));
+	}
 }
 
 Player::~Player()

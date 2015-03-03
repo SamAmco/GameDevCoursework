@@ -30,5 +30,7 @@ private:
 
 	const float torquePower = 16.0f;
 	const float jumpPower = 2.0f;
+
+	bool hasControl = true;
 };
 
