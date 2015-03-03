@@ -63,8 +63,6 @@ void Player::Update(sf::Event& event, float msec)
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
 			sphereRigidBody->applyImpulse(btVector3(0, jumpPower, 0), btVector3(0, 0, 0));
 	}
-	//else
-		//cout << "not on ground" << endl;
 
 	renderObject->SetModelMatrix(trans);
 	camera.Update(renderer, Vector3(trans.getOrigin()));

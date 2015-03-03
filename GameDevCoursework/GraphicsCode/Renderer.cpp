@@ -13,6 +13,8 @@ Renderer::Renderer()
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glEnable(GL_TEXTURE_CUBE_MAP_SEAMLESS);
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
 
 	quad = Mesh::GenerateQuad();
 	skyBoxShader = new Shader("Shaders/skyBoxVertex.glsl", "Shaders/skyBoxFragment.glsl");
@@ -43,6 +45,7 @@ void	Renderer::RenderScene()
 void Renderer::DrawSkyBox()
 {
 	glDepthMask(GL_FALSE);
+	glDisable(GL_CULL_FACE);
 	glUseProgram(skyBoxShader->GetShaderProgram());
 	
 	UpdateShaderMatrices(skyBoxShader->GetShaderProgram());
@@ -50,6 +53,7 @@ void Renderer::DrawSkyBox()
 	
 	glUseProgram(0);
 	glDepthMask(GL_TRUE);
+	glEnable(GL_CULL_FACE);
 }
 
 void Renderer::SetMainLight(Vector3 colour, Vector3 position, float radius)

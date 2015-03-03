@@ -8,11 +8,12 @@
 class SolidPlatform
 {
 public:
-	SolidPlatform(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vector3& position, Vector3& boxHalfExtents);
+	SolidPlatform(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, 
+		const Vector3& position, const Vector3& boxHalfExtents, const string& texName);
 	~SolidPlatform();
 
 private:
-	void initializeGraphics(const Vector3& position, const Vector3& boxHalfExtents);
+	void initializeGraphics(const Vector3& position, const Vector3& boxHalfExtents, const string& texName);
 	void initializePhysics(const Vector3& position, const Vector3& boxHalfExtents);
 
 	btCollisionShape* blockShape;

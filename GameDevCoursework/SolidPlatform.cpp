@@ -2,19 +2,20 @@
 #include "SolidPlatform.h"
 
 
-SolidPlatform::SolidPlatform(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vector3& position, Vector3& boxHalfExtents)
+SolidPlatform::SolidPlatform(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld,
+	const Vector3& position, const Vector3& boxHalfExtents, const string& texName)
 	: renderer(renderer), dynamicsWorld(dynamicsWorld)
 {
-	initializeGraphics(position, boxHalfExtents);
+	initializeGraphics(position, boxHalfExtents, texName);
 	initializePhysics(position, boxHalfExtents);
 }
 
-void SolidPlatform::initializeGraphics(const Vector3& position, const Vector3& boxHalfExtents)
+void SolidPlatform::initializeGraphics(const Vector3& position, const Vector3& boxHalfExtents, const string& texName)
 {
 	Mesh* m = MeshManager::getInstance().LoadMesh("Meshes/cube.obj");
-	Shader* shader = ShaderManager::getInstance().LoadShader("PhongVert", "PhongFrag");
+	Shader* shader = ShaderManager::getInstance().LoadShader("PhongVert", "DiffuseFrag");
 	renderObject = new RenderObject(m, shader);
-	renderObject->AddTexture(TextureManager::getInstance().LoadTexture("Textures/smiley.png"));
+	renderObject->AddTexture(TextureManager::getInstance().LoadTexture("Textures/" + texName));
 	scaleMatrix = Matrix4::Scale(boxHalfExtents);
 	renderObject->SetModelMatrix(Matrix4::Translation(position) * scaleMatrix);
 	renderer.AddRenderObject(renderObject);

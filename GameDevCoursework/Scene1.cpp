@@ -7,10 +7,10 @@ Scene1::Scene1(Renderer& renderer)
 {
 	initializeGraphics();
 	initializePhysics();
-	player = new Player(renderer, dynamicsWorld, Vector3(0, 2, -10));
-	goalBlock = new GoalBlock(renderer, dynamicsWorld, Vector3(0, 2, -20));
-	p1 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,0), Vector3(20, 1, 20));
-	p2 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,45), Vector3(20, 1, 20));
+	player = new Player(renderer, dynamicsWorld, Vector3(0, 2, -5));
+	goal = new Goal(renderer, *player, Vector3(0, 0, 40));
+	p1 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,0), Vector3(10, 1, 10), "red.png");
+	p2 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,35), Vector3(10, 1, 10), "red.png");
 }
 
 void Scene1::initializeGraphics()
@@ -47,7 +47,7 @@ void Scene1::initializePhysics()
 void Scene1::Update(sf::Event event, float msec)
 {
 	player->Update(event, msec);
-	goalBlock->Update(event, msec);
+	goal->Update(event, msec);
 	dynamicsWorld->stepSimulation(msec);
 }
 
@@ -64,4 +64,5 @@ Scene1::~Scene1()
 	delete player;
 	delete p1;
 	delete p2;
+	delete goal;
 }

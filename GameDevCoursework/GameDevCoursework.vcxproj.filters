@@ -84,10 +84,10 @@
     <ClInclude Include="ThirdPersonCamera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GoalBlock.h">
+    <ClInclude Include="SolidPlatform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SolidPlatform.h">
+    <ClInclude Include="Goal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -143,10 +143,10 @@
     <ClCompile Include="ThirdPersonCamera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GoalBlock.cpp">
+    <ClCompile Include="SolidPlatform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SolidPlatform.cpp">
+    <ClCompile Include="Goal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
