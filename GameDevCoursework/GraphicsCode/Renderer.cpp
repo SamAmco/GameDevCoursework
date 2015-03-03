@@ -16,6 +16,7 @@ Renderer::Renderer()
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 
+
 	quad = Mesh::GenerateQuad();
 	skyBoxShader = new Shader("Shaders/skyBoxVertex.glsl", "Shaders/skyBoxFragment.glsl");
 	cubeMap = SOIL_load_OGL_cubemap(

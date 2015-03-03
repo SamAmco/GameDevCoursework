@@ -100,6 +100,7 @@
     <ClInclude Include="GraphicsCode\Vector2.h" />
     <ClInclude Include="GraphicsCode\Vector3.h" />
     <ClInclude Include="GraphicsCode\Vector4.h" />
+    <ClInclude Include="MainMenuScene.h" />
     <ClInclude Include="MeshManager.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Scene.h" />
@@ -111,6 +112,8 @@
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="ThirdPersonCamera.h" />
+    <ClInclude Include="YouLoseScene.h" />
+    <ClInclude Include="YouWinScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
@@ -144,6 +147,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenuScene.cpp" />
     <ClCompile Include="MeshManager.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Scene1.cpp" />
@@ -156,6 +160,8 @@
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="ThirdPersonCamera.cpp" />
+    <ClCompile Include="YouLoseScene.cpp" />
+    <ClCompile Include="YouWinScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bullet-2.82-r2704\build\src\BulletCollision\BulletCollision.vcxproj">

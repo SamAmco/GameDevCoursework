@@ -14,7 +14,7 @@ void Player::initializeGraphics(const Vector3& position)
 	Mesh* m = MeshManager::getInstance().LoadMesh("Meshes/sphere.obj");
 	Shader* shader = ShaderManager::getInstance().LoadShader("PhongVert", "PhongFrag");
 	renderObject = new RenderObject(m, shader);
-	renderObject->AddTexture(TextureManager::getInstance().LoadTexture("Textures/smiley.png"));
+	renderObject->AddTexture(TextureManager::getInstance().LoadTexture("Textures/8Ball.png"));
 	renderObject->SetModelMatrix(Matrix4::Translation(position));
 	renderer.AddRenderObject(renderObject);
 }

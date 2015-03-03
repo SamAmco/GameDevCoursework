@@ -14,6 +14,7 @@ public:
 	~Player();
 
 	void Update(sf::Event& event, float msec);
+	btRigidBody* sphereRigidBody;
 
 private:
 	void initializeGraphics(const Vector3& position);
@@ -21,7 +22,6 @@ private:
 
 	btCollisionShape* shpereShape;
 	btDefaultMotionState* sphereMotionState;
-	btRigidBody* sphereRigidBody;
 
 	RenderObject* renderObject;
 	Renderer& renderer;

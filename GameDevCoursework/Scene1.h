@@ -14,7 +14,7 @@ public:
 	Scene1(Renderer&);
 	virtual ~Scene1();
 
-	virtual void Update(sf::Event event, float msec);
+	virtual Scenes Update(sf::Event& event, float msec);
 
 private:
 	void initializeGraphics();

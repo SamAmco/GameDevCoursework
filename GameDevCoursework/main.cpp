@@ -59,7 +59,10 @@ int _tmain(int argc, _TCHAR* argv[])
 		if (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
+			{
 				running = false;
+				break;
+			}
 			else if (event.type == sf::Event::Resized)
 				glViewport(0, 0, event.size.width, event.size.height);
 		}
@@ -84,6 +87,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		window.pushGLStates();
 		window.draw(text);
+		game.DrawGUI(window);
 		window.popGLStates();
 
 		window.display();//Display the buffer

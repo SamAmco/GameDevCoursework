@@ -8,9 +8,9 @@ Scene1::Scene1(Renderer& renderer)
 	initializeGraphics();
 	initializePhysics();
 	player = new Player(renderer, dynamicsWorld, Vector3(0, 2, -5));
-	goal = new Goal(renderer, *player, Vector3(0, 0, 40));
 	p1 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,0), Vector3(10, 1, 10), "red.png");
 	p2 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,35), Vector3(10, 1, 10), "red.png");
+	goal = new Goal(renderer, *player, Vector3(0, 0, 40));
 }
 
 void Scene1::initializeGraphics()
@@ -44,11 +44,15 @@ void Scene1::initializePhysics()
 	dynamicsWorld->addRigidBody(groundRigidBody);
 }
 
-void Scene1::Update(sf::Event event, float msec)
+Scenes Scene1::Update(sf::Event& event, float msec)
 {
 	player->Update(event, msec);
+	if (player->sphereRigidBody->getWorldTransform().getOrigin().y() < -5)
+		return Scenes::YOU_LOSE_SCENE;
+
 	goal->Update(event, msec);
 	dynamicsWorld->stepSimulation(msec);
+	return Scenes::CURRENT;
 }
 
 Scene1::~Scene1()

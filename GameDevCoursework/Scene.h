@@ -4,6 +4,15 @@
 #include "ShaderManager.h"
 #include <SFML/OpenGL.hpp>
 #include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+
+enum Scenes
+{
+	CURRENT,
+	MAIN_MENU,
+	SCENE1,
+	YOU_LOSE_SCENE
+};
 
 class Scene
 {
@@ -11,7 +20,8 @@ public:
 
 	Scene(){}
 
-	virtual void Update(sf::Event event, float msec) = 0;
+	virtual Scenes Update(sf::Event& event, float msec) = 0;
+	virtual void DrawGUI(sf::RenderWindow& window) {}
 
 	virtual ~Scene()
 	{

@@ -90,6 +90,15 @@
     <ClInclude Include="Goal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MainMenuScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="YouWinScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="YouLoseScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -147,6 +156,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Goal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="YouWinScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="YouLoseScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

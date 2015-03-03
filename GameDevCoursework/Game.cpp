@@ -4,26 +4,52 @@
 Game::Game(Renderer& renderer)
 	: renderer(renderer)
 {
-	currentScene = new Scene1(renderer);
+	currentScene = new MainMenuScene();
+	currentSceneType = Scenes::MAIN_MENU;
 }
 
-
-bool Game::Update(sf::Event event, float msec)
+bool Game::Update(sf::Event& event, float msec)
 {
 	if (event.type == sf::Event::KeyPressed)
 	{
 		if (event.key.code == sf::Keyboard::R)
 		{
-			delete currentScene;
-			currentScene = new Scene1(renderer);
+			loadNextScene(currentSceneType);
 		}
 		else if (event.key.code == sf::Keyboard::Escape)
 		{
 			return false;
 		}
 	}
-	currentScene->Update(event, msec);
+
+	Scenes s = currentScene->Update(event, msec);
+	if (s != Scenes::CURRENT)
+		loadNextScene(s);
+
 	return true;
+}
+
+void Game::loadNextScene(Scenes sceneType)
+{
+	delete currentScene;
+	currentSceneType = sceneType;
+	switch (sceneType)
+	{
+	case Scenes::MAIN_MENU :
+		currentScene = new MainMenuScene();
+		break;
+	case Scenes::SCENE1:
+		currentScene = new Scene1(renderer);
+		break;
+	case Scenes::YOU_LOSE_SCENE:
+		currentScene = new YouLoseScene();
+		break;
+	}
+}
+
+void Game::DrawGUI(sf::RenderWindow& window)
+{
+	currentScene->DrawGUI(window);
 }
 
 Game::~Game()
