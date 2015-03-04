@@ -47,11 +47,14 @@ void Scene1::initializePhysics()
 Scenes Scene1::Update(sf::Event& event, float msec)
 {
 	player->Update(event, msec);
+	dynamicsWorld->stepSimulation(msec);
+
 	if (player->sphereRigidBody->getWorldTransform().getOrigin().y() < -5)
 		return Scenes::YOU_LOSE_SCENE;
 
-	goal->Update(event, msec);
-	dynamicsWorld->stepSimulation(msec);
+	if (goal->Update(event, msec))
+		return Scenes::YOU_WIN_SCENE;
+
 	return Scenes::CURRENT;
 }
 

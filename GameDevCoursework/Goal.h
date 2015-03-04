@@ -11,7 +11,7 @@ public:
 	Goal(Renderer& renderer, Player& player, Vector3& position);
 	~Goal();
 
-	void Update(sf::Event& event, float msec);
+	bool Update(sf::Event& event, float msec);
 
 private:
 	void initializeGraphics(const Vector3& position);
@@ -19,5 +19,8 @@ private:
 	RenderObject* renderObject;
 	Player& player;
 	Renderer& renderer;
+
+	btVector3 position;
+	const float WIN_THRESHOLD = 4.5f;
 };
 

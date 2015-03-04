@@ -11,7 +11,8 @@ enum Scenes
 	CURRENT,
 	MAIN_MENU,
 	SCENE1,
-	YOU_LOSE_SCENE
+	YOU_LOSE_SCENE,
+	YOU_WIN_SCENE
 };
 
 class Scene

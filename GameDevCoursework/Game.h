@@ -5,6 +5,7 @@
 #include "Scene1.h"
 #include "MainMenuScene.h"
 #include "YouLoseScene.h"
+#include "YouWinScene.h"
 
 
 class Game

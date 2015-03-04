@@ -44,6 +44,9 @@ void Game::loadNextScene(Scenes sceneType)
 	case Scenes::YOU_LOSE_SCENE:
 		currentScene = new YouLoseScene();
 		break;
+	case Scenes::YOU_WIN_SCENE:
+		currentScene = new YouWinScene();
+		break;
 	}
 }
 

@@ -6,6 +6,7 @@ Goal::Goal(Renderer& renderer, Player& player, Vector3& position)
 	: renderer(renderer), player(player)
 {
 	initializeGraphics(position);
+	this->position = btVector3(position.x, position.y, position.z);
 }
 
 void Goal::initializeGraphics(const Vector3& position)
@@ -18,8 +19,11 @@ void Goal::initializeGraphics(const Vector3& position)
 	renderer.AddRenderObject(renderObject);
 }
 
-void Goal::Update(sf::Event& event, float msec)
+bool Goal::Update(sf::Event& event, float msec)
 {
+	if ((player.sphereRigidBody->getWorldTransform().getOrigin() - position).length2() < WIN_THRESHOLD)
+		return true;
+	return false;
 }
 
 Goal::~Goal()
