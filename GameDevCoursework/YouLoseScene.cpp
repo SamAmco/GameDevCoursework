@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "YouLoseScene.h"
 

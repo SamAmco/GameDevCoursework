@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #pragma once
 #include "GraphicsCode\Vector3.h"
 #include "GraphicsCode\Renderer.h"

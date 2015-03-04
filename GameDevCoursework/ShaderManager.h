@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #pragma once
 #include "GraphicsCode\Shader.h"
 #include <string>

@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #pragma once
 #include "GraphicsCode\Mesh.h"
 #include <string>
@@ -5,6 +6,7 @@
 
 using namespace std;
 
+//Manages Mesh loading and the memory used by the meshes
 class MeshManager
 {
 public:
@@ -13,7 +15,6 @@ public:
 	static MeshManager& getInstance()
 	{
 		static MeshManager instance;
-
 		return instance;
 	}
 
@@ -28,6 +29,7 @@ private:
 	MeshManager(MeshManager const&) = delete;
 	void operator=(MeshManager const&) = delete;
 
+	//Store a map of already loaded meshes
 	map<string, Mesh*> loadedMeshes;
 };
 

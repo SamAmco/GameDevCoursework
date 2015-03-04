@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "TextureManager.h"
 #include <SOIL.h>
@@ -47,4 +48,5 @@ Texture TextureManager::LoadTexture(string name)
 
 TextureManager::~TextureManager()
 {
+	UnloadTextures();
 }

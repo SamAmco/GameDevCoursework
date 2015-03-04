@@ -6,6 +6,7 @@
 
 Renderer::Renderer() 
 {
+	// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
 	light.colour = Vector3(1,1,1);
 	light.position = Vector3(0,0,0);
 	light.radius = 0;
@@ -26,12 +27,15 @@ Renderer::Renderer()
 		SOIL_LOAD_RGB,
 		SOIL_CREATE_NEW_ID, 0);
 	skyBoxShader->LinkProgram();
+	// CSC3224 NCODE BLOCK ENDS
 }
 
 Renderer::~Renderer(void)	
 {
+	// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
 	delete skyBoxShader;
 	delete quad;
+	// CSC3224 NCODE BLOCK ENDS
 }
 
 void	Renderer::RenderScene() 
@@ -43,6 +47,7 @@ void	Renderer::RenderScene()
 	}
 }
 
+// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
 void Renderer::DrawSkyBox()
 {
 	glDepthMask(GL_FALSE);
@@ -56,6 +61,7 @@ void Renderer::DrawSkyBox()
 	glDepthMask(GL_TRUE);
 	glEnable(GL_CULL_FACE);
 }
+// CSC3224 NCODE BLOCK ENDS
 
 void Renderer::SetMainLight(Vector3 colour, Vector3 position, float radius)
 {

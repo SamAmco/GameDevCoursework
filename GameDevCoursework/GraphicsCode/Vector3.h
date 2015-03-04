@@ -21,12 +21,14 @@ public:
 		ToZero();
 	}
 
+	// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
 	Vector3(const btVector3& vec)
 	{
 		this->x = vec.getX();
 		this->y = vec.getY();
 		this->z = vec.getZ();
 	}
+	// CSC3224 NCODE BLOCK ENDS
 
 	Vector3(const float x, const float y, const float z) {
 		this->x = x;

@@ -141,15 +141,23 @@ Mesh* Mesh::GenerateQuad()
 
 }
 
+// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
 Mesh*	Mesh::LoadMeshFile(const string &filename)
 {
+	//This code is an adapted version of the obj parser described here:
+	//http://www.opengl-tutorial.org/beginners-tutorials/tutorial-7-model-loading/
+	//It is updated to use safer file reading functions and to extract the 
+	//information relevant from the obj file and place it in a Mesh object.
+
 	using namespace std;
 
+	//These will store values read in from the obj file
 	vector<unsigned int> vertexIndices, uvIndices, normalIndices;
 	vector<Vector3> temp_vertices;
 	vector<Vector2> temp_uvs;
 	vector<Vector3> temp_normals;
 
+	//open the obj file stream
 	FILE* file;
 	errno_t err = fopen_s(&file, filename.c_str(), "r");
 	if (err)
@@ -158,6 +166,7 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 		return NULL;
 	}
 
+	//Loop through the lines
 	while (1)
 	{
 		const int arrSize = 128;
@@ -167,12 +176,14 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 		if (res == EOF)
 			break;
 
+		//if it is a vertex:
 		if (strcmp(lineHeader, "v") == 0)
 		{
 			Vector3 vertex;
 			fscanf_s(file, "%f %f %f\n", &vertex.x, &vertex.y, &vertex.z);
 			temp_vertices.push_back(vertex);
 		}
+		//if it is a UV
 		else if (strcmp(lineHeader, "vt") == 0)
 		{
 			Vector2 uv;
@@ -180,12 +191,14 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 			uv.y = 1.0f-uv.y;//This is a small hack to account for the fact that blender assumes a different texture origin
 			temp_uvs.push_back(uv);
 		}
+		//if it is a normal
 		else if (strcmp(lineHeader, "vn") == 0)
 		{
 			Vector3 normal;
 			fscanf_s(file, "%f %f %f\n", &normal.x, &normal.y, &normal.z);
 			temp_normals.push_back(normal);
 		}
+		//if it is an index for a face
 		else if (strcmp(lineHeader, "f") == 0)
 		{
 			unsigned int vertexIndex[3], uvIndex[3], normalIndex[3];
@@ -208,14 +221,22 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 		}
 	}
 
+	//TODO: The below method of converting this data to a Mesh object is quite 
+	//in-efficient, since it duplicates all vertices used more than once,
+	//and doesn't take advantage of the vertex indicies in the obj. This may
+	//need work in future.
+
+	//Create a Mesh
 	Mesh* m = new Mesh();
 	m->numVertices = vertexIndices.size();
 	m->vertices = new Vector3[m->numVertices];
 	m->textureCoords = new Vector2[m->numVertices];
 	m->normals = new Vector3[m->numVertices];
 
+	//loop through the faces
 	for (unsigned int i = 0; i < vertexIndices.size(); ++i)
 	{
+		//create a triangle for each with the relevant data and add it to the Mesh
 		unsigned int vertexIndex = vertexIndices[i];
 		Vector3 vertex = temp_vertices[vertexIndex - 1];
 		m->vertices[i] = vertex;
@@ -227,12 +248,12 @@ Mesh*	Mesh::LoadMeshFile(const string &filename)
 		unsigned int normalIndex = normalIndices[i];
 		Vector3 normal = temp_normals[normalIndex - 1];
 		m->normals[i] = normal;
-
 	}
 
 	m->BufferData();
 	return m;
 }
+// CSC3224 NCODE BLOCK ENDS
 
 void Mesh::GenerateNormals() 
 {

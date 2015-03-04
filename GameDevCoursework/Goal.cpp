@@ -1,7 +1,8 @@
+//File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "Goal.h"
 
-
+//store a reference to the renderer and player and initialize the graphics
 Goal::Goal(Renderer& renderer, Player& player, Vector3& position)
 	: renderer(renderer), player(player)
 {
@@ -9,6 +10,7 @@ Goal::Goal(Renderer& renderer, Player& player, Vector3& position)
 	this->position = btVector3(position.x, position.y, position.z);
 }
 
+//add the render object to the renderer
 void Goal::initializeGraphics(const Vector3& position)
 {
 	Mesh* m = MeshManager::getInstance().LoadMesh("Meshes/goalCylinder.obj");
@@ -19,6 +21,7 @@ void Goal::initializeGraphics(const Vector3& position)
 	renderer.AddRenderObject(renderObject);
 }
 
+//if the player is within the win threshold, return true 
 bool Goal::Update(sf::Event& event, float msec)
 {
 	if ((player.sphereRigidBody->getWorldTransform().getOrigin() - position).length2() < WIN_THRESHOLD)

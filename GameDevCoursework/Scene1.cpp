@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "Scene1.h"
 
@@ -9,8 +10,12 @@ Scene1::Scene1(Renderer& renderer)
 	initializePhysics();
 	player = new Player(renderer, dynamicsWorld, Vector3(0, 2, -5));
 	p1 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,0), Vector3(10, 1, 10), "red.png");
-	p2 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,35), Vector3(10, 1, 10), "red.png");
-	goal = new Goal(renderer, *player, Vector3(0, 0, 40));
+	p2 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,-35), Vector3(10, 1, 10), "red.png");
+	goal = new Goal(renderer, *player, Vector3(0, 0, -40));
+	
+	backgroundMusic = AudioManager::getInstance().LoadMusic("Audio/tacky_background_music.wav");
+	backgroundMusic->setLoop(true);
+	backgroundMusic->play();
 }
 
 void Scene1::initializeGraphics()

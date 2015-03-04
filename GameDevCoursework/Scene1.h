@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #pragma once
 #include "Scene.h"
 #include "GraphicsCode\Renderer.h"
@@ -36,5 +37,7 @@ private:
 
 	SolidPlatform* p1;
 	SolidPlatform* p2;
+
+	sf::Music* backgroundMusic;
 };
 

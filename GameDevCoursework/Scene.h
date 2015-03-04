@@ -1,7 +1,9 @@
+//File Written by Samuel Amantea-Collins
 #pragma once
 #include "MeshManager.h"
 #include "TextureManager.h"
 #include "ShaderManager.h"
+#include "AudioManager.h"
 #include <SFML/OpenGL.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
@@ -29,6 +31,7 @@ public:
 		MeshManager::getInstance().UnloadMeshes();
 		TextureManager::getInstance().UnloadTextures();
 		ShaderManager::getInstance().UnloadShaders();
+		AudioManager::getInstance().UnloadAudio();
 	}
 };
 

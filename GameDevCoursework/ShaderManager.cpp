@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "ShaderManager.h"
 
@@ -47,4 +48,5 @@ Shader* ShaderManager::LoadShader(string vertex, string fragment, string geometr
 
 ShaderManager::~ShaderManager()
 {
+	UnloadShaders();
 }

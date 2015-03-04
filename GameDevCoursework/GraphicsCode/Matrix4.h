@@ -26,7 +26,10 @@ class Matrix4	{
 public:
 	Matrix4(void);
 	Matrix4(float elements[16]);
-	Matrix4(btTransform& trans);
+	// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
+	Matrix4(btTransform& trans);//This constructor is used to convert between
+	//the physics engine's version of a transform and the graphics engine version
+	// CSC3224 NCODE BLOCK ENDS
 	~Matrix4(void);
 
 	float	values[16];

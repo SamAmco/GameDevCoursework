@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include <GL\glew.h>
 #include <SFML/OpenGL.hpp>
@@ -52,7 +53,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	{
 		float msec = clock.getElapsedTime().asMilliseconds();
 		totalMsec += msec;
-		iterations++;
+		++iterations;
 		clock.restart();
 
 		sf::Event event;
@@ -92,10 +93,5 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		window.display();//Display the buffer
 	}
-
-	TextureManager::getInstance().UnloadTextures();
-	MeshManager::getInstance().UnloadMeshes();
-	ShaderManager::getInstance().UnloadShaders();
-
-	return 0;
+	return EXIT_SUCCESS;
 }

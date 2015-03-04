@@ -1,13 +1,16 @@
+//File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "Game.h"
 
 Game::Game(Renderer& renderer)
 	: renderer(renderer)
 {
+	//initialize the opening scene to the main menu
 	currentScene = new MainMenuScene();
 	currentSceneType = Scenes::MAIN_MENU;
 }
 
+//Update the current scene and see whether it wants to load a different scene
 bool Game::Update(sf::Event& event, float msec)
 {
 	if (event.type == sf::Event::KeyPressed)
@@ -29,6 +32,7 @@ bool Game::Update(sf::Event& event, float msec)
 	return true;
 }
 
+//Change the current scene
 void Game::loadNextScene(Scenes sceneType)
 {
 	delete currentScene;
@@ -50,6 +54,7 @@ void Game::loadNextScene(Scenes sceneType)
 	}
 }
 
+//Draw the gui for the current scene.
 void Game::DrawGUI(sf::RenderWindow& window)
 {
 	currentScene->DrawGUI(window);

@@ -54,7 +54,7 @@ public:
 	//Generates a single triangle, with RGB colours
 	static Mesh*	GenerateTriangle();
 	static Mesh*	GenerateQuad();
-	static Mesh*	LoadMeshFile(const string &filename);
+	static Mesh*	LoadMeshFile(const string &filename);//Modified to be an obj loader
 
 	GLuint	type;	//Primitive type for this mesh (GL_TRIANGLES...etc)
 

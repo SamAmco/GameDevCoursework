@@ -13,8 +13,12 @@ Matrix4::~Matrix4(void)	{
 	ToIdentity();
 }
 
+// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
 Matrix4::Matrix4(btTransform& trans)
 {
+	//btTransform doesn't actually store 16 floats, since there is 
+	//no need for sheer or scale. It is simply a question of putting the 
+	//values into the correct positions in the matrix, as below.
 	btMatrix3x3 btMat = trans.getBasis();
 	btVector3 orig = trans.getOrigin();
 
@@ -38,6 +42,7 @@ Matrix4::Matrix4(btTransform& trans)
 	values[14] = orig.getZ();
 	values[15] = 1;
 }
+// CSC3224 NCODE BLOCK ENDS
 
 void Matrix4::ToIdentity() {
 	ToZero();

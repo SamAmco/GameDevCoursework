@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #pragma once
 #include "GraphicsCode\Renderer.h"
 #include "MeshManager.h"
@@ -5,6 +6,8 @@
 #include "ShaderManager.h"
 #include "Player.h"
 
+//A goal is an aura of light in the game world that the player must reach 
+//to win the level
 class Goal
 {
 public:
@@ -21,6 +24,7 @@ private:
 	Renderer& renderer;
 
 	btVector3 position;
+	//The distance that the player must be from the goal to win
 	const float WIN_THRESHOLD = 4.5f;
 };
 

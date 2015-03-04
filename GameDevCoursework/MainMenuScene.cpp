@@ -1,7 +1,8 @@
+//File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "MainMenuScene.h"
 
-
+//Load the font and text and initialize the background music
 MainMenuScene::MainMenuScene()
 {
 	font.loadFromFile("Fonts/OpenSans-Regular.ttf");
@@ -11,8 +12,13 @@ MainMenuScene::MainMenuScene()
 	text.setCharacterSize(44); //in pixels, not points!
 	text.setColor(sf::Color(30,30,30,255));
 	text.setString("Press SPACE to play the demo level");
+
+	backgroundMusic = AudioManager::getInstance().LoadMusic("Audio/simple_soul_in_a_mechanical_world.wav");
+	backgroundMusic->setLoop(true);
+	backgroundMusic->play();
 }
 
+//when the player presses space, change to Scene1
 Scenes MainMenuScene::Update(sf::Event& event, float msec)
 {
 	if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space)
@@ -21,6 +27,7 @@ Scenes MainMenuScene::Update(sf::Event& event, float msec)
 	return Scenes::CURRENT;
 }
 
+//Draw the text
 void MainMenuScene::DrawGUI(sf::RenderWindow& window)
 {
 	window.draw(text);

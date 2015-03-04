@@ -29,8 +29,10 @@ public:
 	virtual void	RenderScene();
 
 	virtual void	Render(const RenderObject &o);
-
+	
+	// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
 	virtual void DrawSkyBox();
+	// CSC3224 NCODE BLOCK ENDS
 
 	virtual void	UpdateScene(float msec);
 
@@ -66,9 +68,11 @@ protected:
 	Matrix4 modelMatrix;	//Model matrix. NOT MODELVIEW
 	Matrix4 textureMatrix;	//Texture matrix
 
+	// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
 	Shader* skyBoxShader;
 	GLuint cubeMap;
 	Mesh* quad;
+	// CSC3224 NCODE BLOCK ENDS
 
 	vector<RenderObject*> renderObjects;
 	Light light;
