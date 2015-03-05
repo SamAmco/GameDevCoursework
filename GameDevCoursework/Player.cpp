@@ -10,6 +10,7 @@ Player::Player(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vecto
 	initializePhysics(position);
 }
 
+//Add the RenderObject to the renderer
 void Player::initializeGraphics(const Vector3& position)
 { 
 	Mesh* m = MeshManager::getInstance().LoadMesh("Meshes/sphere.obj");
@@ -20,6 +21,7 @@ void Player::initializeGraphics(const Vector3& position)
 	renderer.AddRenderObject(renderObject);
 }
 
+//add the sphereRigidBody to the dynamicsWorld
 void Player::initializePhysics(const Vector3& position)
 {
 	shpereShape = new btSphereShape(1);
@@ -40,8 +42,10 @@ void Player::initializePhysics(const Vector3& position)
 	dynamicsWorld->addRigidBody(sphereRigidBody);
 }
 
+//handle user input for the player
 void Player::Update(sf::Event& event, float msec)
 {
+	//This is useful to regain control of the mouse
 	if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Return)
 	{
 		hasControl = !hasControl;
@@ -53,7 +57,8 @@ void Player::Update(sf::Event& event, float msec)
 
 	if (hasControl)
 	{
-		
+		//WASD controls .. the torque is applied around the respective axis rotated by the camera's rotation
+		//so that W is always forward with respect to the camera's view etc.
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 			sphereRigidBody->applyTorque(camera.getRotatedVector(Vector3(-1, 0, 0)) * torquePower);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))

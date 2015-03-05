@@ -2,6 +2,7 @@
 #pragma once
 #include "Scene.h"
 
+//The scene that displays the "you lose" message when the player dies
 class YouLoseScene : public Scene
 {
 public:

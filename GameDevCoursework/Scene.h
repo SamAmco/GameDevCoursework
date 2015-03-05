@@ -8,6 +8,9 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
+//This enumerator must be updated to include the names of any 
+//and all scenes in the game. CURRENT is a special value that is used to
+//denote the scene that is currently loaded
 enum Scenes
 {
 	CURRENT,
@@ -17,6 +20,8 @@ enum Scenes
 	YOU_WIN_SCENE
 };
 
+//This abstract class is the base for all scenes and ensures that all resources are unloaded
+//when a scene is destroyed
 class Scene
 {
 public:

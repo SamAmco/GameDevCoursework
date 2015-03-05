@@ -10,6 +10,7 @@ TextureManager::TextureManager()
 	loadedTextures = map<string, Texture>();
 }
 
+//delete all the Texture objects from the heap and clear the map
 void TextureManager::UnloadTextures()
 {
 	std::map<string, Texture>::const_iterator i = loadedTextures.begin();
@@ -25,10 +26,12 @@ void TextureManager::UnloadTextures()
 
 Texture TextureManager::LoadTexture(string name)
 {
+	//if we have already loaded the Texture object, then return that
 	std::map<string, Texture>::const_iterator i = loadedTextures.find(name);
 	if (i != loadedTextures.end())
 		return (*i).second;
 
+	//otherwise attempt to load it
 	GLuint t = SOIL_load_OGL_texture(name.c_str(), SOIL_LOAD_AUTO,
 		SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS);
 
@@ -48,5 +51,6 @@ Texture TextureManager::LoadTexture(string name)
 
 TextureManager::~TextureManager()
 {
+	//Just in case
 	UnloadTextures();
 }

@@ -6,6 +6,8 @@
 #include "ShaderManager.h"
 #include "btBulletDynamicsCommon.h"
 
+//A solid platform is just a wrapper for a cube that makes it easy to define a static cube in the world
+//with a given texture and size
 class SolidPlatform
 {
 public:
@@ -20,11 +22,9 @@ private:
 	btCollisionShape* blockShape;
 	btDefaultMotionState* blockMotionState;
 	btRigidBody* blockRigidBody;
+	btDiscreteDynamicsWorld* dynamicsWorld;
 
 	RenderObject* renderObject;
 	Renderer& renderer;
-	btDiscreteDynamicsWorld* dynamicsWorld;
-
-	Matrix4 scaleMatrix;
 };
 

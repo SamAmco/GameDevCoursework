@@ -9,6 +9,8 @@
 #include "Goal.h"
 #include "SolidPlatform.h"
 
+//This is the first level of the game. It stores the physics world for the whole game,
+//the player, goal and platforms in the level.
 class Scene1 : public Scene
 {
 public:
@@ -27,14 +29,11 @@ private:
 	btBroadphaseInterface* broadphase;
 	btDefaultCollisionConfiguration* collisionConfiguration;
 	btCollisionDispatcher* dispatcher;
-	btCollisionShape* groundShape;
-	btDefaultMotionState* groundMotionState;
-	btRigidBody* groundRigidBody;
 	btSequentialImpulseConstraintSolver* solver;
 
+	//These are visible objects in the game world
 	Player* player;
 	Goal* goal;
-
 	SolidPlatform* p1;
 	SolidPlatform* p2;
 

@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #include "YouWinScene.h"
 
-
+//Load the font and set up the text
 YouWinScene::YouWinScene()
 {
 	font.loadFromFile("Fonts/OpenSans-Regular.ttf");
@@ -14,6 +14,7 @@ YouWinScene::YouWinScene()
 	text.setString("You won! :) press SPACE \nto return to the main menu");
 }
 
+//Check if the player pressed space and if so, move back to the main menu scene
 Scenes YouWinScene::Update(sf::Event& event, float msec)
 {
 	if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space)
@@ -22,6 +23,7 @@ Scenes YouWinScene::Update(sf::Event& event, float msec)
 	return Scenes::CURRENT;
 }
 
+//draw the text
 void YouWinScene::DrawGUI(sf::RenderWindow& window)
 {
 	window.draw(text);

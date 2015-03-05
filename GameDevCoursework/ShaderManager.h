@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 
+//Manages Shader loading and the memory used by the shaders
 class ShaderManager
 {
 public:
@@ -21,9 +22,11 @@ public:
 	~ShaderManager();
 
 private:
+	//These parts enforce singleton constraints
 	ShaderManager();
 	ShaderManager(ShaderManager const&) = delete;
 	void operator=(ShaderManager const&) = delete;
 
+	//Store a map of already loaded shaders
 	map<string, Shader*> loadedShaders;
 };

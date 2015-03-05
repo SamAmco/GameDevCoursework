@@ -17,7 +17,10 @@ Renderer::Renderer()
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 
+	//TODO: at the moment the cubemap is just hard coded, but this should be passed in to the renderer
+	//or perhaps swappable
 
+	//load the cubemap
 	quad = Mesh::GenerateQuad();
 	skyBoxShader = new Shader("Shaders/skyBoxVertex.glsl", "Shaders/skyBoxFragment.glsl");
 	cubeMap = SOIL_load_OGL_cubemap(
@@ -50,6 +53,8 @@ void	Renderer::RenderScene()
 // CSC3224 NCODE  Samuel Amantea-Collins 110148685 
 void Renderer::DrawSkyBox()
 {
+	//before we draw the rest of the scene, we draw the cubemap with no depth,
+	//such that everything else will be drawn in front
 	glDepthMask(GL_FALSE);
 	glDisable(GL_CULL_FACE);
 	glUseProgram(skyBoxShader->GetShaderProgram());

@@ -5,6 +5,7 @@
 //Load the font and text and initialize the background music
 MainMenuScene::MainMenuScene()
 {
+	font = sf::Font();
 	font.loadFromFile("Fonts/OpenSans-Regular.ttf");
 	text = sf::Text();
 	text.setFont(font);

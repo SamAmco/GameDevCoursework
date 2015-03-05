@@ -11,17 +11,18 @@ SolidPlatform::SolidPlatform(Renderer& renderer, btDiscreteDynamicsWorld* dynami
 	initializePhysics(position, boxHalfExtents);
 }
 
+//Add the render object to the renderer
 void SolidPlatform::initializeGraphics(const Vector3& position, const Vector3& boxHalfExtents, const string& texName)
 {
 	Mesh* m = MeshManager::getInstance().LoadMesh("Meshes/cube.obj");
 	Shader* shader = ShaderManager::getInstance().LoadShader("PhongVert", "DiffuseFrag");
 	renderObject = new RenderObject(m, shader);
 	renderObject->AddTexture(TextureManager::getInstance().LoadTexture("Textures/" + texName));
-	scaleMatrix = Matrix4::Scale(boxHalfExtents);
-	renderObject->SetModelMatrix(Matrix4::Translation(position) * scaleMatrix);
+	renderObject->SetModelMatrix(Matrix4::Translation(position) * Matrix4::Scale(boxHalfExtents));
 	renderer.AddRenderObject(renderObject);
 }
 
+//Add the box to the physics world
 void SolidPlatform::initializePhysics(const Vector3& position, const Vector3& boxHalfExtents)
 {
 	blockShape = new btBoxShape(btVector3(boxHalfExtents.x, boxHalfExtents.y, boxHalfExtents.z));

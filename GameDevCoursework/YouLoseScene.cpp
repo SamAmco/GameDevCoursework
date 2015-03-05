@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #include "YouLoseScene.h"
 
-
+//Load the font and set up the text
 YouLoseScene::YouLoseScene()
 {
 	font.loadFromFile("Fonts/OpenSans-Regular.ttf");
@@ -14,6 +14,7 @@ YouLoseScene::YouLoseScene()
 	text.setString("You died :( press SPACE \nto return to the main menu");
 }
 
+//Check if the player pressed space and if so, move back to the main menu scene
 Scenes YouLoseScene::Update(sf::Event& event, float msec)
 {
 	if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space)
@@ -22,6 +23,7 @@ Scenes YouLoseScene::Update(sf::Event& event, float msec)
 	return Scenes::CURRENT;
 }
 
+//draw the text
 void YouLoseScene::DrawGUI(sf::RenderWindow& window)
 {
 	window.draw(text);

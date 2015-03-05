@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//Manages Texture loading and the memory used by the textures
 class TextureManager
 {
 public:
@@ -28,6 +29,7 @@ private:
 	TextureManager(TextureManager const&) = delete;
 	void operator=(TextureManager const&) = delete;
 
+	//Store a map of already loaded textures
 	map<string, Texture> loadedTextures;
 };
 

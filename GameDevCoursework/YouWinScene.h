@@ -2,6 +2,7 @@
 #pragma once
 #include "Scene.h"
 
+//The scene that displays the "you win" message when the player reaches the goal
 class YouWinScene : public Scene
 {
 public:

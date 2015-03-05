@@ -6,18 +6,23 @@
 Scene1::Scene1(Renderer& renderer)
 	: renderer(renderer)
 {
+	//set up the physics engine and renderer
 	initializeGraphics();
 	initializePhysics();
+
+	//Create the in game objects
 	player = new Player(renderer, dynamicsWorld, Vector3(0, 2, -5));
 	p1 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,0), Vector3(10, 1, 10), "red.png");
 	p2 = new SolidPlatform(renderer, dynamicsWorld, Vector3(0,0,-35), Vector3(10, 1, 10), "red.png");
 	goal = new Goal(renderer, *player, Vector3(0, 0, -40));
 	
+	//load the background music
 	backgroundMusic = AudioManager::getInstance().LoadMusic("Audio/tacky_background_music.wav");
 	backgroundMusic->setLoop(true);
 	backgroundMusic->play();
 }
 
+//Simply sets the light position and projection matrix of the scene
 void Scene1::initializeGraphics()
 {
 	Vector3 lightCol = Vector3(1, 1, 1);
@@ -28,27 +33,18 @@ void Scene1::initializeGraphics()
 	renderer.SetMainLight(lightCol, lightPos, lightRad);
 }
 
+//create the physics engine and what ever else it requires.
 void Scene1::initializePhysics()
 {
 	broadphase = new btDbvtBroadphase();
-
 	collisionConfiguration = new btDefaultCollisionConfiguration();
 	dispatcher = new btCollisionDispatcher(collisionConfiguration);
-
 	solver = new btSequentialImpulseConstraintSolver;
-
 	dynamicsWorld = new btDiscreteDynamicsWorld(dispatcher, broadphase, solver, collisionConfiguration);
-
 	dynamicsWorld->setGravity(btVector3(0, -9.81f, 0));
-
-	groundShape = new btStaticPlaneShape(btVector3(0, 1, 0), 1);
-
-	groundMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(0, -100, 0)));
-	btRigidBody::btRigidBodyConstructionInfo groundRigidBodyCI(0, groundMotionState, groundShape, btVector3(0, 0, 0));
-	groundRigidBody = new btRigidBody(groundRigidBodyCI);
-	dynamicsWorld->addRigidBody(groundRigidBody);
 }
 
+//if the player has fallen below the platforms, or the goal has been reached, return a change of scene
 Scenes Scene1::Update(sf::Event& event, float msec)
 {
 	player->Update(event, msec);
@@ -69,9 +65,6 @@ Scene1::~Scene1()
 	delete broadphase;
 	delete collisionConfiguration;
 	delete dispatcher;
-	delete groundShape;
-	delete groundMotionState;
-	delete groundRigidBody;
 	delete solver;
 	delete player;
 	delete p1;

@@ -1,4 +1,4 @@
-﻿Build started 02/03/2015 14:55:26.
+﻿Build started 05/03/2015 01:37:01.
      1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\src\LinearMath\LinearMath.vcxproj" on node 4 (Build target(s)).
      1>CustomBuild:
          Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/src/LinearMath/CMakeLists.txt
@@ -28,4 +28,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:10.06
+Time Elapsed 00:00:06.84

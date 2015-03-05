@@ -40,5 +40,6 @@ Mesh* MeshManager::LoadMesh(string path)
 
 MeshManager::~MeshManager()
 {
+	//Just in case
 	UnloadMeshes();
 }
