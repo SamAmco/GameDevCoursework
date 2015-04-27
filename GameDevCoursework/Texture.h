@@ -1,6 +1,6 @@
 //File Written by Samuel Amantea-Collins
 #pragma once
-#include <GL\glew.h>
+#include <GL/glew.h>
 #include <string>
 
 using namespace std;

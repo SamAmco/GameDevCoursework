@@ -19,7 +19,7 @@ Scene1::Scene1(Renderer& renderer)
 	//load the background music
 	backgroundMusic = AudioManager::getInstance().LoadMusic("Audio/tacky_background_music.wav");
 	backgroundMusic->setLoop(true);
-	backgroundMusic->play();
+	//backgroundMusic->play();
 }
 
 //Simply sets the light position and projection matrix of the scene

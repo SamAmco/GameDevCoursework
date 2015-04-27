@@ -16,7 +16,7 @@ MainMenuScene::MainMenuScene()
 
 	backgroundMusic = AudioManager::getInstance().LoadMusic("Audio/simple_soul_in_a_mechanical_world.wav");
 	backgroundMusic->setLoop(true);
-	backgroundMusic->play();
+	//backgroundMusic->play();
 }
 
 //when the player presses space, change to Scene1

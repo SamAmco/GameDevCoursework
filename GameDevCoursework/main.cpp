@@ -1,6 +1,6 @@
 //File Written by Samuel Amantea-Collins
 #include "stdafx.h"
-#include <GL\glew.h>
+#include <GL/glew.h>
 #include <SFML/OpenGL.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
@@ -14,6 +14,7 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+
 	// create the window
 	sf::ContextSettings settings;
 	settings.depthBits = 24;
@@ -24,13 +25,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	sf::RenderWindow window = sf::RenderWindow(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, settings);
 	window.setVerticalSyncEnabled(true);
 	window.setMouseCursorVisible(false);
-
+	
 	if (glewInit() != GLEW_OK)
 	{	//Try to initialise GLEW
 		std::cout << "OGLRenderer::OGLRenderer(): Cannot initialise GLEW!" << std::endl;
 		return -1;
 	}
-	
+
 	Renderer renderer = Renderer();
 	Game game = Game(renderer);
 
