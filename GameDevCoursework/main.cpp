@@ -14,7 +14,6 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-
 	// create the window
 	sf::ContextSettings settings;
 	settings.depthBits = 24;
@@ -96,3 +95,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 	return EXIT_SUCCESS;
 }
+
+/*#include <stdio.h>
+#include <direct.h>
+char cCurrentPath[FILENAME_MAX];
+if (!_getcwd(cCurrentPath, sizeof(cCurrentPath)))
+{
+	return errno;
+}
+printf("The current working directory is %s", cCurrentPath);*/

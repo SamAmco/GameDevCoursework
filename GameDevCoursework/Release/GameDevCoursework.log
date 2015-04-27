@@ -1,38 +1,6 @@
-﻿Build started 27/04/2015 19:35:44.
-     1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GameDevCoursework\GameDevCoursework.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D GLEW_STATIC /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MDd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\GameDevCoursework.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D GLEW_STATIC /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MDd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\GameDevCoursework.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AudioManager.cpp Game.cpp Goal.cpp main.cpp MainMenuScene.cpp MeshManager.cpp Player.cpp Scene1.cpp ShaderManager.cpp SolidPlatform.cpp TextureManager.cpp ThirdPersonCamera.cpp YouLoseScene.cpp YouWinScene.cpp
-         AudioManager.cpp
-         Game.cpp
-         Goal.cpp
-         main.cpp
-     1>main.cpp(54): warning C4244: 'initializing' : conversion from 'sf::Int32' to 'float', possible loss of data
-         MainMenuScene.cpp
-     1>MainMenuScene.cpp(12): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-         MeshManager.cpp
-         Player.cpp
-         Scene1.cpp
-     1>Scene1.cpp(17): warning C4316: 'Goal' : object allocated on the heap may not be aligned 16
-         ShaderManager.cpp
-         SolidPlatform.cpp
-         TextureManager.cpp
-         ThirdPersonCamera.cpp
-         YouLoseScene.cpp
-     1>YouLoseScene.cpp(11): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-         YouWinScene.cpp
-     1>YouWinScene.cpp(11): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D GLEW_STATIC /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MDd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GraphicsCode\Matrix3.cpp GraphicsCode\Matrix4.cpp GraphicsCode\Mesh.cpp GraphicsCode\Quaternion.cpp GraphicsCode\Renderer.cpp GraphicsCode\RenderObject.cpp GraphicsCode\Shader.cpp
-         Matrix3.cpp
-         Matrix4.cpp
-         Mesh.cpp
-         Quaternion.cpp
-         Renderer.cpp
-     1>GraphicsCode\Renderer.cpp(103): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-         RenderObject.cpp
-         Shader.cpp
-       Link:
+﻿Build started 28/04/2015 00:28:38.
+     1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GameDevCoursework\GameDevCoursework.vcxproj" on node 3 (Build target(s)).
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Release\GameDevCoursework.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL\Release" /LIBPATH:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\lib" opengl32.lib glew.lib "sfml-system.lib" "sfml-audio.lib" "sfml-window.lib" "sfml-graphics.lib" SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Release\GameDevCoursework.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Release\GameDevCoursework.lib" /MACHINE:X86 /SAFESEH Release\AudioManager.obj
          Release\Game.obj
          Release\Goal.obj
@@ -58,7 +26,6 @@
          "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\lib\Release\BulletCollision.lib"
          "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\lib\Release\BulletDynamics.lib"
          "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\lib\Release\LinearMath.lib"
-     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
          Generating code
          Finished generating code
      1>SOIL.lib(SOIL.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'SOIL.lib(SOIL.obj)' or at 'C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Release\vc120.pdb'; linking object as if no debug info
@@ -70,4 +37,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:33.77
+Time Elapsed 00:00:06.03
