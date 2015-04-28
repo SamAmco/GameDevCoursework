@@ -17,9 +17,9 @@ Scene1::Scene1(Renderer& renderer)
 	goal = new Goal(renderer, *player, Vector3(0, 0, -40));
 	
 	//load the background music
-	backgroundMusic = AudioManager::getInstance().LoadMusic("Audio/tacky_background_music.wav");
-	backgroundMusic->setLoop(true);
-	//backgroundMusic->play();
+	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("Audio/tacky_background_music.wav", AUDIO_TYPE::MUSIC);
+	backgroundMusic->music->setLoop(true);
+	backgroundMusic->music->play();
 }
 
 //Simply sets the light position and projection matrix of the scene

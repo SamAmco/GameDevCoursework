@@ -8,6 +8,7 @@
 #include "Player.h"
 #include "Goal.h"
 #include "SolidPlatform.h"
+#include "MusicResource.h"
 
 //This is the first level of the game. It stores the physics world for the whole game,
 //the player, goal and platforms in the level.
@@ -37,6 +38,6 @@ private:
 	SolidPlatform* p1;
 	SolidPlatform* p2;
 
-	sf::Music* backgroundMusic;
+	MusicResource* backgroundMusic;
 };
 

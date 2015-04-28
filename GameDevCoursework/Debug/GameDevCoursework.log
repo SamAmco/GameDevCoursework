@@ -1,9 +1,22 @@
-﻿Build started 27/04/2015 20:06:58.
+﻿Build started 28/04/2015 02:00:24.
      1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GameDevCoursework\GameDevCoursework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D GLEW_STATIC /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameDevCoursework.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MainMenuScene.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL" /I"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D GLEW_STATIC /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\GameDevCoursework.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AudioManager.cpp Game.cpp MainMenuScene.cpp Scene1.cpp YouLoseScene.cpp YouWinScene.cpp main.cpp
+         AudioManager.cpp
+         Generating Code...
+         Compiling...
+         main.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\main.cpp(54): warning C4244: 'initializing' : conversion from 'sf::Int32' to 'float', possible loss of data
+         YouWinScene.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\youwinscene.cpp(11): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
+         YouLoseScene.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\youlosescene.cpp(11): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
+         Scene1.cpp
+     1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\scene1.cpp(17): warning C4316: 'Goal' : object allocated on the heap may not be aligned 16
          MainMenuScene.cpp
      1>c:\users\samamco\documents\visual studio 2013\projects\gamedevcoursework\gamedevcoursework\mainmenuscene.cpp(12): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
+         Game.cpp
+         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL\Debug" /LIBPATH:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\lib" opengl32.lib glew.lib "sfml-system-d.lib" "sfml-audio-d.lib" "sfml-window-d.lib" "sfml-graphics-d.lib" SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.lib" /MACHINE:X86 Debug\AudioManager.obj
          Debug\Game.obj
@@ -30,9 +43,14 @@
          "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\lib\Debug\BulletCollision_Debug.lib"
          "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\lib\Debug\BulletDynamics_Debug.lib"
          "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\lib\Debug\LinearMath_Debug.lib"
-         GameDevCoursework.vcxproj -> C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.exe
-     1>Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GameDevCoursework\GameDevCoursework.vcxproj" (Build target(s)).
+     1>YouWinScene.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ResourceManager::UnloadAllResources(void)" (?UnloadAllResources@ResourceManager@@UAEXXZ)
+     1>AudioManager.obj : error LNK2019: unresolved external symbol "public: virtual void __thiscall ResourceManager::UnloadAllResources(void)" (?UnloadAllResources@ResourceManager@@UAEXXZ) referenced in function "public: __thiscall ResourceManager::~ResourceManager(void)" (??1ResourceManager@@QAE@XZ)
+     1>MainMenuScene.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ResourceManager::UnloadAllResources(void)" (?UnloadAllResources@ResourceManager@@UAEXXZ)
+     1>Scene1.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ResourceManager::UnloadAllResources(void)" (?UnloadAllResources@ResourceManager@@UAEXXZ)
+     1>YouLoseScene.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ResourceManager::UnloadAllResources(void)" (?UnloadAllResources@ResourceManager@@UAEXXZ)
+     1>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\Debug\GameDevCoursework.exe : fatal error LNK1120: 1 unresolved externals
+     1>Done Building Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\GameDevCoursework\GameDevCoursework.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:03.85
+Time Elapsed 00:00:13.83

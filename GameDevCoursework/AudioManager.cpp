@@ -5,89 +5,130 @@
 
 AudioManager::AudioManager()
 {
-	loadedMusic = map<string, sf::Music*>();
-	loadedSounds = map<string, sf::Sound*>();
-	buffers = vector<sf::SoundBuffer*>();
+	loadedMusic = vector<MusicResource*>();
+	loadedSounds = vector<SoundResource*>();
+}
+
+Resource* AudioManager::LoadResource(const string& name, const int type)
+{
+	switch (type)
+	{
+		case AUDIO_TYPE::SOUND :
+			return LoadSound(name);
+		default :
+			return LoadMusic(name);
+	}
 }
 
 //delete all the audio objects from the heap and clear the maps
-void AudioManager::UnloadAudio()
+void AudioManager::UnloadAllResources()
 {
 	//delete loaded sounds
-	map<string, sf::Sound*>::const_iterator i1 = loadedSounds.begin();
-	while (i1 != loadedSounds.end())
+	for (auto s : loadedSounds)
 	{
-		cout << "deleting " << i1->first << endl;
-		delete i1->second;
-		++i1;
+		cout << "deleting " << s->name << endl;
+		delete s->soundBuffer;
+		delete s->sound;
+		delete s;
 	}
 	loadedSounds.clear();
 
-	//delete loaded buffers
-	for (auto s : buffers)
-	{
-		delete s;
-	}
-	buffers.clear();
-
 	//delete loaded music
-	map<string, sf::Music*>::const_iterator i2 = loadedMusic.begin();
-	while (i2 != loadedMusic.end())
+	for (auto m : loadedMusic)
 	{
-		cout << "deleting " << i2->first << endl;
-		delete i2->second;
-		++i2;
+		cout << "deleting " << m->name << endl;
+		delete m->music;
+		delete m;
 	}
 	loadedMusic.clear();
 }
 
-sf::Music* AudioManager::LoadMusic(string name)
+void AudioManager::LoadingNewScene()
+{
+	auto iter = loadedSounds.begin();
+	//delete loaded sounds
+	while (iter != loadedSounds.end())
+	{
+		if ((*iter)->destroyOnSceneLoad)
+		{
+			cout << "deleting " << (*iter)->name << endl;
+			delete (*iter)->soundBuffer;
+			delete (*iter)->sound;
+			delete *iter;
+			iter = loadedSounds.erase(iter);
+		}
+		else ++iter;
+	}
+
+	auto iter2 = loadedMusic.begin();
+	//delete loaded sounds
+	while (iter2 != loadedMusic.end())
+	{
+		if ((*iter2)->destroyOnSceneLoad)
+		{
+			cout << "deleting " << (*iter2)->name << endl;
+			delete (*iter2)->music;
+			delete *iter2;
+			iter2 = loadedMusic.erase(iter2);
+		}
+		else ++iter2;
+	}
+}
+
+MusicResource* AudioManager::LoadMusic(const string& name)
 {
 	//if we have already loaded the Music object, then return that
-	map<string, sf::Music*>::const_iterator i = loadedMusic.find(name);
-	if (i != loadedMusic.end())
-		return (*i).second;
+	for (auto m : loadedMusic)
+	{
+		if (m->name.compare(name))
+			return m;
+	}
 
 	//otherwise attempt to load it
 	sf::Music* music = new sf::Music();
+	MusicResource* mr = new MusicResource();
+
 	if (!music->openFromFile(name))
 	{
 		//load failed
 		delete music;
 		cout << "Failed to load music: " << name << endl;
-		return NULL;
+		mr->failedToLoad = true;
+		return mr;
 	}
-	loadedMusic.insert(pair<string, sf::Music*>(name, music));
-	return music;
+	mr->music = music;
+	mr->name = name;
+	loadedMusic.push_back(mr);
+	return mr;
 }
 
-sf::Sound* AudioManager::LoadSound(string name)
+SoundResource* AudioManager::LoadSound(const string& name)
 {
 	//if we have already loaded the Sound object, then return that
-	map<string, sf::Sound*>::const_iterator i = loadedSounds.find(name);
-	if (i != loadedSounds.end())
-		return (*i).second;
+	for (auto s : loadedSounds)
+	{
+		if (s->name.compare(name))
+			return s;
+	}
 
 	//otherwise attempt to load it
 	sf::Sound* sound = new sf::Sound();
 	//Sound objects require a SoundBuffer object also
 	sf::SoundBuffer* soundBuffer = new sf::SoundBuffer();
 
+	SoundResource* sr = new SoundResource();
+
 	if (!soundBuffer->loadFromFile(name))
 	{
 		delete sound;
 		delete soundBuffer;
 		cout << "Failed to load sound: " << name << endl;
-		return NULL;
+		sr->failedToLoad = true;
+		return sr;
 	}
-	buffers.push_back(soundBuffer);
 	sound->setBuffer(*soundBuffer);
-	loadedSounds.insert(pair<string, sf::Sound*>(name, sound));
-	return sound;
-}
-
-AudioManager::~AudioManager()
-{
-	//Just in case
-	UnloadAudio();
+	sr->soundBuffer = soundBuffer;
+	sr->sound = sound;
+	loadedSounds.push_back(sr);
+	return sr;
 }

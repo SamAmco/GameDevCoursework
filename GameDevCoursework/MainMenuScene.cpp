@@ -14,9 +14,9 @@ MainMenuScene::MainMenuScene()
 	text.setColor(sf::Color(30,30,30,255));
 	text.setString("Press SPACE to play the demo level");
 
-	backgroundMusic = AudioManager::getInstance().LoadMusic("Audio/simple_soul_in_a_mechanical_world.wav");
-	backgroundMusic->setLoop(true);
-	//backgroundMusic->play();
+	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("Audio/simple_soul_in_a_mechanical_world.wav", AUDIO_TYPE::MUSIC);
+	backgroundMusic->music->setLoop(true);
+	backgroundMusic->music->play();
 }
 
 //when the player presses space, change to Scene1

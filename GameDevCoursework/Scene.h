@@ -36,7 +36,7 @@ public:
 		MeshManager::getInstance().UnloadMeshes();
 		TextureManager::getInstance().UnloadTextures();
 		ShaderManager::getInstance().UnloadShaders();
-		AudioManager::getInstance().UnloadAudio();
+		AudioManager::getInstance().LoadingNewScene();
 	}
 };
 

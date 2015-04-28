@@ -1,5 +1,5 @@
-﻿Build started 03/03/2015 01:26:41.
-     1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\src\BulletDynamics\BulletDynamics.vcxproj" on node 4 (Build target(s)).
+﻿Build started 28/04/2015 01:56:08.
+     1>Project "C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\src\BulletDynamics\BulletDynamics.vcxproj" on node 3 (Build target(s)).
      1>CustomBuild:
          Building Custom Rule C:/Users/SamAmco/Documents/Visual Studio 2013/Projects/GameDevCoursework/bullet-2.82-r2704/src/BulletDynamics/CMakeLists.txt
          CMake does not need to re-run because C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\build\src\BulletDynamics\CMakeFiles\generate.stamp is up-to-date.
@@ -74,4 +74,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:16.16
+Time Elapsed 00:00:12.36
