@@ -16,6 +16,7 @@ Resource* MeshManager::LoadResource(const string& name, const int type)
 	MeshResource* mr = new MeshResource();
 	mr->mesh = m;
 	mr->name = name;
+	mr->failedToLoad = (m == NULL);
 	loadedResources.push_back(mr);
 
 	return mr;

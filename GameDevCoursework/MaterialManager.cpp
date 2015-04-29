@@ -53,7 +53,9 @@ Resource* MaterialManager::LoadResource(const string& name, const int type)
 
 	MaterialResource* mat = new MaterialResource();
 	mat->name = name;
-	mat->shader = LoadShader(vertex, fragment, geometry, tcs, tes);
+	Shader* sh = LoadShader(vertex, fragment, geometry, tcs, tes);
+	mat->shader = sh;
+	mat->failedToLoad = sh->UsingDefaultShader();
 	loadedResources.push_back(mat);
 	return mat;
 }
