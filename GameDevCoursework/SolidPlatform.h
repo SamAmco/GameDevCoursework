@@ -3,7 +3,7 @@
 #include "GraphicsCode\Renderer.h"
 #include "MeshManager.h"
 #include "TextureManager.h"
-#include "ShaderManager.h"
+#include "MaterialManager.h"
 #include "btBulletDynamicsCommon.h"
 
 //A solid platform is just a wrapper for a cube that makes it easy to define a static cube in the world

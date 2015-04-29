@@ -6,7 +6,7 @@ class MusicResource : public Resource
 {
 public:
 	MusicResource(){}
-	~MusicResource(){}
+	~MusicResource(){ delete music; }
 
 	sf::Music* music;
 };

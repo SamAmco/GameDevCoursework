@@ -14,10 +14,10 @@ SolidPlatform::SolidPlatform(Renderer& renderer, btDiscreteDynamicsWorld* dynami
 //Add the render object to the renderer
 void SolidPlatform::initializeGraphics(const Vector3& position, const Vector3& boxHalfExtents, const string& texName)
 {
-	Mesh* m = MeshManager::getInstance().LoadMesh("Meshes/cube.obj");
-	Shader* shader = ShaderManager::getInstance().LoadShader("PhongVert", "DiffuseFrag");
-	renderObject = new RenderObject(m, shader);
-	renderObject->AddTexture(TextureManager::getInstance().LoadTexture("Textures/" + texName));
+	MeshResource* m = (MeshResource*)MeshManager::getInstance().LoadResource("Meshes/cube.obj");
+	MaterialResource* mat = (MaterialResource*)MaterialManager::getInstance().LoadResource("PlatformMaterial");
+	renderObject = new RenderObject(m, mat);
+	renderObject->AddTexture((TextureResource*)TextureManager::getInstance().LoadResource("Textures/" + texName));
 	renderObject->SetModelMatrix(Matrix4::Translation(position) * Matrix4::Scale(boxHalfExtents));
 	renderer.AddRenderObject(renderObject);
 }

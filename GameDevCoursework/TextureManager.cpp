@@ -1,56 +1,35 @@
 //File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "TextureManager.h"
-#include <SOIL.h>
-#include <iostream>
 
 
-TextureManager::TextureManager()
-{
-	loadedTextures = map<string, Texture>();
-}
-
-//delete all the Texture objects from the heap and clear the map
-void TextureManager::UnloadTextures()
-{
-	std::map<string, Texture>::const_iterator i = loadedTextures.begin();
-	while (i != loadedTextures.end())
-	{
-		const GLuint* p = &(i->second.getGLuint());
-		cout << "deleting " << i->second.getName() << " : " << i->second.getGLuint() << "\n";
-		glDeleteTextures(1, p);
-		++i;
-	}
-	loadedTextures.clear();
-}
-
-Texture TextureManager::LoadTexture(string name)
+Resource* TextureManager::LoadResource(const string& name, int type)
 {
 	//if we have already loaded the Texture object, then return that
-	std::map<string, Texture>::const_iterator i = loadedTextures.find(name);
-	if (i != loadedTextures.end())
-		return (*i).second;
-
+	for (auto t : loadedResources)
+	{
+		if (t->name.compare(name) == 0)
+			return t;
+	}
+	cout << "Loading: " << name << endl;
 	//otherwise attempt to load it
 	GLuint t = SOIL_load_OGL_texture(name.c_str(), SOIL_LOAD_AUTO,
 		SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS);
 
-	Texture texture;
+	TextureResource* texture = new TextureResource();
 	if (!t)
 	{
 		cout << "GLuint Renderer::LoadTexture(string name) FAILED TO LOAD " << name << endl;
-		texture = Texture();
+		texture->failedToLoad = true;
+		texture->name = "FAILED TO LOAD";
 	}
 	else
-		texture = Texture(name, t);
+	{
+		texture->name = name;
+		texture->tex = t;
+	}
 
-	loadedTextures.insert(std::pair<string, Texture>(name, texture));
+	loadedResources.push_back(texture);
 
 	return texture;
-}
-
-TextureManager::~TextureManager()
-{
-	//Just in case
-	UnloadTextures();
 }

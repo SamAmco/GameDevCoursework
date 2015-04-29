@@ -3,7 +3,7 @@
 #include "GraphicsCode\Renderer.h"
 #include "MeshManager.h"
 #include "TextureManager.h"
-#include "ShaderManager.h"
+#include "MaterialManager.h"
 #include "btBulletDynamicsCommon.h"
 #include <SFML/Window.hpp>
 #include "ThirdPersonCamera.h"

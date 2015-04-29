@@ -1,0 +1,2 @@
+vertex BasicVert
+fragment TransparentTex

@@ -6,7 +6,7 @@ class SoundResource : public Resource
 {
 public:
 	SoundResource(){}
-	~SoundResource(){}
+	~SoundResource(){ delete sound; delete soundBuffer; }
 
 	sf::Sound* sound;
 	sf::SoundBuffer* soundBuffer;

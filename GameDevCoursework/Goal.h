@@ -3,7 +3,7 @@
 #include "GraphicsCode\Renderer.h"
 #include "MeshManager.h"
 #include "TextureManager.h"
-#include "ShaderManager.h"
+#include "MaterialManager.h"
 #include "Player.h"
 
 //A goal is an aura of light in the game world that the player must reach 

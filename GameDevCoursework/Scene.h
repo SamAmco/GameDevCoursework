@@ -2,7 +2,7 @@
 #pragma once
 #include "MeshManager.h"
 #include "TextureManager.h"
-#include "ShaderManager.h"
+#include "MaterialManager.h"
 #include "AudioManager.h"
 #include <SFML/OpenGL.hpp>
 #include <SFML/Window.hpp>
@@ -33,9 +33,9 @@ public:
 
 	virtual ~Scene()
 	{
-		MeshManager::getInstance().UnloadMeshes();
-		TextureManager::getInstance().UnloadTextures();
-		ShaderManager::getInstance().UnloadShaders();
+		MeshManager::getInstance().LoadingNewScene();
+		TextureManager::getInstance().LoadingNewScene();
+		MaterialManager::getInstance().LoadingNewScene();
 		AudioManager::getInstance().LoadingNewScene();
 	}
 };

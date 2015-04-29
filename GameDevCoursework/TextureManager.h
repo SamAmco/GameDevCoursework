@@ -1,35 +1,30 @@
 //File Written by Samuel Amantea-Collins
 #pragma once
-#include "Texture.h"
 #include <string>
-#include <map>
+#include <vector>
+#include <SOIL.h>
+#include <iostream>
+#include "ResourceManager.h"
+#include "TextureResource.h"
 
 using namespace std;
 
 //Manages Texture loading and the memory used by the textures
-class TextureManager
+class TextureManager : public ResourceManager
 {
 public:
-	Texture LoadTexture(string name);
+	Resource* LoadResource(const string& name, const int type = 0);
 
 	//singleton getter
 	static TextureManager& getInstance()
 	{
 		static TextureManager instance;
-		
 		return instance;
 	}
 
-	void UnloadTextures();
-
-	~TextureManager();
+	~TextureManager(){ UnloadAllResources(); }
 private:
 	//These parts enforce singleton constraints
-	TextureManager();
-	TextureManager(TextureManager const&) = delete;
-	void operator=(TextureManager const&) = delete;
-
-	//Store a map of already loaded textures
-	map<string, Texture> loadedTextures;
+	TextureManager(){};
 };
 

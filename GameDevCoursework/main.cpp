@@ -8,7 +8,7 @@
 #include "GraphicsCode\Renderer.h"
 #include "TextureManager.h"
 #include "MeshManager.h"
-#include "ShaderManager.h"
+#include "MaterialManager.h"
 #include "Game.h"
 
 
@@ -51,7 +51,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	float iterations = 0;
 	while (running)
 	{
-		float msec = clock.getElapsedTime().asMilliseconds();
+		float msec = (float)clock.getElapsedTime().asMilliseconds();
 		totalMsec += msec;
 		++iterations;
 		clock.restart();

@@ -3,23 +3,22 @@
 #include "Matrix4.h"
 #include "Mesh.h"
 #include "Shader.h"
-#include "../Texture.h"
+#include "../MaterialResource.h"
+#include "../TextureResource.h"
+#include "../MeshResource.h"
 
 class RenderObject	{
 public:
 	RenderObject(void);
-	RenderObject(Mesh*m, Shader*s, Texture t = Texture());
-	~RenderObject(void);
+	RenderObject(MeshResource*m, MaterialResource*mat);
+	~RenderObject(void){}
 
 	Mesh*	GetMesh()	const			{return mesh;}
-	void	SetMesh(Mesh*m)				{mesh = m;}
 
-	Shader* GetShader()		const		{return shader; }
-	void	SetShader(Shader*s)			{shader = s;}
+	Shader* GetShader()		const		{ return shader; }
 
-	Texture	GetTexture(int index)		const	{ return textures[index]; }
-	void	AddTexture(Texture tex)		{ textures.push_back(tex); }
-	void	ClearTextures()				{ textures.clear(); }
+	void	AddTexture(TextureResource* tex) { textures.push_back(tex->tex); }
+	void	ClearTextures() { textures.clear(); }
 
 	void	SetModelMatrix(Matrix4 mat) {modelMatrix = mat;}
 	Matrix4 GetModelMatrix()	const	{return modelMatrix;}
@@ -47,7 +46,7 @@ protected:
 	Mesh*	mesh;
 	Shader*	shader;
 
-	vector<Texture> textures;
+	vector<GLuint> textures;
 
 	Matrix4 modelMatrix;
 	Matrix4 worldTransform;

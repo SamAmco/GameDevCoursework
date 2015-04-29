@@ -2,14 +2,19 @@
 #pragma once
 #include "GraphicsCode\Mesh.h"
 #include <string>
-#include <map>
+#include <fstream>
+#include <vector>
+#include "ResourceManager.h"
+#include "MeshResource.h"
 
 using namespace std;
 
 //Manages Mesh loading and the memory used by the meshes
-class MeshManager
+class MeshManager : public ResourceManager
 {
 public:
+
+	Resource* LoadResource(const string& name, const int type = 0);
 
 	//singleton getter
 	static MeshManager& getInstance()
@@ -18,18 +23,10 @@ public:
 		return instance;
 	}
 
-	Mesh* LoadMesh(const string);
-	void UnloadMeshes();
-
-	~MeshManager();
+	~MeshManager() { UnloadAllResources(); }
 
 private:
 	//These parts enforce singleton constraints
-	MeshManager();
-	MeshManager(MeshManager const&) = delete;
-	void operator=(MeshManager const&) = delete;
-
-	//Store a map of already loaded meshes
-	map<string, Mesh*> loadedMeshes;
+	MeshManager(){};
 };
 
