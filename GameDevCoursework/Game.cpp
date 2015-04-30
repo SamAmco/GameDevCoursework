@@ -2,6 +2,9 @@
 #include "stdafx.h"
 #include "Game.h"
 
+bool Game::continueGame = true;
+bool Game::gamePaused = false;
+
 Game::Game(Renderer& renderer, tgui::Gui& gui)
 	: renderer(renderer), gui(gui)
 {
@@ -21,15 +24,20 @@ bool Game::Update(sf::Event& event, float msec)
 		}
 		else if (event.key.code == sf::Keyboard::Escape)
 		{
-			return false;
+			//return false;
 		}
 	}
 
+
+	if (gamePaused)
+		msec = 0;
+
 	Scenes s = currentScene->Update(event, msec);
+
 	if (s != Scenes::CURRENT)
 		loadNextScene(s);
 
-	return true;
+	return continueGame;
 }
 
 //Change the current scene
@@ -46,12 +54,13 @@ void Game::loadNextScene(Scenes sceneType)
 		currentScene = new Scene1(renderer, gui);
 		break;
 	}
+	gamePaused = false;
 }
 
 //Draw the gui for the current scene.
 void Game::HandleUI(tgui::Gui& gui)
 {
-	currentScene->HandleUI(gui);
+	currentScene->HandleUI();
 }
 
 Game::~Game()

@@ -5,7 +5,7 @@ class Resource
 {
 public:
 	Resource(){ name = ""; }
-	~Resource(){}
+	virtual ~Resource(){}
 
 	bool failedToLoad = false;
 	bool destroyOnSceneLoad = true;

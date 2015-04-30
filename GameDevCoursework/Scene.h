@@ -10,6 +10,7 @@
 #include <TGUI\TGUI.hpp>
 #include "GuiLoader.h"
 
+
 //This enumerator must be updated to include the names of any 
 //and all scenes in the game. CURRENT is a special value that is used to
 //denote the scene that is currently loaded
@@ -26,13 +27,13 @@ class Scene
 {
 public:
 
-	Scene(tgui::Gui& gui) 
+	Scene(tgui::Gui& gui) : gui(gui)
 	{
 		gui.removeAllWidgets();
 	}
 
 	virtual Scenes Update(sf::Event& event, float msec) = 0;
-	virtual void HandleUI(tgui::Gui& gui) {}
+	virtual void HandleUI() {}
 
 	virtual ~Scene()
 	{
@@ -41,5 +42,9 @@ public:
 		MaterialManager::getInstance().LoadingNewScene();
 		AudioManager::getInstance().LoadingNewScene();
 	}
+protected:
+	tgui::Gui& gui;
+	Scenes nextScene;
+
 };
 

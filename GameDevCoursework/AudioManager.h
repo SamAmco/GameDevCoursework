@@ -25,6 +25,11 @@ public:
 	//Sounds are loaded directly into memory, music is streamed from the hard disk
 	Resource* LoadResource(const string& name, const int type = 0);
 
+	void PlayMusicResource(MusicResource* music);
+	void PlaySoundResource(SoundResource* sound);
+	void setVolume(float v);
+	inline float getVolume(){ return volume; }
+
 	//singleton getter
 	static AudioManager& getInstance()
 	{
@@ -39,5 +44,6 @@ private:
 	AudioManager(){};
 	SoundResource* LoadSound(const string& name);
 	MusicResource* LoadMusic(const string& name);
+	float volume = 100.f;
 };
 

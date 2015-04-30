@@ -1,11 +1,14 @@
 //File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "Scene1.h"
+#include "Game.h"
 
 
 Scene1::Scene1(Renderer& renderer, tgui::Gui& gui)
 	: Scene(gui), renderer(renderer)
 {
+	nextScene = Scenes::CURRENT;
+
 	//set up the physics engine and renderer
 	initializeGraphics();
 	initializePhysics();
@@ -19,7 +22,7 @@ Scene1::Scene1(Renderer& renderer, tgui::Gui& gui)
 	//load the background music
 	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("Audio/tacky_background_music.wav", AUDIO_TYPE::MUSIC);
 	backgroundMusic->music->setLoop(true);
-	//backgroundMusic->music->play();
+	AudioManager::getInstance().PlayMusicResource(backgroundMusic);
 }
 
 //Simply sets the light position and projection matrix of the scene
@@ -47,8 +50,19 @@ void Scene1::initializePhysics()
 //if the player has fallen below the platforms, or the goal has been reached, return a change of scene
 Scenes Scene1::Update(sf::Event& event, float msec)
 {
-	player->Update(event, msec);
-	dynamicsWorld->stepSimulation(msec);
+	if (msec > 0)
+	{
+		player->Update(event, msec);
+		dynamicsWorld->stepSimulation(msec);
+	}
+
+	if (event.type == sf::Event::KeyPressed)
+	{
+		if (event.key.code == sf::Keyboard::Escape)
+		{
+			GuiLoader::LoadSettingsOverlay2(gui);
+		}
+	}
 
 	if (player->sphereRigidBody->getWorldTransform().getOrigin().y() < -5)
 		return Scenes::SCENE1;
@@ -56,7 +70,20 @@ Scenes Scene1::Update(sf::Event& event, float msec)
 	if (goal->Update(event, msec))
 		return Scenes::SCENE1;
 
-	return Scenes::CURRENT;
+	return nextScene;
+}
+
+void Scene1::HandleUI()
+{
+	tgui::Callback callback;
+	while (gui.pollCallback(callback))
+	{
+		//if there is a gui event, check the id of the gui element
+		if (callback.id == 1)
+		{
+			nextScene = Scenes::MAIN_MENU;
+		}
+	}
 }
 
 Scene1::~Scene1()

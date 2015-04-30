@@ -10,7 +10,7 @@ MainMenuScene::MainMenuScene(tgui::Gui& gui) : Scene(gui)
 	backgroundMusic->music->setLoop(true);
 
 	nextScene = Scenes::CURRENT;
-	//backgroundMusic->music->play();
+	AudioManager::getInstance().PlayMusicResource(backgroundMusic);
 }
 
 //when the player presses space, change to Scene1
@@ -20,20 +20,12 @@ Scenes MainMenuScene::Update(sf::Event& event, float msec)
 }
 
 //Draw the text
-void MainMenuScene::HandleUI(tgui::Gui& gui)
+void MainMenuScene::HandleUI()
 {
 	tgui::Callback callback;
 	while (gui.pollCallback(callback))
 	{
 		//if there is a gui event, check the id of the gui element
-		if (callback.id == -1)
-		{
-			GuiLoader::DestroySettingsOverlay(gui);
-		}
-		if (callback.id == 0)
-		{
-			GuiLoader::LoadSettingsOverlay(gui);
-		}
 		if (callback.id == 1)
 		{
 			nextScene = Scenes::SCENE1;

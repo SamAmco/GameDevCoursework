@@ -11,10 +11,9 @@ public:
 	~MainMenuScene(){}
 
 	Scenes Update(sf::Event& event, float msec);
-	virtual void HandleUI(tgui::Gui& gui);
+	virtual void HandleUI();
 
 private:
 	MusicResource* backgroundMusic;
-	Scenes nextScene;
 };
 

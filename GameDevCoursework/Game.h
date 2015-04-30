@@ -16,11 +16,14 @@ public:
 
 	bool Update(sf::Event& event, float msec);
 	void HandleUI(tgui::Gui& gui);
+	void loadNextScene(Scenes sceneType);
+
+	static bool continueGame;
+	static bool gamePaused;
 
 	~Game();
 
 private:
-	void loadNextScene(Scenes sceneType);
 
 	Renderer& renderer;
 	Scene* currentScene;

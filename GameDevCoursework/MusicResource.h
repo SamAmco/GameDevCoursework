@@ -1,12 +1,14 @@
 #pragma once
-#include "Resource.h"
+#include "AudioResource.h"
 #include <SFML/Audio.hpp>
 
-class MusicResource : public Resource
+class MusicResource : public AudioResource
 {
 public:
 	MusicResource(){}
 	~MusicResource(){ delete music; }
+
+	inline void setVolume(float v){ music->setVolume(v); }
 
 	sf::Music* music;
 };

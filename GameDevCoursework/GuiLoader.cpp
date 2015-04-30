@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "GuiLoader.h"
+#include "Game.h"
 
 const std::string GuiLoader::GUI_CONFIG = "Gui/Black.conf";
 tgui::ChildWindow::Ptr GuiLoader::settingsOverlay;
@@ -14,13 +15,12 @@ void GuiLoader::LoadMainMenuGui(tgui::Gui& gui)
 	tgui::Button::Ptr settingsButton(gui);
 	settingsButton->load(GUI_CONFIG);
 	settingsButton->setSize(100, 40);
-	settingsButton->setPosition(gui.getWindow()->getSize().x - 100, 0);
+	settingsButton->setPosition(gui.getWindow()->getSize().x - 100.f, 0);
 	settingsButton->setText("Settings");
 	settingsButton->setTextColor(sf::Color::White);
 	settingsButton->setTextSize(24);
 	settingsButton->setTransparency(125);
-	settingsButton->bindCallback(tgui::Button::LeftMouseClicked);
-	settingsButton->setCallbackId(0);
+	settingsButton->bindCallback(std::bind(GuiLoader::LoadSettingsOverlay, std::ref(gui)), tgui::Button::LeftMouseClicked);
 
 
 	int xOffset = 0;
@@ -65,6 +65,24 @@ void GuiLoader::LoadMainMenuGui(tgui::Gui& gui)
 
 }
 
+void GuiLoader::LoadSettingsOverlay2(tgui::Gui& gui)
+{
+	LoadSettingsOverlay(gui);
+
+	tgui::Button::Ptr mainMenuButton(*settingsOverlay);
+	mainMenuButton->load(GUI_CONFIG);
+	mainMenuButton->setSize(150, 40);
+	mainMenuButton->setPosition((settingsOverlay->getSize().x / 2.f) - 75.f, (settingsOverlay->getSize().y / 6.f) * 3.f);
+	mainMenuButton->setText("Main Menu");
+	mainMenuButton->setTextColor(sf::Color::White);
+	mainMenuButton->setTextSize(24);
+	mainMenuButton->setTransparency(125);
+	mainMenuButton->bindCallback(tgui::Button::LeftMouseClicked);
+	mainMenuButton->setCallbackId(1);
+
+	Game::gamePaused = true;
+}
+
 void GuiLoader::LoadSettingsOverlay(tgui::Gui& gui)
 {
 	gui.remove(settingsOverlay);
@@ -90,18 +108,8 @@ void GuiLoader::LoadSettingsOverlay(tgui::Gui& gui)
 	volumeSlider->setVerticalScroll(false);
 	volumeSlider->setPosition((settingsOverlay->getSize().x / 2.f) - 150, (settingsOverlay->getSize().y / 6.f) * 2.f);
 	volumeSlider->setMaximum(100);
-	volumeSlider->setValue(100);
-
-	tgui::Button::Ptr applyButton(*settingsOverlay);
-	applyButton->load(GUI_CONFIG);
-	applyButton->setSize(150, 40);
-	applyButton->setPosition((settingsOverlay->getSize().x / 2.f) - 75, (settingsOverlay->getSize().y / 6.f) * 3.f);
-	applyButton->setText("Apply");
-	applyButton->setTextColor(sf::Color::White);
-	applyButton->setTextSize(24);
-	applyButton->setTransparency(125);
-	applyButton->bindCallback(tgui::Button::LeftMouseClicked);
-	applyButton->setCallbackId(-2);
+	volumeSlider->setValue(AudioManager::getInstance().getVolume());
+	volumeSlider->bindCallback(std::bind(GuiLoader::VolumeChanged, volumeSlider), tgui::Slider::ValueChanged);
 
 	tgui::Button::Ptr quitButton(*settingsOverlay);
 	quitButton->load(GUI_CONFIG);
@@ -111,8 +119,7 @@ void GuiLoader::LoadSettingsOverlay(tgui::Gui& gui)
 	quitButton->setTextColor(sf::Color::White);
 	quitButton->setTextSize(24);
 	quitButton->setTransparency(125);
-	quitButton->bindCallback(tgui::Button::LeftMouseClicked);
-	quitButton->setCallbackId(-2);
+	quitButton->bindCallback(QuitGame, tgui::Button::LeftMouseClicked);
 
 	tgui::Button::Ptr closeButton(*settingsOverlay);
 	closeButton->load(GUI_CONFIG);
@@ -122,12 +129,22 @@ void GuiLoader::LoadSettingsOverlay(tgui::Gui& gui)
 	closeButton->setTextColor(sf::Color::White);
 	closeButton->setTextSize(24);
 	closeButton->setTransparency(125);
-	closeButton->bindCallback(tgui::Button::LeftMouseClicked);
-	closeButton->setCallbackId(-1);
-	
+	closeButton->bindCallback(std::bind(GuiLoader::DestroySettingsOverlay, std::ref(gui)), tgui::Button::LeftMouseClicked);
+
+}
+
+void GuiLoader::VolumeChanged(tgui::Slider::Ptr volumeSlider)
+{
+	AudioManager::getInstance().setVolume(volumeSlider->getValue());
+}
+
+void GuiLoader::QuitGame()
+{
+	Game::continueGame = false;
 }
 
 void GuiLoader::DestroySettingsOverlay(tgui::Gui& gui)
 {
 	gui.remove(settingsOverlay);
+	Game::gamePaused = false;
 }

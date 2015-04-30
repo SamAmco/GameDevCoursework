@@ -18,6 +18,28 @@ Resource* AudioManager::LoadResource(const string& name, const int type)
 	}
 }
 
+void AudioManager::PlayMusicResource(MusicResource* music)
+{
+	music->music->setVolume(volume);
+	music->music->play();
+}
+
+void AudioManager::PlaySoundResource(SoundResource* sound)
+{
+	sound->sound->setVolume(volume);
+	sound->sound->play();
+}
+
+void AudioManager::setVolume(float v)
+{
+	volume = v;
+	for (auto r : loadedResources)
+	{
+		AudioResource* a = (AudioResource*)r;
+		a->setVolume(v);
+	}
+}
+
 MusicResource* AudioManager::LoadMusic(const string& name)
 {
 	cout << "Loading Music: " << name << endl;
