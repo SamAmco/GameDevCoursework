@@ -3,38 +3,40 @@
 #include "MainMenuScene.h"
 
 //Load the font and text and initialize the background music
-MainMenuScene::MainMenuScene()
+MainMenuScene::MainMenuScene(tgui::Gui& gui) : Scene(gui)
 {
-	font = sf::Font();
-	font.loadFromFile("Fonts/OpenSans-Regular.ttf");
-	text = sf::Text();
-	text.setFont(font);
-	text.setPosition(0, (sf::VideoMode::getDesktopMode().height / 2) - 50);
-	text.setCharacterSize(44); //in pixels, not points!
-	text.setColor(sf::Color(30,30,30,255));
-	text.setString("Press SPACE to play the demo level");
-
+	GuiLoader::LoadMainMenuGui(gui);
 	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("Audio/simple_soul_in_a_mechanical_world.wav", AUDIO_TYPE::MUSIC);
 	backgroundMusic->music->setLoop(true);
+
+	nextScene = Scenes::CURRENT;
 	//backgroundMusic->music->play();
 }
 
 //when the player presses space, change to Scene1
 Scenes MainMenuScene::Update(sf::Event& event, float msec)
 {
-	if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space)
-		return Scenes::SCENE1;
-
-	return Scenes::CURRENT;
+	return nextScene;
 }
 
 //Draw the text
-void MainMenuScene::DrawGUI(sf::RenderWindow& window)
+void MainMenuScene::HandleUI(tgui::Gui& gui)
 {
-	window.draw(text);
-}
-
-MainMenuScene::~MainMenuScene()
-{
-
+	tgui::Callback callback;
+	while (gui.pollCallback(callback))
+	{
+		//if there is a gui event, check the id of the gui element
+		if (callback.id == -1)
+		{
+			GuiLoader::DestroySettingsOverlay(gui);
+		}
+		if (callback.id == 0)
+		{
+			GuiLoader::LoadSettingsOverlay(gui);
+		}
+		if (callback.id == 1)
+		{
+			nextScene = Scenes::SCENE1;
+		}
+	}
 }

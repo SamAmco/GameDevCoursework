@@ -52,14 +52,14 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;GLEW_STATIC;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\TGUI-0.6\include;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL\Debug;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew.lib;sfml-system-d.lib;sfml-audio-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\TGUI-0.6\lib;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL\Debug;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew.lib;sfml-system-d.lib;sfml-audio-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;SOIL.lib;tgui-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -71,7 +71,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;SFML_DYNAMIC;GLEW_STATIC;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\TGUI-0.6\include;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
@@ -80,8 +80,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL\Release;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew.lib;sfml-system.lib;sfml-audio.lib;sfml-window.lib;sfml-graphics.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\TGUI-0.6\lib;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL\Release;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew.lib;sfml-system.lib;sfml-audio.lib;sfml-window.lib;sfml-graphics.lib;SOIL.lib;tgui.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -102,6 +102,7 @@
     <ClInclude Include="GraphicsCode\Vector2.h" />
     <ClInclude Include="GraphicsCode\Vector3.h" />
     <ClInclude Include="GraphicsCode\Vector4.h" />
+    <ClInclude Include="GuiLoader.h" />
     <ClInclude Include="MainMenuScene.h" />
     <ClInclude Include="MaterialResource.h" />
     <ClInclude Include="MeshManager.h" />
@@ -120,8 +121,6 @@
     <ClInclude Include="TextureResource.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="ThirdPersonCamera.h" />
-    <ClInclude Include="YouLoseScene.h" />
-    <ClInclude Include="YouWinScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AudioManager.cpp" />
@@ -155,6 +154,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="GuiLoader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenuScene.cpp" />
     <ClCompile Include="MeshManager.cpp" />
@@ -169,8 +169,6 @@
     </ClCompile>
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="ThirdPersonCamera.cpp" />
-    <ClCompile Include="YouLoseScene.cpp" />
-    <ClCompile Include="YouWinScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bullet-2.82-r2704\build\src\BulletCollision\BulletCollision.vcxproj">

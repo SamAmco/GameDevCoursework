@@ -7,15 +7,14 @@
 class MainMenuScene : public Scene
 {
 public:
-	MainMenuScene();
-	~MainMenuScene();
+	MainMenuScene(tgui::Gui& gui);
+	~MainMenuScene(){}
 
 	Scenes Update(sf::Event& event, float msec);
-	void DrawGUI(sf::RenderWindow& window);
+	virtual void HandleUI(tgui::Gui& gui);
 
 private:
-	sf::Text text;
-	sf::Font font;
 	MusicResource* backgroundMusic;
+	Scenes nextScene;
 };
 

@@ -7,6 +7,8 @@
 #include <SFML/OpenGL.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <TGUI\TGUI.hpp>
+#include "GuiLoader.h"
 
 //This enumerator must be updated to include the names of any 
 //and all scenes in the game. CURRENT is a special value that is used to
@@ -15,9 +17,7 @@ enum Scenes
 {
 	CURRENT,
 	MAIN_MENU,
-	SCENE1,
-	YOU_LOSE_SCENE,
-	YOU_WIN_SCENE
+	SCENE1
 };
 
 //This abstract class is the base for all scenes and ensures that all resources are unloaded
@@ -26,10 +26,13 @@ class Scene
 {
 public:
 
-	Scene(){}
+	Scene(tgui::Gui& gui) 
+	{
+		gui.removeAllWidgets();
+	}
 
 	virtual Scenes Update(sf::Event& event, float msec) = 0;
-	virtual void DrawGUI(sf::RenderWindow& window) {}
+	virtual void HandleUI(tgui::Gui& gui) {}
 
 	virtual ~Scene()
 	{

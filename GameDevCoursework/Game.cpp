@@ -2,11 +2,11 @@
 #include "stdafx.h"
 #include "Game.h"
 
-Game::Game(Renderer& renderer)
-	: renderer(renderer)
+Game::Game(Renderer& renderer, tgui::Gui& gui)
+	: renderer(renderer), gui(gui)
 {
 	//initialize the opening scene to the main menu
-	currentScene = new MainMenuScene();
+	currentScene = new MainMenuScene(gui);
 	currentSceneType = Scenes::MAIN_MENU;
 }
 
@@ -40,24 +40,18 @@ void Game::loadNextScene(Scenes sceneType)
 	switch (sceneType)
 	{
 	case Scenes::MAIN_MENU :
-		currentScene = new MainMenuScene();
+		currentScene = new MainMenuScene(gui);
 		break;
 	case Scenes::SCENE1:
-		currentScene = new Scene1(renderer);
-		break;
-	case Scenes::YOU_LOSE_SCENE:
-		currentScene = new YouLoseScene();
-		break;
-	case Scenes::YOU_WIN_SCENE:
-		currentScene = new YouWinScene();
+		currentScene = new Scene1(renderer, gui);
 		break;
 	}
 }
 
 //Draw the gui for the current scene.
-void Game::DrawGUI(sf::RenderWindow& window)
+void Game::HandleUI(tgui::Gui& gui)
 {
-	currentScene->DrawGUI(window);
+	currentScene->HandleUI(gui);
 }
 
 Game::~Game()

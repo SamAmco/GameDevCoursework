@@ -3,8 +3,8 @@
 #include "Scene1.h"
 
 
-Scene1::Scene1(Renderer& renderer)
-	: renderer(renderer)
+Scene1::Scene1(Renderer& renderer, tgui::Gui& gui)
+	: Scene(gui), renderer(renderer)
 {
 	//set up the physics engine and renderer
 	initializeGraphics();
@@ -51,10 +51,10 @@ Scenes Scene1::Update(sf::Event& event, float msec)
 	dynamicsWorld->stepSimulation(msec);
 
 	if (player->sphereRigidBody->getWorldTransform().getOrigin().y() < -5)
-		return Scenes::YOU_LOSE_SCENE;
+		return Scenes::SCENE1;
 
 	if (goal->Update(event, msec))
-		return Scenes::YOU_WIN_SCENE;
+		return Scenes::SCENE1;
 
 	return Scenes::CURRENT;
 }

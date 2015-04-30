@@ -15,7 +15,7 @@
 class Scene1 : public Scene
 {
 public:
-	Scene1(Renderer&);
+	Scene1(Renderer&, tgui::Gui& gui);
 	virtual ~Scene1();
 
 	virtual Scenes Update(sf::Event& event, float msec);

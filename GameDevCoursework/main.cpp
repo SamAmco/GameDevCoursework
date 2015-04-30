@@ -4,6 +4,7 @@
 #include <SFML/OpenGL.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <TGUI\TGUI.hpp>
 
 #include "GraphicsCode\Renderer.h"
 #include "TextureManager.h"
@@ -23,7 +24,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	settings.minorVersion = 0;
 	sf::RenderWindow window = sf::RenderWindow(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, settings);
 	window.setVerticalSyncEnabled(true);
-	window.setMouseCursorVisible(false);
+	//window.setMouseCursorVisible(false);
+	tgui::Gui gui(window);
 	
 	if (glewInit() != GLEW_OK)
 	{	//Try to initialise GLEW
@@ -32,11 +34,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 
 	Renderer renderer = Renderer();
-	Game game = Game(renderer);
 
 	sf::Font font;
 	if (!font.loadFromFile("Fonts/OpenSans-Regular.ttf"))
 		return EXIT_FAILURE;
+	gui.setGlobalFont(font);
 	sf::Text text;
 	text.setFont(font);
 	text.setPosition(0, 0);
@@ -44,6 +46,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	text.setColor(sf::Color::Red);
 	window.setActive();
 
+	Game game = Game(renderer, gui);
 
 	bool running = true;
 	sf::Clock clock;
@@ -66,12 +69,15 @@ int _tmain(int argc, _TCHAR* argv[])
 			}
 			else if (event.type == sf::Event::Resized)
 				glViewport(0, 0, event.size.width, event.size.height);
+
+			gui.handleEvent(event);
 		}
 		else
 			event = sf::Event();
 
 		running = game.Update(event, msec);//physics update
-		
+		game.HandleUI(gui);
+
 		renderer.UpdateScene(msec);//graphics update
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//Clear the screen
@@ -88,7 +94,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 		window.pushGLStates();
 		window.draw(text);
-		game.DrawGUI(window);
+		gui.draw();
 		window.popGLStates();
 
 		window.display();//Display the buffer
