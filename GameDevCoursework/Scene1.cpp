@@ -4,10 +4,11 @@
 #include "Game.h"
 
 
-Scene1::Scene1(Renderer& renderer, tgui::Gui& gui)
-	: Scene(gui), renderer(renderer)
+Scene1::Scene1(Renderer& renderer, tgui::Gui& gui, bool lastLevel)
+	: Scene(gui), lastLevel(lastLevel), renderer(renderer)
 {
 	nextScene = Scenes::CURRENT;
+	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(false);
 
 	//set up the physics engine and renderer
 	initializeGraphics();
@@ -54,21 +55,26 @@ Scenes Scene1::Update(sf::Event& event, float msec)
 	{
 		player->Update(event, msec);
 		dynamicsWorld->stepSimulation(msec);
-	}
-
-	if (event.type == sf::Event::KeyPressed)
-	{
-		if (event.key.code == sf::Keyboard::Escape)
+	
+		if (event.type == sf::Event::KeyPressed)
 		{
-			GuiLoader::LoadSettingsOverlay2(gui);
+			if (event.key.code == sf::Keyboard::Escape)
+			{
+				GuiLoader::LoadSettingsOverlay2(gui);
+			}
+		}
+
+		if (player->sphereRigidBody->getWorldTransform().getOrigin().y() < -5)
+			GuiLoader::LoadLevelLostOverlay(gui);
+
+		if (goal->Update(event, msec))
+		{
+			if (lastLevel)
+				GuiLoader::LoadGameWonOverlay(gui);
+			else
+				GuiLoader::LoadLevelWonOverlay(gui);
 		}
 	}
-
-	if (player->sphereRigidBody->getWorldTransform().getOrigin().y() < -5)
-		return Scenes::SCENE1;
-
-	if (goal->Update(event, msec))
-		return Scenes::SCENE1;
 
 	return nextScene;
 }
@@ -82,6 +88,14 @@ void Scene1::HandleUI()
 		if (callback.id == 1)
 		{
 			nextScene = Scenes::MAIN_MENU;
+		}
+		else if (callback.id == 2)
+		{
+			nextScene = Scenes::NEXT_LEVEL;
+		}
+		else if (callback.id == 3)
+		{
+			nextScene = Scenes::RELOAD;
 		}
 	}
 }

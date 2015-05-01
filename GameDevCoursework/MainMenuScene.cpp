@@ -5,11 +5,13 @@
 //Load the font and text and initialize the background music
 MainMenuScene::MainMenuScene(tgui::Gui& gui) : Scene(gui)
 {
+	nextScene = Scenes::CURRENT;
+	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(true);
+
 	GuiLoader::LoadMainMenuGui(gui);
 	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("Audio/simple_soul_in_a_mechanical_world.wav", AUDIO_TYPE::MUSIC);
 	backgroundMusic->music->setLoop(true);
 
-	nextScene = Scenes::CURRENT;
 	AudioManager::getInstance().PlayMusicResource(backgroundMusic);
 }
 
@@ -26,9 +28,10 @@ void MainMenuScene::HandleUI()
 	while (gui.pollCallback(callback))
 	{
 		//if there is a gui event, check the id of the gui element
-		if (callback.id == 1)
+		if (callback.id > 0)
 		{
-			nextScene = Scenes::SCENE1;
+			levelSelected = callback.id;
+			nextScene = Scenes::CHOSEN_LEVEL;
 		}
 	}
 }

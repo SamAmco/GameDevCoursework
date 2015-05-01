@@ -27,7 +27,6 @@ private:
 
 	Renderer& renderer;
 	Scene* currentScene;
-	Scenes currentSceneType;
 	tgui::Gui& gui;
 };
 

@@ -10,7 +10,6 @@ Game::Game(Renderer& renderer, tgui::Gui& gui)
 {
 	//initialize the opening scene to the main menu
 	currentScene = new MainMenuScene(gui);
-	currentSceneType = Scenes::MAIN_MENU;
 }
 
 //Update the current scene and see whether it wants to load a different scene
@@ -20,11 +19,7 @@ bool Game::Update(sf::Event& event, float msec)
 	{
 		if (event.key.code == sf::Keyboard::R)
 		{
-			loadNextScene(currentSceneType);
-		}
-		else if (event.key.code == sf::Keyboard::Escape)
-		{
-			//return false;
+			loadNextScene(Scenes::RELOAD);
 		}
 	}
 
@@ -43,17 +38,30 @@ bool Game::Update(sf::Event& event, float msec)
 //Change the current scene
 void Game::loadNextScene(Scenes sceneType)
 {
+	int levelNumber = 0;
+	if (sceneType == Scenes::CHOSEN_LEVEL)
+	{
+		levelNumber = ((MainMenuScene*)currentScene)->levelSelected;
+	}
+	
 	delete currentScene;
-	currentSceneType = sceneType;
+
 	switch (sceneType)
 	{
 	case Scenes::MAIN_MENU :
 		currentScene = new MainMenuScene(gui);
 		break;
-	case Scenes::SCENE1:
-		currentScene = new Scene1(renderer, gui);
+	case Scenes::NEXT_LEVEL:
+		currentScene = new Scene1(renderer, gui, true);
 		break;
+	case Scenes::CHOSEN_LEVEL:
+		currentScene = new Scene1(renderer, gui, false);
+		break;
+	case Scenes::RELOAD:
+		currentScene = new Scene1(renderer, gui, false);
 	}
+
+
 	gamePaused = false;
 }
 

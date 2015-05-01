@@ -13,6 +13,8 @@ public:
 	Scenes Update(sf::Event& event, float msec);
 	virtual void HandleUI();
 
+	int levelSelected = 0;
+
 private:
 	MusicResource* backgroundMusic;
 };

@@ -3,7 +3,7 @@
 #include "Game.h"
 
 const std::string GuiLoader::GUI_CONFIG = "Gui/Black.conf";
-tgui::ChildWindow::Ptr GuiLoader::settingsOverlay;
+tgui::ChildWindow::Ptr GuiLoader::overlay;
 
 void GuiLoader::LoadMainMenuGui(tgui::Gui& gui)
 {
@@ -65,70 +65,225 @@ void GuiLoader::LoadMainMenuGui(tgui::Gui& gui)
 
 }
 
-void GuiLoader::LoadSettingsOverlay2(tgui::Gui& gui)
+void GuiLoader::LoadLevelLostOverlay(tgui::Gui& gui)
 {
-	LoadSettingsOverlay(gui);
+	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(true);
+	gui.remove(overlay);
+	Game::gamePaused = true;
 
-	tgui::Button::Ptr mainMenuButton(*settingsOverlay);
+	overlay = tgui::ChildWindow::Ptr(gui);
+	overlay->load(GUI_CONFIG);
+	overlay->setSize((gui.getWindow()->getSize().x / 20.f) * 18.f, (gui.getWindow()->getSize().y / 15.f) * 13.f);
+	overlay->setBackgroundColor(sf::Color(80, 80, 80));
+	overlay->setPosition((gui.getWindow()->getSize().x / 20.f), (gui.getWindow()->getSize().y / 15.f));
+	overlay->setTitle("Child window");
+	overlay->setBorders();
+	overlay->setTitleBarHeight(0);
+
+	tgui::Label::Ptr youWonLabel(*overlay);
+	youWonLabel->setTextSize(34);
+	youWonLabel->setText("You died :(");
+	youWonLabel->setPosition((overlay->getSize().x / 2.f) - (youWonLabel->getSize().x / 2.f),
+		(overlay->getSize().y / 6.f) * 1.6f);
+
+	tgui::Button::Ptr mainMenuButton(*overlay);
 	mainMenuButton->load(GUI_CONFIG);
 	mainMenuButton->setSize(150, 40);
-	mainMenuButton->setPosition((settingsOverlay->getSize().x / 2.f) - 75.f, (settingsOverlay->getSize().y / 6.f) * 3.f);
+	mainMenuButton->setPosition((overlay->getSize().x / 2.f) - 75.f, (overlay->getSize().y / 6.f) * 3.f);
 	mainMenuButton->setText("Main Menu");
 	mainMenuButton->setTextColor(sf::Color::White);
 	mainMenuButton->setTextSize(24);
-	mainMenuButton->setTransparency(125);
 	mainMenuButton->bindCallback(tgui::Button::LeftMouseClicked);
 	mainMenuButton->setCallbackId(1);
 
+	tgui::Button::Ptr nextLevelButton(*overlay);
+	nextLevelButton->load(GUI_CONFIG);
+	nextLevelButton->setSize(150, 40);
+	nextLevelButton->setPosition((overlay->getSize().x / 2.f) - 75.f, (overlay->getSize().y / 6.f) * 4.f);
+	nextLevelButton->setText("Retry");
+	nextLevelButton->setTextColor(sf::Color::White);
+	nextLevelButton->setTextSize(24);
+	nextLevelButton->bindCallback(tgui::Button::LeftMouseClicked);
+	nextLevelButton->setCallbackId(3);
+}
+
+void GuiLoader::LoadLevelWonOverlay(tgui::Gui& gui)
+{
+	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(true);
+	gui.remove(overlay);
 	Game::gamePaused = true;
+
+	overlay = tgui::ChildWindow::Ptr(gui);
+	overlay->load(GUI_CONFIG);
+	overlay->setSize((gui.getWindow()->getSize().x / 20.f) * 18.f, (gui.getWindow()->getSize().y / 15.f) * 13.f);
+	overlay->setBackgroundColor(sf::Color(80, 80, 80));
+	overlay->setPosition((gui.getWindow()->getSize().x / 20.f), (gui.getWindow()->getSize().y / 15.f));
+	overlay->setTitle("Child window");
+	overlay->setBorders();
+	overlay->setTitleBarHeight(0);
+
+	tgui::Label::Ptr youWonLabel(*overlay);
+	youWonLabel->setTextSize(34);
+	youWonLabel->setText("You've completed the level!");
+	youWonLabel->setPosition((overlay->getSize().x / 2.f) - (youWonLabel->getSize().x / 2.f),
+		(overlay->getSize().y / 6.f) * 1.6f);
+
+	tgui::Button::Ptr mainMenuButton(*overlay);
+	mainMenuButton->load(GUI_CONFIG);
+	mainMenuButton->setSize(150, 40);
+	mainMenuButton->setPosition((overlay->getSize().x / 2.f) - 75.f, (overlay->getSize().y / 6.f) * 3.f);
+	mainMenuButton->setText("Main Menu");
+	mainMenuButton->setTextColor(sf::Color::White);
+	mainMenuButton->setTextSize(24);
+	mainMenuButton->bindCallback(tgui::Button::LeftMouseClicked);
+	mainMenuButton->setCallbackId(1);
+
+	tgui::Button::Ptr nextLevelButton(*overlay);
+	nextLevelButton->load(GUI_CONFIG);
+	nextLevelButton->setSize(150, 40);
+	nextLevelButton->setPosition((overlay->getSize().x / 2.f) - 75.f, (overlay->getSize().y / 6.f) * 4.f);
+	nextLevelButton->setText("Next Level");
+	nextLevelButton->setTextColor(sf::Color::White);
+	nextLevelButton->setTextSize(24);
+	nextLevelButton->bindCallback(tgui::Button::LeftMouseClicked);
+	nextLevelButton->setCallbackId(2);
+}
+
+void GuiLoader::LoadGameWonOverlay(tgui::Gui& gui)
+{
+	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(true);
+	gui.remove(overlay);
+	Game::gamePaused = true;
+
+	overlay = tgui::ChildWindow::Ptr(gui);
+	overlay->load(GUI_CONFIG);
+	overlay->setSize((gui.getWindow()->getSize().x / 20.f) * 18.f, (gui.getWindow()->getSize().y / 15.f) * 13.f);
+	overlay->setBackgroundColor(sf::Color(80, 80, 80));
+	overlay->setPosition((gui.getWindow()->getSize().x / 20.f), (gui.getWindow()->getSize().y / 15.f));
+	overlay->setTitle("Child window");
+	overlay->setBorders();
+	overlay->setTitleBarHeight(0);
+
+	tgui::Label::Ptr youWonLabel(*overlay);
+	youWonLabel->setTextSize(34);
+	youWonLabel->setText("You've completed the game!");
+	youWonLabel->setPosition((overlay->getSize().x / 2.f) - (youWonLabel->getSize().x / 2.f),
+		(overlay->getSize().y / 6.f) * 1.6f);
+
+	tgui::Button::Ptr mainMenuButton(*overlay);
+	mainMenuButton->load(GUI_CONFIG);
+	mainMenuButton->setSize(150, 40);
+	mainMenuButton->setPosition((overlay->getSize().x / 2.f) - 75.f, (overlay->getSize().y / 6.f) * 3.f);
+	mainMenuButton->setText("Main Menu");
+	mainMenuButton->setTextColor(sf::Color::White);
+	mainMenuButton->setTextSize(24);
+	mainMenuButton->bindCallback(tgui::Button::LeftMouseClicked);
+	mainMenuButton->setCallbackId(1);
+}
+
+void GuiLoader::LoadSettingsOverlay2(tgui::Gui& gui)
+{
+	Game::gamePaused = true;
+	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(true);
+	gui.remove(overlay);
+
+	overlay = tgui::ChildWindow::Ptr(gui);
+	overlay->load(GUI_CONFIG);
+	overlay->setSize((gui.getWindow()->getSize().x / 20.f) * 18.f, (gui.getWindow()->getSize().y / 15.f) * 13.f);
+	overlay->setBackgroundColor(sf::Color(80, 80, 80));
+	overlay->setPosition((gui.getWindow()->getSize().x / 20.f), (gui.getWindow()->getSize().y / 15.f));
+	overlay->setTitle("Child window");
+	overlay->setBorders();
+	overlay->setTitleBarHeight(0);
+
+	tgui::Label::Ptr volumeLabel(*overlay);
+	volumeLabel->setTextSize(24);
+	volumeLabel->setText("Volume:");
+	volumeLabel->setPosition((overlay->getSize().x / 2.f) - (volumeLabel->getSize().x / 2.f),
+		(overlay->getSize().y / 6.f) * 1.6f);
+
+	tgui::Slider::Ptr volumeSlider(*overlay);
+	volumeSlider->load(GUI_CONFIG);
+	volumeSlider->setSize(300, 25);
+	volumeSlider->setVerticalScroll(false);
+	volumeSlider->setPosition((overlay->getSize().x / 2.f) - 150, (overlay->getSize().y / 6.f) * 2.f);
+	volumeSlider->setMaximum(100);
+	volumeSlider->setValue(AudioManager::getInstance().getVolume());
+	volumeSlider->bindCallback(std::bind(GuiLoader::VolumeChanged, volumeSlider), tgui::Slider::ValueChanged);
+	
+	tgui::Button::Ptr mainMenuButton(*overlay);
+	mainMenuButton->load(GUI_CONFIG);
+	mainMenuButton->setSize(150, 40);
+	mainMenuButton->setPosition((overlay->getSize().x / 2.f) - 75.f, (overlay->getSize().y / 6.f) * 3.f);
+	mainMenuButton->setText("Main Menu");
+	mainMenuButton->setTextColor(sf::Color::White);
+	mainMenuButton->setTextSize(24);
+	mainMenuButton->bindCallback(tgui::Button::LeftMouseClicked);
+	mainMenuButton->setCallbackId(1);
+
+	tgui::Button::Ptr quitButton(*overlay);
+	quitButton->load(GUI_CONFIG);
+	quitButton->setSize(150, 40);
+	quitButton->setPosition((overlay->getSize().x / 2.f) - 75, (overlay->getSize().y / 6.f) * 4.f);
+	quitButton->setText("Quit Game");
+	quitButton->setTextColor(sf::Color::White);
+	quitButton->setTextSize(24);
+	quitButton->bindCallback(QuitGame, tgui::Button::LeftMouseClicked);
+
+	tgui::Button::Ptr closeButton(*overlay);
+	closeButton->load(GUI_CONFIG);
+	closeButton->setSize(80, 40);
+	closeButton->setPosition((overlay->getSize().x / 2.f) - 40, (overlay->getSize().y / 6.f) * 5.f);
+	closeButton->setText("Close");
+	closeButton->setTextColor(sf::Color::White);
+	closeButton->setTextSize(24);
+	closeButton->bindCallback(std::bind(GuiLoader::DestroySettingsOverlay2, std::ref(gui)), tgui::Button::LeftMouseClicked);
 }
 
 void GuiLoader::LoadSettingsOverlay(tgui::Gui& gui)
 {
-	gui.remove(settingsOverlay);
+	gui.remove(overlay);
 
-	settingsOverlay = tgui::ChildWindow::Ptr(gui);
-	settingsOverlay->load(GUI_CONFIG);
-	settingsOverlay->setSize((gui.getWindow()->getSize().x / 20.f) * 18.f, (gui.getWindow()->getSize().y / 15.f) * 13.f);
-	settingsOverlay->setBackgroundColor(sf::Color(80, 80, 80));
-	settingsOverlay->setPosition((gui.getWindow()->getSize().x / 20.f), (gui.getWindow()->getSize().y / 15.f));
-	settingsOverlay->setTitle("Child window");
-	settingsOverlay->setBorders();
-	settingsOverlay->setTitleBarHeight(0);
+	overlay = tgui::ChildWindow::Ptr(gui);
+	overlay->load(GUI_CONFIG);
+	overlay->setSize((gui.getWindow()->getSize().x / 20.f) * 18.f, (gui.getWindow()->getSize().y / 15.f) * 13.f);
+	overlay->setBackgroundColor(sf::Color(80, 80, 80));
+	overlay->setPosition((gui.getWindow()->getSize().x / 20.f), (gui.getWindow()->getSize().y / 15.f));
+	overlay->setTitle("Child window");
+	overlay->setBorders();
+	overlay->setTitleBarHeight(0);
 
-	tgui::Label::Ptr volumeLabel(*settingsOverlay);
+	tgui::Label::Ptr volumeLabel(*overlay);
 	volumeLabel->setTextSize(24);
 	volumeLabel->setText("Volume:");
-	volumeLabel->setPosition((settingsOverlay->getSize().x / 2.f) - (volumeLabel->getSize().x / 2.f),
-		(settingsOverlay->getSize().y / 6.f) * 1.6f);
+	volumeLabel->setPosition((overlay->getSize().x / 2.f) - (volumeLabel->getSize().x / 2.f),
+		(overlay->getSize().y / 6.f) * 1.6f);
 
-	tgui::Slider::Ptr volumeSlider(*settingsOverlay);
+	tgui::Slider::Ptr volumeSlider(*overlay);
 	volumeSlider->load(GUI_CONFIG);
 	volumeSlider->setSize(300, 25);
 	volumeSlider->setVerticalScroll(false);
-	volumeSlider->setPosition((settingsOverlay->getSize().x / 2.f) - 150, (settingsOverlay->getSize().y / 6.f) * 2.f);
+	volumeSlider->setPosition((overlay->getSize().x / 2.f) - 150, (overlay->getSize().y / 6.f) * 2.f);
 	volumeSlider->setMaximum(100);
 	volumeSlider->setValue(AudioManager::getInstance().getVolume());
 	volumeSlider->bindCallback(std::bind(GuiLoader::VolumeChanged, volumeSlider), tgui::Slider::ValueChanged);
 
-	tgui::Button::Ptr quitButton(*settingsOverlay);
+	tgui::Button::Ptr quitButton(*overlay);
 	quitButton->load(GUI_CONFIG);
 	quitButton->setSize(150, 40);
-	quitButton->setPosition((settingsOverlay->getSize().x / 2.f) - 75, (settingsOverlay->getSize().y / 6.f) * 4.f);
+	quitButton->setPosition((overlay->getSize().x / 2.f) - 75, (overlay->getSize().y / 6.f) * 4.f);
 	quitButton->setText("Quit Game");
 	quitButton->setTextColor(sf::Color::White);
 	quitButton->setTextSize(24);
-	quitButton->setTransparency(125);
 	quitButton->bindCallback(QuitGame, tgui::Button::LeftMouseClicked);
 
-	tgui::Button::Ptr closeButton(*settingsOverlay);
+	tgui::Button::Ptr closeButton(*overlay);
 	closeButton->load(GUI_CONFIG);
 	closeButton->setSize(80, 40);
-	closeButton->setPosition((settingsOverlay->getSize().x / 2.f) - 40, (settingsOverlay->getSize().y / 6.f) * 5.f);
+	closeButton->setPosition((overlay->getSize().x / 2.f) - 40, (overlay->getSize().y / 6.f) * 5.f);
 	closeButton->setText("Close");
 	closeButton->setTextColor(sf::Color::White);
 	closeButton->setTextSize(24);
-	closeButton->setTransparency(125);
 	closeButton->bindCallback(std::bind(GuiLoader::DestroySettingsOverlay, std::ref(gui)), tgui::Button::LeftMouseClicked);
 
 }
@@ -145,6 +300,13 @@ void GuiLoader::QuitGame()
 
 void GuiLoader::DestroySettingsOverlay(tgui::Gui& gui)
 {
-	gui.remove(settingsOverlay);
+	gui.remove(overlay);
+	Game::gamePaused = false;
+}
+
+void GuiLoader::DestroySettingsOverlay2(tgui::Gui& gui)
+{
+	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(false);
+	gui.remove(overlay);
 	Game::gamePaused = false;
 }

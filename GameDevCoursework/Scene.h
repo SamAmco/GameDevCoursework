@@ -18,7 +18,9 @@ enum Scenes
 {
 	CURRENT,
 	MAIN_MENU,
-	SCENE1
+	NEXT_LEVEL,
+	CHOSEN_LEVEL,
+	RELOAD
 };
 
 //This abstract class is the base for all scenes and ensures that all resources are unloaded

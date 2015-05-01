@@ -15,7 +15,7 @@
 class Scene1 : public Scene
 {
 public:
-	Scene1(Renderer& renderer, tgui::Gui& gui);
+	Scene1(Renderer& renderer, tgui::Gui& gui, bool lastLevel);
 	virtual ~Scene1();
 
 	virtual Scenes Update(sf::Event& event, float msec);
@@ -41,6 +41,8 @@ private:
 	SolidPlatform* p2;
 
 	MusicResource* backgroundMusic;
+
+	bool lastLevel;
 
 };
 
