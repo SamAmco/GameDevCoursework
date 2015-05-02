@@ -3,7 +3,7 @@
 #include "Player.h"
 
 
-Player::Player(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vector3& position) 
+Player::Player(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vector3 position) 
 	: renderer(renderer), dynamicsWorld(dynamicsWorld), camera(ThirdPersonCamera(10, 2))
 {
 	initializeGraphics(position);

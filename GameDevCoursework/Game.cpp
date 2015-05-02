@@ -9,7 +9,25 @@ Game::Game(Renderer& renderer, tgui::Gui& gui)
 	: renderer(renderer), gui(gui)
 {
 	//initialize the opening scene to the main menu
-	currentScene = new MainMenuScene(gui);
+	levelNames = vector<string>();
+
+	DIR *dir;
+	struct dirent *ent;
+	if ((dir = opendir("Levels\\")) != NULL) 
+	{
+		/* print all the files and directories within directory */
+		while ((ent = readdir(dir)) != NULL) 
+		{
+			string s = ent->d_name;
+			if (s.find(".unity") != std::string::npos)
+				levelNames.push_back(s);
+		}
+		closedir(dir);
+	}
+	else 
+		cout << "Could not open levels directory!" << endl;
+
+	currentScene = new MainMenuScene(gui, levelNames.size());
 }
 
 //Update the current scene and see whether it wants to load a different scene
@@ -38,29 +56,24 @@ bool Game::Update(sf::Event& event, float msec)
 //Change the current scene
 void Game::loadNextScene(Scenes sceneType)
 {
-	int levelNumber = 0;
 	if (sceneType == Scenes::CHOSEN_LEVEL)
-	{
 		levelNumber = ((MainMenuScene*)currentScene)->levelSelected;
-	}
-	
-	delete currentScene;
+	else if (sceneType == Scenes::NEXT_LEVEL)
+		++levelNumber;
 
+	delete currentScene;
+	
 	switch (sceneType)
 	{
 	case Scenes::MAIN_MENU :
-		currentScene = new MainMenuScene(gui);
+		currentScene = new MainMenuScene(gui, levelNames.size());
 		break;
 	case Scenes::NEXT_LEVEL:
-		currentScene = new Scene1(renderer, gui, true);
+	case Scenes::CHOSEN_LEVEL :
+	case Scenes::RELOAD :
+		currentScene = new Scene1(renderer, gui, levelNames[levelNumber], levelNumber == levelNames.size() - 1);
 		break;
-	case Scenes::CHOSEN_LEVEL:
-		currentScene = new Scene1(renderer, gui, false);
-		break;
-	case Scenes::RELOAD:
-		currentScene = new Scene1(renderer, gui, false);
 	}
-
 
 	gamePaused = false;
 }

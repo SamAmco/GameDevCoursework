@@ -3,12 +3,12 @@
 #include "MainMenuScene.h"
 
 //Load the font and text and initialize the background music
-MainMenuScene::MainMenuScene(tgui::Gui& gui) : Scene(gui)
+MainMenuScene::MainMenuScene(tgui::Gui& gui, int numberOfLevels) : Scene(gui)
 {
 	nextScene = Scenes::CURRENT;
 	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(true);
 
-	GuiLoader::LoadMainMenuGui(gui);
+	GuiLoader::LoadMainMenuGui(gui, numberOfLevels);
 	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("Audio/simple_soul_in_a_mechanical_world.wav", AUDIO_TYPE::MUSIC);
 	backgroundMusic->music->setLoop(true);
 
@@ -30,7 +30,7 @@ void MainMenuScene::HandleUI()
 		//if there is a gui event, check the id of the gui element
 		if (callback.id > 0)
 		{
-			levelSelected = callback.id;
+			levelSelected = callback.id - 1;
 			nextScene = Scenes::CHOSEN_LEVEL;
 		}
 	}

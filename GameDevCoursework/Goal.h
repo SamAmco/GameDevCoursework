@@ -25,6 +25,6 @@ private:
 
 	btVector3 position;
 	//The distance that the player must be from the goal to win
-	const float WIN_THRESHOLD = 4.5f;
+	const float WIN_THRESHOLD = 1.5f;
 };
 

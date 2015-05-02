@@ -12,7 +12,7 @@
 class Player
 {
 public:
-	Player(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vector3& position);
+	Player(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vector3 position);
 	~Player();
 
 	void Update(sf::Event& event, float msec);

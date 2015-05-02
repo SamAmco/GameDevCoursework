@@ -4,8 +4,12 @@
 #include <SFML/OpenGL.hpp>
 #include <SFML/Window.hpp>
 #include <TGUI\TGUI.hpp>
+#include <string>
 #include "Scene1.h"
 #include "MainMenuScene.h"
+#include <dirent.h>
+
+using namespace std;
 
 //The game class controls the game flow,
 //it holds a pointer to the current scene and determines when to load and unload scenes
@@ -27,6 +31,8 @@ private:
 
 	Renderer& renderer;
 	Scene* currentScene;
+	vector<string> levelNames;
+	int levelNumber = 0;
 	tgui::Gui& gui;
 };
 

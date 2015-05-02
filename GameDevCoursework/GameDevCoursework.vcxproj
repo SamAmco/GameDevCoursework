@@ -52,7 +52,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;GLEW_STATIC;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\TGUI-0.6\include;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\dirent-1.9;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\TGUI-0.6\include;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -71,7 +71,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;SFML_DYNAMIC;GLEW_STATIC;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\TGUI-0.6\include;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\dirent-1.9;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\TGUI-0.6\include;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\bullet-2.82-r2704\src;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SOIL;C:\Users\SamAmco\Documents\Visual Studio 2013\Projects\GameDevCoursework\SFML-2.2\include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>

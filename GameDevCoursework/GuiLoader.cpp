@@ -5,7 +5,7 @@
 const std::string GuiLoader::GUI_CONFIG = "Gui/Black.conf";
 tgui::ChildWindow::Ptr GuiLoader::overlay;
 
-void GuiLoader::LoadMainMenuGui(tgui::Gui& gui)
+void GuiLoader::LoadMainMenuGui(tgui::Gui& gui, int numberOfLevels)
 {
 	tgui::Label::Ptr selectLevelLabel(gui);
 	selectLevelLabel->setText("Please select a level:");
@@ -22,47 +22,23 @@ void GuiLoader::LoadMainMenuGui(tgui::Gui& gui)
 	settingsButton->setTransparency(125);
 	settingsButton->bindCallback(std::bind(GuiLoader::LoadSettingsOverlay, std::ref(gui)), tgui::Button::LeftMouseClicked);
 
+	int yOffset = 0;
+	int offsetInc = 105;
 
-	int xOffset = 0;
-	int offsetInc = 205;
-
-	tgui::Button::Ptr l1(gui);
-	l1->load(GUI_CONFIG);
-	l1->setSize(200, 100);
-	l1->setPosition((gui.getWindow()->getSize().x / 20.f) + xOffset, (gui.getWindow()->getSize().y / 6.f));
-	l1->setText("1");
-	l1->setTextColor(sf::Color::White);
-	l1->setTextSize(44);
-	l1->setTransparency(125);
-	l1->bindCallback(tgui::Button::LeftMouseClicked);
-	l1->setCallbackId(1);
-
-	xOffset += offsetInc;
-
-	tgui::Button::Ptr l2(gui);
-	l2->load(GUI_CONFIG);
-	l2->setSize(200, 100);
-	l2->setPosition((gui.getWindow()->getSize().x / 20.f) + xOffset, (gui.getWindow()->getSize().y / 6.f));
-	l2->setText("2");
-	l2->setTextColor(sf::Color::White);
-	l2->setTextSize(44);
-	l2->setTransparency(125);
-	l2->bindCallback(tgui::Button::LeftMouseClicked);
-	l2->setCallbackId(2);
-
-	xOffset += offsetInc;
-
-	tgui::Button::Ptr l3(gui);
-	l3->load(GUI_CONFIG);
-	l3->setSize(200, 100);
-	l3->setPosition((gui.getWindow()->getSize().x / 20.f) + xOffset, (gui.getWindow()->getSize().y / 6.f));
-	l3->setText("3");
-	l3->setTextColor(sf::Color::White);
-	l3->setTextSize(44);
-	l3->setTransparency(125);
-	l3->bindCallback(tgui::Button::LeftMouseClicked);
-	l3->setCallbackId(3);
-
+	for (int i = 0; i < numberOfLevels; ++i)
+	{
+		tgui::Button::Ptr l1(gui);
+		l1->load(GUI_CONFIG);
+		l1->setSize(200, 100);
+		l1->setPosition((gui.getWindow()->getSize().x / 2.f) - 100.f, (gui.getWindow()->getSize().y / 6.f) + yOffset);
+		l1->setText(std::to_string(i + 1));
+		l1->setTextColor(sf::Color::White);
+		l1->setTextSize(44);
+		l1->setTransparency(125);
+		l1->bindCallback(tgui::Button::LeftMouseClicked);
+		l1->setCallbackId(i + 1);
+		yOffset += offsetInc;
+	}
 }
 
 void GuiLoader::LoadLevelLostOverlay(tgui::Gui& gui)

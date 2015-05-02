@@ -6,7 +6,7 @@ class GuiLoader
 {
 public:
 
-	static void LoadMainMenuGui(tgui::Gui& gui);
+	static void LoadMainMenuGui(tgui::Gui& gui, int numberOfLevels);
 	static void LoadSettingsOverlay2(tgui::Gui& gui);
 	static void LoadGameWonOverlay(tgui::Gui& gui);
 	static void LoadLevelWonOverlay(tgui::Gui& gui);
