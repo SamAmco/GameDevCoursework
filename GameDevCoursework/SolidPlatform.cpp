@@ -5,7 +5,7 @@
 
 SolidPlatform::SolidPlatform(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld,
 	btVector3& position, btQuaternion& rotation, btVector3& boxHalfExtents, const string& texName)
-	: renderer(renderer), dynamicsWorld(dynamicsWorld)
+	: renderer(renderer), dynamicsWorld(dynamicsWorld), boxHalfExtents(boxHalfExtents)
 {
 	initializeGraphics(position, rotation, boxHalfExtents, texName);
 	initializePhysics(position, rotation, boxHalfExtents);

@@ -5,7 +5,7 @@
 #include <SFML/Window.hpp>
 #include <TGUI\TGUI.hpp>
 #include <string>
-#include "Scene1.h"
+#include "LevelScene.h"
 #include "MainMenuScene.h"
 #include <dirent.h>
 

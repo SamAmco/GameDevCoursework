@@ -71,7 +71,7 @@ void Game::loadNextScene(Scenes sceneType)
 	case Scenes::NEXT_LEVEL:
 	case Scenes::CHOSEN_LEVEL :
 	case Scenes::RELOAD :
-		currentScene = new Scene1(renderer, gui, levelNames[levelNumber], levelNumber == levelNames.size() - 1);
+		currentScene = new LevelScene(renderer, gui, levelNames[levelNumber], levelNumber == levelNames.size() - 1);
 		break;
 	}
 

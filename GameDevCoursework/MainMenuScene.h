@@ -3,7 +3,7 @@
 #include "Scene.h"
 #include "MusicResource.h"
 
-//The scene for the main menu. Simply says press space to play and moves to Scene1
+//The scene for the main menu. Simply says press space to play and moves to LevelScene
 class MainMenuScene : public Scene
 {
 public:

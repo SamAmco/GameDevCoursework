@@ -13,11 +13,13 @@ class SolidPlatform
 public:
 	SolidPlatform(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld,
 		btVector3& position, btQuaternion& rotation, btVector3& boxHalfExtents, const string& texName);
-	~SolidPlatform();
+	virtual ~SolidPlatform();
 
-private:
+protected:
 	void initializeGraphics(const btVector3& position, const btQuaternion& rotation, const Vector3& boxHalfExtents, const string& texName);
 	void initializePhysics(const btVector3& position, const btQuaternion& rotation, const btVector3& boxHalfExtents);
+
+	btVector3 boxHalfExtents;
 
 	btCollisionShape* blockShape;
 	btDefaultMotionState* blockMotionState;

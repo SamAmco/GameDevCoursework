@@ -8,16 +8,18 @@
 #include "Player.h"
 #include "Goal.h"
 #include "SolidPlatform.h"
+#include "MovingPlatform.h"
 #include "MusicResource.h"
+#include "LevelParser.h"
 
 
 //This is the first level of the game. It stores the physics world for the whole game,
 //the player, goal and platforms in the level.
-class Scene1 : public Scene
+class LevelScene : public Scene
 {
 public:
-	Scene1(Renderer& renderer, tgui::Gui& gui, string levelName, bool lastLevel);
-	virtual ~Scene1();
+	LevelScene(Renderer& renderer, tgui::Gui& gui, string levelName, bool lastLevel);
+	virtual ~LevelScene();
 
 	virtual Scenes Update(sf::Event& event, float msec);
 	virtual void HandleUI();
@@ -26,8 +28,6 @@ public:
 private:
 	void initializeGraphics();
 	void initializePhysics();
-	void readLevelDataIn(string& levelName);
-	void readTransformIn(FILE* file, btQuaternion& rotation, btVector3& position, btVector3& scale);
 
 	Renderer& renderer;	
 
@@ -41,6 +41,7 @@ private:
 	Player* player;
 	Goal* goal;
 	vector<SolidPlatform*> solidPlatforms;
+	vector<MovingPlatform*> movingPlatforms;
 
 	MusicResource* backgroundMusic;
 
