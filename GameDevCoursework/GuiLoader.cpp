@@ -9,8 +9,10 @@ void GuiLoader::LoadMainMenuGui(tgui::Gui& gui, int numberOfLevels)
 {
 	tgui::Label::Ptr selectLevelLabel(gui);
 	selectLevelLabel->setText("Please select a level:");
-	selectLevelLabel->setPosition((gui.getWindow()->getSize().x / 20.f), (gui.getWindow()->getSize().y / 15.f));
 	selectLevelLabel->setTextSize(44);
+	selectLevelLabel->setPosition((gui.getWindow()->getSize().x / 2.f) - (selectLevelLabel->getSize().x / 2.f),
+		(gui.getWindow()->getSize().y / 15.f));
+	selectLevelLabel->setTextColor(sf::Color::Cyan);
 
 	tgui::Button::Ptr settingsButton(gui);
 	settingsButton->load(GUI_CONFIG);

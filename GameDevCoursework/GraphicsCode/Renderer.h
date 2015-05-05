@@ -10,6 +10,10 @@
 #include <SFML/Window/WindowStyle.hpp>
 #include <SFML/System/String.hpp>
 
+#include "../MaterialManager.h"
+#include "../TextureManager.h"
+#include "../CubeMapResource.h"
+
 
 using std::vector;
  
@@ -69,8 +73,9 @@ protected:
 	Matrix4 textureMatrix;	//Texture matrix
 
 	// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
-	Shader* skyBoxShader;
-	GLuint cubeMap;
+	MaterialResource* skyBoxMaterial;
+	Shader* skyBoxShader;//This is stored for speed, so that it is not necessary to dereference the pointer twice 
+	CubeMapResource* cubeMap;
 	Mesh* quad;
 	// CSC3224 NCODE BLOCK ENDS
 

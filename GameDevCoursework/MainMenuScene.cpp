@@ -8,8 +8,10 @@ MainMenuScene::MainMenuScene(tgui::Gui& gui, int numberOfLevels) : Scene(gui)
 	nextScene = Scenes::CURRENT;
 	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(true);
 
+	TextureManager::getInstance().LoadResource("Dunes.txt", TextureType::CUBE_MAP);
+
 	GuiLoader::LoadMainMenuGui(gui, numberOfLevels);
-	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("Audio/simple_soul_in_a_mechanical_world.wav", AUDIO_TYPE::MUSIC);
+	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("simple_soul_in_a_mechanical_world.wav", AUDIO_TYPE::MUSIC);
 	backgroundMusic->music->setLoop(true);
 
 	AudioManager::getInstance().PlayMusicResource(backgroundMusic);

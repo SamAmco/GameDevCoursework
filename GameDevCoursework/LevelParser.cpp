@@ -90,9 +90,31 @@ void LevelParser::ReadLevelDataIn(string& levelName, Renderer& renderer, btDiscr
 				position.setZ(-position.z());
 				*goal = new Goal(renderer, **player, Vector3(position));
 			}
-
+			else if (strcmp(name, "LevelData") == 0)
+				ReadLevelDataIn(file);
 		}
 	}
+}
+
+void LevelParser::ReadLevelDataIn(FILE* file)
+{
+	char lineHeader[MAX_READ_IN_CHARS];
+	string cubeMap;
+
+	while (1)
+	{
+		int res2 = fscanf_s(file, "%s", lineHeader, MAX_READ_IN_CHARS);
+		if (res2 == EOF)
+			break;
+
+		if (strcmp(lineHeader, "cubeMap:") == 0)
+		{
+			ReadStringIn(file, cubeMap);
+			break;
+		}
+	}
+
+	TextureManager::getInstance().LoadResource(cubeMap, TextureType::CUBE_MAP);
 }
 
 void LevelParser::ReadMovingPlatformDataIn(FILE* file, btVector3& startPos, btVector3& endPos, float& moveSpeed)
@@ -161,4 +183,11 @@ void LevelParser::ReadQuatIn(FILE* file, btQuaternion& quat)
 void LevelParser::ReadFloatIn(FILE* file, float& f)
 {
 	fscanf_s(file, " %f", &f, MAX_READ_IN_CHARS);
+}
+
+void LevelParser::ReadStringIn(FILE* file, string& s)
+{
+	char c[MAX_READ_IN_CHARS] = "";
+	fscanf_s(file, " %s", &c, MAX_READ_IN_CHARS);
+	s = c;
 }

@@ -22,21 +22,15 @@ Renderer::Renderer()
 
 	//load the cubemap
 	quad = Mesh::GenerateQuad();
-	skyBoxShader = new Shader("Shaders/skyBoxVertex.glsl", "Shaders/skyBoxFragment.glsl");
-	cubeMap = SOIL_load_OGL_cubemap(
-		"Textures/checkered_left.jpg", "Textures/checkered_right.jpg",
-		"Textures/checkered_top.JPG", "Textures/checkered_top.JPG",
-		"Textures/checkered_back.jpg", "Textures/checkered_front.jpg",
-		SOIL_LOAD_RGB,
-		SOIL_CREATE_NEW_ID, 0);
-	skyBoxShader->LinkProgram();
+	skyBoxMaterial = (MaterialResource*)MaterialManager::getInstance().LoadResource("SkyBoxMaterial");
+	skyBoxMaterial->destroyOnSceneLoad = false;
+	skyBoxShader = skyBoxMaterial->shader;
 	// CSC3224 NCODE BLOCK ENDS
 }
 
 Renderer::~Renderer(void)	
 {
 	// CSC3224 NCODE  Samuel Amantea-Collins 110148685 
-	delete skyBoxShader;
 	delete quad;
 	// CSC3224 NCODE BLOCK ENDS
 }

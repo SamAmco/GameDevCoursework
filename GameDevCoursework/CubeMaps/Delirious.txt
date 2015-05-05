@@ -1,0 +1,6 @@
+top Textures/delirious_top.jpg
+bottom Textures/delirious_top.jpg
+left Textures/delirious_left.jpg
+right Textures/delirious_right.jpg
+front Textures/delirious_front.jpg
+back Textures/delirious_back.jpg

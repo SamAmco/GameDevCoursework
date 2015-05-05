@@ -47,11 +47,15 @@ MusicResource* AudioManager::LoadMusic(const string& name)
 	sf::Music* music = new sf::Music();
 	MusicResource* mr = new MusicResource();
 
-	if (!music->openFromFile(name))
+	FILE* file;
+	stringstream s;
+	s << "Audio/" << name;
+
+	if (!music->openFromFile(s.str()))
 	{
 		//load failed
 		delete music;
-		cout << "Failed to load music: " << name << endl;
+		cout << "Failed to load music: " << s.str() << endl;
 		mr->failedToLoad = true;
 		return mr;
 	}
@@ -71,11 +75,15 @@ SoundResource* AudioManager::LoadSound(const string& name)
 
 	SoundResource* sr = new SoundResource();
 
-	if (!soundBuffer->loadFromFile(name))
+	FILE* file;
+	stringstream s;
+	s << "Audio/" << name;
+
+	if (!soundBuffer->loadFromFile(s.str()))
 	{
 		delete sound;
 		delete soundBuffer;
-		cout << "Failed to load sound: " << name << endl;
+		cout << "Failed to load sound: " << s.str() << endl;
 		sr->failedToLoad = true;
 		return sr;
 	}

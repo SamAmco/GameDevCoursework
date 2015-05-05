@@ -41,13 +41,13 @@ Resource* MaterialManager::LoadResource(const string& name, const int type)
 
 		if (strcmp(lineHeader, "vertex") == 0)
 			fscanf_s(file, "%s\n", &vertex, arrSize);
-		if (strcmp(lineHeader, "fragment") == 0)
+		else if (strcmp(lineHeader, "fragment") == 0)
 			fscanf_s(file, "%s\n", &fragment, arrSize);
-		if (strcmp(lineHeader, "geometry") == 0)
+		else if (strcmp(lineHeader, "geometry") == 0)
 			fscanf_s(file, "%s\n", &geometry, arrSize);
-		if (strcmp(lineHeader, "tcs") == 0)
+		else if (strcmp(lineHeader, "tcs") == 0)
 			fscanf_s(file, "%s\n", &tcs, arrSize);
-		if (strcmp(lineHeader, "tes") == 0)
+		else if (strcmp(lineHeader, "tes") == 0)
 			fscanf_s(file, "%s\n", &tes, arrSize);
 	}
 

@@ -90,6 +90,7 @@
   <ItemGroup>
     <ClInclude Include="AudioManager.h" />
     <ClInclude Include="AudioResource.h" />
+    <ClInclude Include="CubeMapResource.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Goal.h" />
     <ClInclude Include="GraphicsCode\common.h" />

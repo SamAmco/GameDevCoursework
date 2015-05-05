@@ -6,8 +6,15 @@
 #include <iostream>
 #include "ResourceManager.h"
 #include "TextureResource.h"
+#include "CubeMapResource.h"
 
 using namespace std;
+
+enum TextureType
+{
+	TEXTURE,
+	CUBE_MAP
+};
 
 //Manages Texture loading and the memory used by the textures
 class TextureManager : public ResourceManager
@@ -24,6 +31,10 @@ public:
 
 	~TextureManager(){ UnloadAllResources(); }
 private:
+
+	TextureResource* LoadTexture(const string& name);
+	CubeMapResource* LoadCubeMap(const string& name);
+
 	//These parts enforce singleton constraints
 	TextureManager(){};
 };

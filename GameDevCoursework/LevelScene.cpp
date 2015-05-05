@@ -21,7 +21,7 @@ LevelScene::LevelScene(Renderer& renderer, tgui::Gui& gui, string levelName, boo
 	LevelParser::ReadLevelDataIn(levelName, renderer, dynamicsWorld, solidPlatforms, movingPlatforms, &goal, &player);
 	
 	//load the background music
-	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("Audio/tacky_background_music.wav", AUDIO_TYPE::MUSIC);
+	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("tacky_background_music.wav", AUDIO_TYPE::MUSIC);
 	backgroundMusic->music->setLoop(true);
 	AudioManager::getInstance().PlayMusicResource(backgroundMusic);
 }

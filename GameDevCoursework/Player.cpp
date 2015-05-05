@@ -13,10 +13,10 @@ Player::Player(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vecto
 //Add the RenderObject to the renderer
 void Player::initializeGraphics(const Vector3& position)
 { 
-	MeshResource* m = (MeshResource*)MeshManager::getInstance().LoadResource("Meshes/sphere.obj");
+	MeshResource* m = (MeshResource*)MeshManager::getInstance().LoadResource("sphere.obj");
 	MaterialResource* mat = (MaterialResource*)MaterialManager::getInstance().LoadResource("PlayerMaterial");
 	renderObject = new RenderObject(m, mat);
-	renderObject->AddTexture((TextureResource*)TextureManager::getInstance().LoadResource("Textures/8Ball.png"));
+	renderObject->AddTexture((TextureResource*)TextureManager::getInstance().LoadResource("8Ball.png", TextureType::TEXTURE));
 	renderObject->SetModelMatrix(Matrix4::Translation(position));
 	renderer.AddRenderObject(renderObject);
 }

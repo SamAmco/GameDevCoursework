@@ -1,0 +1,6 @@
+top Textures/dunes_top.jpg
+bottom Textures/dunes_top.jpg
+left Textures/dunes_left.jpg
+right Textures/dunes_right.jpg
+front Textures/dunes_front.jpg
+back Textures/dunes_back.jpg

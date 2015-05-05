@@ -11,25 +11,100 @@ Resource* TextureManager::LoadResource(const string& name, int type)
 		if (t->name.compare(name) == 0)
 			return t;
 	}
+	switch (type)
+	{
+	case TextureType::CUBE_MAP:
+		return LoadCubeMap(name);
+	default:
+		return LoadTexture(name);
+		break;
+	}
+}
+
+TextureResource* TextureManager::LoadTexture(const string& name)
+{
 	cout << "Loading: " << name << endl;
-	//otherwise attempt to load it
-	GLuint t = SOIL_load_OGL_texture(name.c_str(), SOIL_LOAD_AUTO,
+	
+	stringstream s;
+	s << "Textures/" << name;
+	GLuint t = SOIL_load_OGL_texture(s.str().c_str(), SOIL_LOAD_AUTO,
 		SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS);
 
 	TextureResource* texture = new TextureResource();
 	if (!t)
 	{
-		cout << "GLuint Renderer::LoadTexture(string name) FAILED TO LOAD " << name << endl;
+		cout << "GLuint Renderer::LoadTexture(string name) FAILED TO LOAD " << s.str() << endl;
 		texture->failedToLoad = true;
-		texture->name = "FAILED TO LOAD";
 	}
 	else
-	{
-		texture->name = name;
 		texture->tex = t;
-	}
 
+	texture->name = name;
 	loadedResources.push_back(texture);
 
 	return texture;
+}
+
+CubeMapResource* TextureManager::LoadCubeMap(const string& name)
+{
+	cout << "Loading: " << name << endl;
+
+	FILE* file;
+	stringstream s;
+	s << "CubeMaps/" << name;
+	errno_t err = fopen_s(&file, s.str().c_str(), "r");
+	if (err)
+	{
+		cout << "Impossible to open the file " << s.str() << "\n";
+		return NULL;
+	}
+
+	const int arrSize = 128;
+	char lineHeader[arrSize];
+	char top[arrSize] = "";
+	char bottom[arrSize] = "";
+	char left[arrSize] = "";
+	char right[arrSize] = "";
+	char front[arrSize] = "";
+	char back[arrSize] = "";
+
+	//Loop through the lines
+	while (1)
+	{
+		// read the first word of the line
+		int res = fscanf_s(file, "%s", lineHeader, arrSize);
+		if (res == EOF)
+			break;
+
+		if (strcmp(lineHeader, "top") == 0)
+			fscanf_s(file, "%s\n", &top, arrSize);
+		else if (strcmp(lineHeader, "bottom") == 0)
+			fscanf_s(file, "%s\n", &bottom, arrSize);
+		else if (strcmp(lineHeader, "left") == 0)
+			fscanf_s(file, "%s\n", &left, arrSize);
+		else if (strcmp(lineHeader, "right") == 0)
+			fscanf_s(file, "%s\n", &right, arrSize);
+		else if (strcmp(lineHeader, "front") == 0)
+			fscanf_s(file, "%s\n", &front, arrSize);
+		else if (strcmp(lineHeader, "back") == 0)
+			fscanf_s(file, "%s\n", &back, arrSize);
+	}
+
+	GLuint c = SOIL_load_OGL_cubemap(
+		left, right, top, bottom, back, front,
+		SOIL_LOAD_RGB, SOIL_CREATE_NEW_ID, 0);
+
+	CubeMapResource* cubeMap = new CubeMapResource();
+	if (!c)
+	{
+		cout << "GLuint Renderer::LoadCubeMap(string name) FAILED TO LOAD " << name << endl;
+		cubeMap->failedToLoad = true;
+	}
+	else
+		cubeMap->cubeMap = c;
+
+	cubeMap->name = name;
+	loadedResources.push_back(cubeMap);
+
+	return cubeMap;
 }

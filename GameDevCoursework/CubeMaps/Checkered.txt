@@ -1,0 +1,6 @@
+top Textures/checkered_top.jpg
+bottom Textures/checkered_top.jpg
+left Textures/checkered_left.jpg
+right Textures/checkered_right.jpg
+front Textures/checkered_front.jpg
+back Textures/checkered_back.jpg

@@ -18,10 +18,12 @@ private:
 
 	static void ReadTransformIn(FILE* file, btQuaternion& rotation, btVector3& position, btVector3& scale);
 	static void ReadMovingPlatformDataIn(FILE* file, btVector3& startPos, btVector3& endPos, float& moveSpeed);
+	static void ReadLevelDataIn(FILE* file);
 
 	static void ReadVec3In(FILE* file, btVector3& vec);
 	static void ReadQuatIn(FILE* file, btQuaternion& quat);
 	static void ReadFloatIn(FILE* file, float& f);
+	static void ReadStringIn(FILE* file, string& s);
 
 	LevelParser(){}
 	~LevelParser(){}

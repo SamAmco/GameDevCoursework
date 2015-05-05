@@ -12,7 +12,9 @@ Resource* MeshManager::LoadResource(const string& name, const int type)
 	}
 
 	//otherwise attempt to load it
-	Mesh* m = Mesh::LoadMeshFile(name);
+	stringstream s;
+	s << "Meshes/" << name;
+	Mesh* m = Mesh::LoadMeshFile(s.str());
 	MeshResource* mr = new MeshResource();
 	mr->mesh = m;
 	mr->name = name;
