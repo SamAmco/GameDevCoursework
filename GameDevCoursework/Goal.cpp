@@ -14,9 +14,13 @@ Goal::Goal(Renderer& renderer, Player& player, Vector3& position)
 void Goal::initializeGraphics(const Vector3& position)
 {
 	MeshResource* m = (MeshResource*)MeshManager::getInstance().LoadResource("goalCylinder.obj");
+	m->destroyOnSceneLoad = false;
 	MaterialResource* mat = (MaterialResource*)MaterialManager::getInstance().LoadResource("GoalMaterial");
+	mat->destroyOnSceneLoad = false;
 	renderObject = new RenderObject(m, mat);
-	renderObject->AddTexture((TextureResource*)TextureManager::getInstance().LoadResource("goalLight.png", TextureType::TEXTURE));
+	TextureResource* tex = (TextureResource*)TextureManager::getInstance().LoadResource("goalLight.png", TextureType::TEXTURE);
+	tex->destroyOnSceneLoad = false;
+	renderObject->AddTexture(tex);
 	renderObject->SetModelMatrix(Matrix4::Translation(position));
 	renderer.AddRenderObject(renderObject);
 }

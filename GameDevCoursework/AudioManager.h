@@ -44,6 +44,6 @@ private:
 	AudioManager(){};
 	SoundResource* LoadSound(const string& name);
 	MusicResource* LoadMusic(const string& name);
-	float volume = 0.f;//100.f;
+	float volume = 100.f;
 };
 

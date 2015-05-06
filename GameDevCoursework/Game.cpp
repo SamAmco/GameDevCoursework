@@ -27,7 +27,7 @@ Game::Game(Renderer& renderer, tgui::Gui& gui)
 	else 
 		cout << "Could not open levels directory!" << endl;
 
-	currentScene = new MainMenuScene(gui, levelNames.size());
+	currentScene = new MainMenuScene(gui, levelNames);
 }
 
 //Update the current scene and see whether it wants to load a different scene
@@ -66,7 +66,7 @@ void Game::loadNextScene(Scenes sceneType)
 	switch (sceneType)
 	{
 	case Scenes::MAIN_MENU :
-		currentScene = new MainMenuScene(gui, levelNames.size());
+		currentScene = new MainMenuScene(gui, levelNames);
 		break;
 	case Scenes::NEXT_LEVEL:
 	case Scenes::CHOSEN_LEVEL :

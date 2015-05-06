@@ -8,15 +8,21 @@ Player::Player(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vecto
 {
 	initializeGraphics(position);
 	initializePhysics(position);
+
+	jumpSound = (SoundResource*)AudioManager::getInstance().LoadResource("Jump.wav", AUDIO_TYPE::SOUND);
 }
 
 //Add the RenderObject to the renderer
 void Player::initializeGraphics(const Vector3& position)
 { 
 	MeshResource* m = (MeshResource*)MeshManager::getInstance().LoadResource("sphere.obj");
+	m->destroyOnSceneLoad = false;
 	MaterialResource* mat = (MaterialResource*)MaterialManager::getInstance().LoadResource("PlayerMaterial");
+	mat->destroyOnSceneLoad = false;
 	renderObject = new RenderObject(m, mat);
-	renderObject->AddTexture((TextureResource*)TextureManager::getInstance().LoadResource("8Ball.png", TextureType::TEXTURE));
+	TextureResource* tex = (TextureResource*)TextureManager::getInstance().LoadResource("8Ball.png", TextureType::TEXTURE);
+	tex->destroyOnSceneLoad = false;
+	renderObject->AddTexture(tex);
 	renderObject->SetModelMatrix(Matrix4::Translation(position));
 	renderer.AddRenderObject(renderObject);
 }
@@ -76,7 +82,10 @@ void Player::Update(sf::Event& event, float msec)
 		if (rayCallback.hasHit())
 		{
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+			{
 				sphereRigidBody->applyImpulse(btVector3(0, jumpPower, 0), btVector3(0, 0, 0));
+				AudioManager::getInstance().PlaySoundResource(jumpSound);
+			}
 		}
 
 		camera.Update(renderer, Vector3(trans.getOrigin()));

@@ -4,8 +4,9 @@
 
 const std::string GuiLoader::GUI_CONFIG = "Gui/Black.conf";
 tgui::ChildWindow::Ptr GuiLoader::overlay;
+int GuiLoader::previousScrolbarValue = 0;
 
-void GuiLoader::LoadMainMenuGui(tgui::Gui& gui, int numberOfLevels)
+void GuiLoader::LoadMainMenuGui(tgui::Gui& gui, const vector<string>& levelNames)
 {
 	tgui::Label::Ptr selectLevelLabel(gui);
 	selectLevelLabel->setText("Please select a level:");
@@ -24,18 +25,36 @@ void GuiLoader::LoadMainMenuGui(tgui::Gui& gui, int numberOfLevels)
 	settingsButton->setTransparency(125);
 	settingsButton->bindCallback(std::bind(GuiLoader::LoadSettingsOverlay, std::ref(gui)), tgui::Button::LeftMouseClicked);
 
+	// Create the panel(gui.getWindow()->getSize().x / 2.f) - 100.f, (gui.getWindow()->getSize().y / 6.f) + yOffset
+	tgui::Panel::Ptr panel(gui);
+	panel->setPosition((gui.getWindow()->getSize().x / 2.f) - 100.f, (gui.getWindow()->getSize().y / 6.f));
+	panel->setSize(200, gui.getWindow()->getSize().y - panel->getPosition().y);
+	panel->setTransparency(255);
+
+	tgui::Scrollbar::Ptr scrollbar(gui);
+	scrollbar->load(GUI_CONFIG);
+	scrollbar->setSize(15, gui.getWindow()->getSize().y - panel->getPosition().y);
+	scrollbar->setPosition(panel->getPosition() + sf::Vector2f(panel->getSize().x, 0));
+	scrollbar->setArrowScrollAmount(30);
+	scrollbar->setLowValue(360); // Viewable area (height of the panel)
+	scrollbar->setMaximum((levelNames.size()-1) * 105); // Total area (height of the 5 images)
+
+	// Call the scrollPanel function that we defined above when scrolling
+	scrollbar->bindCallbackEx(std::bind(ScrollBarMoved, panel, std::placeholders::_1), tgui::Scrollbar::ValueChanged);
+	previousScrolbarValue = 0;
+
 	int yOffset = 0;
 	int offsetInc = 105;
 
-	for (int i = 0; i < numberOfLevels; ++i)
+	for (int i = 0; i < levelNames.size(); ++i)
 	{
-		tgui::Button::Ptr l1(gui);
+		tgui::Button::Ptr l1(*panel);
 		l1->load(GUI_CONFIG);
 		l1->setSize(200, 100);
-		l1->setPosition((gui.getWindow()->getSize().x / 2.f) - 100.f, (gui.getWindow()->getSize().y / 6.f) + yOffset);
-		l1->setText(std::to_string(i + 1));
+		l1->setPosition(0, yOffset);
+		l1->setText(stripExtention(levelNames[i]));
 		l1->setTextColor(sf::Color::White);
-		l1->setTextSize(44);
+		l1->setTextSize(20);
 		l1->setTransparency(125);
 		l1->bindCallback(tgui::Button::LeftMouseClicked);
 		l1->setCallbackId(i + 1);
@@ -287,4 +306,21 @@ void GuiLoader::DestroySettingsOverlay2(tgui::Gui& gui)
 	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(false);
 	gui.remove(overlay);
 	Game::gamePaused = false;
+}
+
+void GuiLoader::ScrollBarMoved(tgui::Panel::Ptr panel, const tgui::Callback& callback)
+{
+	int distanceToMove = previousScrolbarValue - callback.value;
+
+	// Move all widgets that are inside the panel
+	for (auto& widget : panel->getWidgets())
+		widget->setPosition(widget->getPosition().x, widget->getPosition().y + distanceToMove);
+
+	previousScrolbarValue = callback.value;
+}
+
+string GuiLoader::stripExtention(const string& s)
+{
+	int lastindex = s.find_last_of(".");
+	return s.substr(0, lastindex);
 }

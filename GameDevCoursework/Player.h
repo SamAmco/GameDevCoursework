@@ -7,6 +7,8 @@
 #include "btBulletDynamicsCommon.h"
 #include <SFML/Window.hpp>
 #include "ThirdPersonCamera.h"
+#include "SoundResource.h"
+#include "AudioManager.h"
 
 //A player is a ball controlled by the user that has a camera attached
 class Player
@@ -37,5 +39,7 @@ private:
 	//This is for debugging purposes, it enables you to disable the player controls so that you 
 	//can regain control of your mouse by pressing return.
 	bool hasControl = true;
+
+	SoundResource* jumpSound;
 };
 

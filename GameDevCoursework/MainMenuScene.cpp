@@ -3,14 +3,14 @@
 #include "MainMenuScene.h"
 
 //Load the font and text and initialize the background music
-MainMenuScene::MainMenuScene(tgui::Gui& gui, int numberOfLevels) : Scene(gui)
+MainMenuScene::MainMenuScene(tgui::Gui& gui, vector<string>& levelNames) : Scene(gui)
 {
 	nextScene = Scenes::CURRENT;
 	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(true);
 
 	TextureManager::getInstance().LoadResource("Dunes.txt", TextureType::CUBE_MAP);
 
-	GuiLoader::LoadMainMenuGui(gui, numberOfLevels);
+	GuiLoader::LoadMainMenuGui(gui, levelNames);
 	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("simple_soul_in_a_mechanical_world.wav", AUDIO_TYPE::MUSIC);
 	backgroundMusic->music->setLoop(true);
 

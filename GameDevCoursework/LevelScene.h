@@ -44,6 +44,8 @@ private:
 	vector<MovingPlatform*> movingPlatforms;
 
 	MusicResource* backgroundMusic;
+	SoundResource* wonSound;
+	SoundResource* lostSound;
 
 	bool lastLevel;
 };

@@ -18,12 +18,21 @@ LevelScene::LevelScene(Renderer& renderer, tgui::Gui& gui, string levelName, boo
 	initializePhysics();
 
 	//Create the in game objects
-	LevelParser::ReadLevelDataIn(levelName, renderer, dynamicsWorld, solidPlatforms, movingPlatforms, &goal, &player);
+	string musicName;
+	LevelParser::ReadLevelDataIn(levelName, renderer, dynamicsWorld, solidPlatforms, movingPlatforms, &goal, &player, musicName);
 	
 	//load the background music
-	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource("tacky_background_music.wav", AUDIO_TYPE::MUSIC);
+	backgroundMusic = (MusicResource*)AudioManager::getInstance().LoadResource(musicName, AUDIO_TYPE::MUSIC);
 	backgroundMusic->music->setLoop(true);
 	AudioManager::getInstance().PlayMusicResource(backgroundMusic);
+
+	if (lastLevel)
+		wonSound = (SoundResource*)AudioManager::getInstance().LoadResource("GameWon.wav", AUDIO_TYPE::SOUND);
+	else
+		wonSound = (SoundResource*)AudioManager::getInstance().LoadResource("LevelWon.wav", AUDIO_TYPE::SOUND);
+
+	lostSound = (SoundResource*)AudioManager::getInstance().LoadResource("LevelLost.wav", AUDIO_TYPE::SOUND);
+
 }
 
 //Simply sets the light position and projection matrix of the scene
@@ -65,7 +74,10 @@ Scenes LevelScene::Update(sf::Event& event, float msec)
 		}
 
 		if (player->sphereRigidBody->getWorldTransform().getOrigin().y() < -5)
+		{
 			GuiLoader::LoadLevelLostOverlay(gui);
+			AudioManager::getInstance().PlaySoundResource(lostSound);
+		}
 
 		if (goal->Update(event, msec))
 		{
@@ -73,6 +85,8 @@ Scenes LevelScene::Update(sf::Event& event, float msec)
 				GuiLoader::LoadGameWonOverlay(gui);
 			else
 				GuiLoader::LoadLevelWonOverlay(gui);
+
+			AudioManager::getInstance().PlaySoundResource(wonSound);
 		}
 
 		for (auto p : movingPlatforms)

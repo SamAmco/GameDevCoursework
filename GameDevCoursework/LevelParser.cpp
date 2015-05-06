@@ -7,7 +7,8 @@ const int LevelParser::MAX_READ_IN_CHARS = 128;
 
 
 void LevelParser::ReadLevelDataIn(string& levelName, Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld,
-	vector<SolidPlatform*>& solidPlatforms, vector<MovingPlatform*>& movingPlatforms, Goal** goal, Player** player)
+	vector<SolidPlatform*>& solidPlatforms, vector<MovingPlatform*>& movingPlatforms, Goal** goal, Player** player,
+	string& musicName)
 {
 	using namespace std;
 
@@ -91,12 +92,12 @@ void LevelParser::ReadLevelDataIn(string& levelName, Renderer& renderer, btDiscr
 				*goal = new Goal(renderer, **player, Vector3(position));
 			}
 			else if (strcmp(name, "LevelData") == 0)
-				ReadLevelDataIn(file);
+				ReadLevelDataIn(file, musicName);
 		}
 	}
 }
 
-void LevelParser::ReadLevelDataIn(FILE* file)
+void LevelParser::ReadLevelDataIn(FILE* file, string& musicName)
 {
 	char lineHeader[MAX_READ_IN_CHARS];
 	string cubeMap;
@@ -108,8 +109,10 @@ void LevelParser::ReadLevelDataIn(FILE* file)
 			break;
 
 		if (strcmp(lineHeader, "cubeMap:") == 0)
-		{
 			ReadStringIn(file, cubeMap);
+		else if (strcmp(lineHeader, "backgroundMusic:") == 0)
+		{
+			ReadStringIn(file, musicName);
 			break;
 		}
 	}

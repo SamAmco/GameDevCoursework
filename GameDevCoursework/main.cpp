@@ -52,6 +52,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	sf::Clock clock;
 	float totalMsec = 0;
 	float iterations = 0;
+	bool displayFrameRate = true;
 	while (running)
 	{
 		float msec = (float)clock.getElapsedTime().asMilliseconds();
@@ -66,6 +67,11 @@ int _tmain(int argc, _TCHAR* argv[])
 			{
 				running = false;
 				break;
+			}
+			else if (event.type == sf::Event::KeyPressed)
+			{
+				if (event.key.code == sf::Keyboard::F)
+					displayFrameRate = !displayFrameRate;
 			}
 			else if (event.type == sf::Event::Resized)
 				glViewport(0, 0, event.size.width, event.size.height);
@@ -93,8 +99,12 @@ int _tmain(int argc, _TCHAR* argv[])
 			iterations = 0;
 		}
 		window.pushGLStates();
-		window.draw(text);
+		
+		if (displayFrameRate)
+			window.draw(text);
+		
 		gui.draw();
+		
 		window.popGLStates();
 
 		window.display();//Display the buffer

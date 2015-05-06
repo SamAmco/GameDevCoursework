@@ -7,7 +7,7 @@
 class MainMenuScene : public Scene
 {
 public:
-	MainMenuScene(tgui::Gui& gui, int numberOfLevels);
+	MainMenuScene(tgui::Gui& gui, vector<string>& levelNames);
 	~MainMenuScene(){}
 
 	Scenes Update(sf::Event& event, float msec);

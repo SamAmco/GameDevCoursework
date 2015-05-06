@@ -94,7 +94,7 @@ void	Renderer::Render(const RenderObject &o)
 		Vector3 camPos = rotation * -invCamPos; 
 
 		glUniform3fv(glGetUniformLocation(program, "cameraPos"), 1, (float*)&camPos);
-		glUniform1f(glGetUniformLocation(program, "time"), ((float)clock()) / 1000.0);
+		glUniform1f(glGetUniformLocation(program, "time"), ((float)clock()) * .001f);
 		glUniform3fv(glGetUniformLocation(program, "lightColour"), 1, (float*) &light.colour);
 		glUniform3fv(glGetUniformLocation(program, "lightPos"), 1, (float*) &light.position);
 		glUniform1f(glGetUniformLocation(program, "lightRadius"), light.radius);
