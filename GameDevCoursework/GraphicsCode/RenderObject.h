@@ -7,6 +7,8 @@
 #include "../TextureResource.h"
 #include "../MeshResource.h"
 
+//This class has been slightly adapted to accept the resource wrappers as parameters
+//instead of the hard data for textures, mesh's and materials
 class RenderObject	{
 public:
 	RenderObject(void);

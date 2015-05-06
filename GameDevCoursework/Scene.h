@@ -11,9 +11,11 @@
 #include "GuiLoader.h"
 
 
-//This enumerator must be updated to include the names of any 
-//and all scenes in the game. CURRENT is a special value that is used to
-//denote the scene that is currently loaded
+//This enumerator is used to navigate scenes. CURRENT is a special value that is used to
+//denote the scene that is currently loaded, MAIN_MENU simply denotes the main menu scene,
+//NEXT_LEVEL denotes the level after the current one,
+//where as CHOSEN_LEVEL denotes the level chosen from the main menu scene. RELOAD signifies that
+//a given scene should be reloaded.
 enum Scenes
 {
 	CURRENT,

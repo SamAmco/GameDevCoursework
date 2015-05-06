@@ -11,6 +11,7 @@ Resource* TextureManager::LoadResource(const string& name, int type)
 		if (t->name.compare(name) == 0)
 			return t;
 	}
+	//otherwise load the correct type of resource
 	switch (type)
 	{
 	case TextureType::CUBE_MAP:
@@ -27,6 +28,7 @@ TextureResource* TextureManager::LoadTexture(const string& name)
 	
 	stringstream s;
 	s << "Textures/" << name;
+
 	GLuint t = SOIL_load_OGL_texture(s.str().c_str(), SOIL_LOAD_AUTO,
 		SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS);
 
@@ -49,6 +51,7 @@ CubeMapResource* TextureManager::LoadCubeMap(const string& name)
 {
 	cout << "Loading: " << name << endl;
 
+	//Find the file
 	FILE* file;
 	stringstream s;
 	s << "CubeMaps/" << name;
@@ -76,6 +79,7 @@ CubeMapResource* TextureManager::LoadCubeMap(const string& name)
 		if (res == EOF)
 			break;
 
+		//given the word, read in the texture name to the correct char[]
 		if (strcmp(lineHeader, "top") == 0)
 			fscanf_s(file, "%s\n", &top, arrSize);
 		else if (strcmp(lineHeader, "bottom") == 0)
@@ -90,6 +94,7 @@ CubeMapResource* TextureManager::LoadCubeMap(const string& name)
 			fscanf_s(file, "%s\n", &back, arrSize);
 	}
 
+	//Load the cubemap, wrap it in a cubemap resource and return it
 	GLuint c = SOIL_load_OGL_cubemap(
 		left, right, top, bottom, back, front,
 		SOIL_LOAD_RGB, SOIL_CREATE_NEW_ID, 0);

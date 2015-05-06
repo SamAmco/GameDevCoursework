@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #pragma once
 #include <string>
 #include <sstream>
@@ -7,6 +8,8 @@
 
 using namespace std;
 
+//This is the abstract class for all resource managers, it allows all resource managers
+//to store their resources and destroy them in the same way.
 class ResourceManager
 {
 public:

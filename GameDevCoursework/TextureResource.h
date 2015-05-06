@@ -5,10 +5,7 @@
 #include "Resource.h"
 
 
-//This stores the name of a texture associated with it's position in graphics memory.
-//This class should only be created by the TextureManager. Has loaded is helpful if the
-//TextureManager has not been able to find the texture, because it still returns a pointer
-//to a Texture object.
+//Stores and destroys a GLuint that refers to a texture in graphics memory
 class TextureResource : public Resource
 {
 public:

@@ -17,7 +17,6 @@ MainMenuScene::MainMenuScene(tgui::Gui& gui, vector<string>& levelNames) : Scene
 	AudioManager::getInstance().PlayMusicResource(backgroundMusic);
 }
 
-//when the player presses space, change to LevelScene
 Scenes MainMenuScene::Update(sf::Event& event, float msec)
 {
 	return nextScene;

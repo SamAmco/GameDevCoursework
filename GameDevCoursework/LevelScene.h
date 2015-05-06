@@ -13,7 +13,7 @@
 #include "LevelParser.h"
 
 
-//This is the first level of the game. It stores the physics world for the whole game,
+//This represents any level in the game. It stores the physics world,
 //the player, goal and platforms in the level.
 class LevelScene : public Scene
 {

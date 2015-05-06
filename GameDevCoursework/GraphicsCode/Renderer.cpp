@@ -17,10 +17,7 @@ Renderer::Renderer()
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 
-	//TODO: at the moment the cubemap is just hard coded, but this should be passed in to the renderer
-	//or perhaps swappable
-
-	//load the cubemap
+	//load the skybox material and generate a quad to draw it on
 	quad = Mesh::GenerateQuad();
 	skyBoxMaterial = (MaterialResource*)MaterialManager::getInstance().LoadResource("SkyBoxMaterial");
 	skyBoxMaterial->destroyOnSceneLoad = false;

@@ -1,6 +1,8 @@
+//File Written by Samuel Amantea-Collins
 #pragma once
 #include "SolidPlatform.h"
 
+//A type of platform that moves constantly between two positions
 class MovingPlatform : SolidPlatform
 {
 public:

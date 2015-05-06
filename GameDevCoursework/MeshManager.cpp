@@ -4,7 +4,7 @@
 
 Resource* MeshManager::LoadResource(const string& name, const int type)
 {
-	//if we have already loaded the Mesh object, then return that
+	//if we have already loaded the Mesh resource, then return that
 	for (auto m : loadedResources)
 	{
 		if (m->name.compare(name) == 0)

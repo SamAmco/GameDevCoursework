@@ -7,7 +7,9 @@
 #include "ResourceManager.h"
 #include "MaterialResource.h"
 
-//Manages Shader loading and the memory used by the shaders
+//Manages Material loading and the memory used by the shaders
+//A material is a file that contains a set of shader names for vertex,
+//fragment etc.. that describe how that material should look
 class MaterialManager : public ResourceManager
 {
 public:

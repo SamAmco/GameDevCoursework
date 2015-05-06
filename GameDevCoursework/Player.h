@@ -32,12 +32,11 @@ private:
 	btDiscreteDynamicsWorld* dynamicsWorld;
 	ThirdPersonCamera camera;
 
-	//TODO: these values are hard coded for now, consider a more data driven approach
 	const float torquePower = 16.0f;
 	const float jumpPower = 2.0f;
 
 	//This is for debugging purposes, it enables you to disable the player controls so that you 
-	//can regain control of your mouse by pressing return.
+	//can regain control of your mouse by pressing the return key.
 	bool hasControl = true;
 
 	SoundResource* jumpSound;

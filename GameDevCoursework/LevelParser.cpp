@@ -1,3 +1,4 @@
+//File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "LevelParser.h"
 
@@ -28,7 +29,7 @@ void LevelParser::ReadLevelDataIn(string& levelName, Renderer& renderer, btDiscr
 	//Loop through the lines
 	while (1)
 	{
-		// read the first word of the line
+		// read the first word of the line in to line header
 		int res = fscanf_s(file, "%s", lineHeader, MAX_READ_IN_CHARS);
 		if (res == EOF)
 			break;
@@ -40,12 +41,14 @@ void LevelParser::ReadLevelDataIn(string& levelName, Renderer& renderer, btDiscr
 			btVector3 position;
 			btVector3 scale;
 
+			//Loop through the lines after the word GameObject:
 			while (1)
 			{
 				int res2 = fscanf_s(file, "%s", lineHeader, MAX_READ_IN_CHARS);
 				if (res2 == EOF)
 					break;
 
+				//find the name of the game object
 				if (strcmp(lineHeader, "m_Name:") == 0)
 				{
 					fscanf_s(file, "%s\n", &name, MAX_READ_IN_CHARS);
@@ -54,7 +57,7 @@ void LevelParser::ReadLevelDataIn(string& levelName, Renderer& renderer, btDiscr
 				}
 			}
 
-
+			//depending on the name of the game object. Load in game stuff..
 			if (strcmp(name, "SolidPlatform") == 0)
 			{
 				ReadTransformIn(file, rotation, position, scale);
@@ -85,6 +88,7 @@ void LevelParser::ReadLevelDataIn(string& levelName, Renderer& renderer, btDiscr
 				position.setZ(-position.z());
 				*player = new Player(renderer, dynamicsWorld, position);
 			}
+			//Unity should always store the goal data after the player start
 			else if (strcmp(name, "Goal") == 0)
 			{
 				ReadTransformIn(file, rotation, position, scale);

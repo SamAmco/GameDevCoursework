@@ -10,6 +10,8 @@
 
 using namespace std;
 
+//Provides support for two different types of Audio
+//Sounds are loaded directly into memory, music is streamed from the hard disk
 enum AUDIO_TYPE
 {
 	SOUND,
@@ -21,8 +23,6 @@ enum AUDIO_TYPE
 class AudioManager : public ResourceManager
 {
 public:
-	//Provides support for two different types of Audio
-	//Sounds are loaded directly into memory, music is streamed from the hard disk
 	Resource* LoadResource(const string& name, const int type = 0);
 
 	void PlayMusicResource(MusicResource* music);
@@ -40,10 +40,10 @@ public:
 	~AudioManager(){ UnloadAllResources(); }
 
 private:
-	//These store mappings of audio to name, so we know what we've loaded already
 	AudioManager(){};
 	SoundResource* LoadSound(const string& name);
 	MusicResource* LoadMusic(const string& name);
+
 	float volume = 100.f;
 };
 

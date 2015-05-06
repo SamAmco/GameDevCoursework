@@ -24,7 +24,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	settings.minorVersion = 0;
 	sf::RenderWindow window = sf::RenderWindow(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, settings);
 	window.setVerticalSyncEnabled(true);
-	//window.setMouseCursorVisible(false);
 	tgui::Gui gui(window);
 	
 	if (glewInit() != GLEW_OK)
@@ -111,12 +110,3 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 	return EXIT_SUCCESS;
 }
-
-/*#include <stdio.h>
-#include <direct.h>
-char cCurrentPath[FILENAME_MAX];
-if (!_getcwd(cCurrentPath, sizeof(cCurrentPath)))
-{
-	return errno;
-}
-printf("The current working directory is %s", cCurrentPath);*/

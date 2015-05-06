@@ -2,20 +2,20 @@
 #include "stdafx.h"
 #include "Game.h"
 
+//These two public static variables are accessed by gui elements 
 bool Game::continueGame = true;
 bool Game::gamePaused = false;
 
 Game::Game(Renderer& renderer, tgui::Gui& gui)
 	: renderer(renderer), gui(gui)
 {
-	//initialize the opening scene to the main menu
 	levelNames = vector<string>();
 
+	//This code requires an external header called dirent
 	DIR *dir;
 	struct dirent *ent;
 	if ((dir = opendir("Levels\\")) != NULL) 
 	{
-		/* print all the files and directories within directory */
 		while ((ent = readdir(dir)) != NULL) 
 		{
 			string s = ent->d_name;
@@ -41,7 +41,7 @@ bool Game::Update(sf::Event& event, float msec)
 		}
 	}
 
-
+	//when the game is paused we send the special value of 0 to the scene
 	if (gamePaused)
 		msec = 0;
 

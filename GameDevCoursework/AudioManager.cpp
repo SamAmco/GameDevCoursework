@@ -2,13 +2,16 @@
 #include "stdafx.h"
 #include "AudioManager.h"
 
+
 Resource* AudioManager::LoadResource(const string& name, const int type)
 {
+	//return the resource if it's already loaded
 	for (auto m : loadedResources)
 	{
 		if (m->name.compare(name) == 0)
 			return m;
 	}
+	//otherwise load the given type of resource with the given name
 	switch (type)
 	{
 		case AUDIO_TYPE::SOUND :
@@ -32,6 +35,8 @@ void AudioManager::PlaySoundResource(SoundResource* sound)
 
 void AudioManager::setVolume(float v)
 {
+	//when volume is changed, we must change the volume of all loaded audio resources
+	//in case any of them are playing
 	volume = v;
 	for (auto r : loadedResources)
 	{

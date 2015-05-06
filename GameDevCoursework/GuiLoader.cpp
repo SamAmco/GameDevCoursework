@@ -1,7 +1,9 @@
+//File Written by Samuel Amantea-Collins
 #include "stdafx.h"
 #include "GuiLoader.h"
 #include "Game.h"
 
+//This is a standard TGUI config, but in theory, it could be replaced with completely custom graphics for all gui elements
 const std::string GuiLoader::GUI_CONFIG = "Gui/Black.conf";
 tgui::ChildWindow::Ptr GuiLoader::overlay;
 int GuiLoader::previousScrolbarValue = 0;
@@ -64,6 +66,7 @@ void GuiLoader::LoadMainMenuGui(tgui::Gui& gui, const vector<string>& levelNames
 
 void GuiLoader::LoadLevelLostOverlay(tgui::Gui& gui)
 {
+	//We must always enable the mouse, in case the current scene has made it invisible
 	((sf::RenderWindow*)gui.getWindow())->setMouseCursorVisible(true);
 	gui.remove(overlay);
 	Game::gamePaused = true;

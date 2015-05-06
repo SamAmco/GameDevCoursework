@@ -15,6 +15,7 @@ Player::Player(Renderer& renderer, btDiscreteDynamicsWorld* dynamicsWorld, Vecto
 //Add the RenderObject to the renderer
 void Player::initializeGraphics(const Vector3& position)
 { 
+	//We do not want to unload the player resources, because the player is in every level scene
 	MeshResource* m = (MeshResource*)MeshManager::getInstance().LoadResource("sphere.obj");
 	m->destroyOnSceneLoad = false;
 	MaterialResource* mat = (MaterialResource*)MaterialManager::getInstance().LoadResource("PlayerMaterial");

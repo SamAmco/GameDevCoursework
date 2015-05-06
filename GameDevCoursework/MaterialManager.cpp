@@ -4,14 +4,17 @@
 
 Resource* MaterialManager::LoadResource(const string& name, const int type)
 {
+	//if the material is already loaded, return that
 	for (auto m : loadedResources)
 	{
 		if (m->name.compare(name) == 0)
 			return m;
 	}
 
+	//otherwise read in the material file
 	using namespace std;
 
+	//Find the right file
 	FILE* file;
 	stringstream s;
 	s << "Materials/" << name << ".txt";
@@ -38,7 +41,8 @@ Resource* MaterialManager::LoadResource(const string& name, const int type)
 		int res = fscanf_s(file, "%s", lineHeader, arrSize);
 		if (res == EOF)
 			break;
-
+		
+		//given the word, read in the shader name to the correct char[]
 		if (strcmp(lineHeader, "vertex") == 0)
 			fscanf_s(file, "%s\n", &vertex, arrSize);
 		else if (strcmp(lineHeader, "fragment") == 0)
@@ -51,6 +55,7 @@ Resource* MaterialManager::LoadResource(const string& name, const int type)
 			fscanf_s(file, "%s\n", &tes, arrSize);
 	}
 
+	//Load the shader, wrap it in a material resource and return it
 	MaterialResource* mat = new MaterialResource();
 	mat->name = name;
 	Shader* sh = LoadShader(vertex, fragment, geometry, tcs, tes);

@@ -11,7 +11,7 @@ ResourceManager::ResourceManager()
 void ResourceManager::LoadingNewScene()
 {
 	auto iter = loadedResources.begin();
-	//delete loaded sounds
+	//delete loaded resources as long as they are not flagged to not be destroyed on scene loading
 	while (iter != loadedResources.end())
 	{
 		if ((*iter)->destroyOnSceneLoad)
@@ -27,6 +27,7 @@ void ResourceManager::LoadingNewScene()
 //delete all the Texture objects from the heap and clear the map
 void ResourceManager::UnloadAllResources()
 {
+	//delete all resources, regardless of whether they are flagged to not be destroyed on scene loading
 	for (auto r : loadedResources)
 	{
 		cout << "deleting " << r->name << endl;

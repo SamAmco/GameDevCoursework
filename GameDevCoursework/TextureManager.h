@@ -10,6 +10,7 @@
 
 using namespace std;
 
+//This resource manager can be used to load textures or cube maps
 enum TextureType
 {
 	TEXTURE,
